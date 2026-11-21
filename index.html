@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Castlerock Lawnmowers | Garden Machinery Sales, Servicing &amp; Repairs</title>
-  <meta name="description" content="New and used lawnmowers, chainsaws, strimmers, hedgetrimmers, log splitters, generators and full workshop repairs in Castlerock, Coleraine.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Castlerock Lawnmowers | Garden Machinery Sales, Servicing & Repairs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .cat-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .cat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.09);
+      border-color: #166534;
+    }
+    .cat-card img {
+      width: 100%;
+      height: 175px;
+      object-fit: contain;
+      background: #f8fafc;
+      padding: 12px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .cat-card-body {
+      padding: 16px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cat-card-body h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      color: #1e293b;
+    }
+    .cat-card-body span {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #166534;
+    }
+  </style>
 </head>
 <body>
-
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Castlerock Lawnmowers</h1>
-        <span>Sales &bull; Servicing &bull; Repairs &bull; BT51</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="shop.html">Equipment For Sale</a>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-title">Castlerock Lawnmowers</span>
+        <span class="brand-sub">Sales • Servicing • Repairs</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Categories</a>
+        <a href="shop.html?cat=lawnmowers">Lawn &amp; Hedge</a>
+        <a href="machinery.html?cat=blowers">Machinery &amp; Tools</a>
         <a href="services.html">Servicing &amp; Repairs</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -26,183 +78,139 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Garden &amp; Groundcare Machinery in Castlerock</h2>
-      <p>Quality new and fully serviced used lawnmowers, chainsaws, strimmers, hedgetrimmers, log splitters, blowers, and construction equipment—backed by local workshop servicing and repairs.</p>
+      <h1>Garden &amp; Groundcare Machinery in Castlerock</h1>
+      <p>Select a category below to browse our full range of new and used equipment, or get in touch for workshop servicing and repairs.</p>
       <div class="hero-actions">
-        <a href="shop.html" class="btn btn-primary">Browse All Equipment</a>
-        <a href="tel:07934716954" class="btn btn-outline">Call 07934 716954</a>
+        <a href="tel:07934716954" class="btn btn-primary">Call 07934 716954</a>
+        <a href="services.html" class="btn btn-secondary">Servicing Prices</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Browse By Category</h2>
-        <p>Click any category below to view current stock, specifications, and prices.</p>
-      </div>
+  <main class="container" style="padding: 40px 20px;">
+    <h2 style="text-align: center; margin-bottom: 8px;">Browse Equipment by Category</h2>
+    <p style="text-align: center; color: #475569; max-width: 640px; margin: 0 auto 24px;">Click any category below to view only the machines in that section.</p>
 
-      <div class="category-grid">
-        <a href="shop.html#lawnmowers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers" loading="lazy">
-          <div class="category-card-body">
-            <h3>Lawnmowers</h3>
-            <span>Petrol, Battery, Electric &amp; Cylinder &rarr;</span>
-          </div>
-        </a>
+    <div class="cat-grid">
+      <a href="shop.html?cat=lawnmowers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Lawnmowers</h3>
+          <span>View Lawnmowers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#strimmers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers and Brushcutters" loading="lazy">
-          <div class="category-card-body">
-            <h3>Strimmers &amp; Brushcutters</h3>
-            <span>Petrol, Cordless &amp; Wheeled Trimmers &rarr;</span>
-          </div>
-        </a>
+      <a href="shop.html?cat=strimmers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers & Brushcutters" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Strimmers &amp; Brushcutters</h3>
+          <span>View Strimmers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#chainsaws" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Chainsaws" loading="lazy">
-          <div class="category-card-body">
-            <h3>Chainsaws &amp; Sharpeners</h3>
-            <span>Petrol, Top-Handle &amp; Cordless &rarr;</span>
-          </div>
-        </a>
+      <a href="shop.html?cat=chainsaws" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Chainsaws" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Chainsaws</h3>
+          <span>View Chainsaws →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#hedgetrimmers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Hedgetrimmers" loading="lazy">
-          <div class="category-card-body">
-            <h3>Hedgetrimmers</h3>
-            <span>Standard, Long-Reach &amp; Battery &rarr;</span>
-          </div>
-        </a>
+      <a href="shop.html?cat=hedgetrimmers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg" alt="Hedgetrimmers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Hedgetrimmers</h3>
+          <span>View Hedgetrimmers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#blowers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Leaf Blowers and Vacuums" loading="lazy">
-          <div class="category-card-body">
-            <h3>Blowers &amp; Leaf Vacuums</h3>
-            <span>Handheld, Backpack &amp; Wheeled Vacs &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=blowers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg" alt="Leaf Blowers & Vacuums" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Blowers &amp; Vacuums</h3>
+          <span>View Blowers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#log-splitters" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters" loading="lazy">
-          <div class="category-card-body">
-            <h3>Log Splitters</h3>
-            <span>7–10 Ton Electric &amp; Petrol Splitters &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=splitters" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Log Splitters</h3>
+          <span>View Log Splitters →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#shredders" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Garden Shredders and Chippers" loading="lazy">
-          <div class="category-card-body">
-            <h3>Shredders &amp; Chippers</h3>
-            <span>Petrol &amp; Electric Branch Shredders &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=shredders" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Garden Shredders & Chippers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Shredders &amp; Chippers</h3>
+          <span>View Shredders →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#scarifiers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Lawn Scarifiers" loading="lazy">
-          <div class="category-card-body">
-            <h3>Lawn Scarifiers</h3>
-            <span>Petrol &amp; Electric Moss Removal &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=scarifiers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Scarifiers</h3>
+          <span>View Scarifiers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#generators" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators" loading="lazy">
-          <div class="category-card-body">
-            <h3>Generators</h3>
-            <span>Petrol &amp; Dual-Fuel Site/Backup Power &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=generators" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Generators</h3>
+          <span>View Generators →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#pressure-washers" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers" loading="lazy">
-          <div class="category-card-body">
-            <h3>Pressure Washers</h3>
-            <span>High-Pressure Petrol &amp; Electric &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=washers" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Pressure Washers</h3>
+          <span>View Washers →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#construction" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Construction Equipment" loading="lazy">
-          <div class="category-card-body">
-            <h3>Construction Equipment</h3>
-            <span>Wacker Plates, Mixers &amp; Concrete Saws &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=construction" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Construction Equipment" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Construction Equipment</h3>
+          <span>View Construction →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#other-equipment" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="Spreaders, Sprayers, Trailers and Pumps" loading="lazy">
-          <div class="category-card-body">
-            <h3>Spreaders, Trailers &amp; Pumps</h3>
-            <span>Tow Carts, Sprayers, Sweepers &amp; Saw Horses &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=other" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg" alt="Sweepers, Spreaders & Trailers" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Sweepers, Spreaders &amp; Trailers</h3>
+          <span>View Other Equipment →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#tools" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" alt="Power Tools and Ramps" loading="lazy">
-          <div class="category-card-body">
-            <h3>Power Tools &amp; Ramps</h3>
-            <span>20V Cordless Range, Socket Sets &amp; Ramps &rarr;</span>
-          </div>
-        </a>
+      <a href="machinery.html?cat=tools" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" alt="Power Tools, Batteries & Ramps" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Power Tools, Batteries &amp; Ramps</h3>
+          <span>View Tools &amp; Batteries →</span>
+        </div>
+      </a>
 
-        <a href="shop.html#used-equipment" class="category-card">
-          <img src="https://static.wixstatic.com/media/b243b4_791cd6e7e47145188df179475efa5a43~mv2.jpg" alt="Used Equipment" loading="lazy">
-          <div class="category-card-body">
-            <h3>Serviced Used Equipment</h3>
-            <span>Checked, Serviced &amp; Ready to Work &rarr;</span>
-          </div>
-        </a>
-      </div>
+      <a href="machinery.html?cat=used" class="cat-card">
+        <img src="https://static.wixstatic.com/media/b243b4_904f1daadfed460993a8b21aec896a0a~mv2.jpg" alt="Used & Ex-Demo Equipment" loading="lazy" />
+        <div class="cat-card-body">
+          <h3>Used &amp; Ex-Demo Equipment</h3>
+          <span>View Used Stock →</span>
+        </div>
+      </a>
     </div>
-  </section>
-
-  <section class="section" style="background: #eef3ee; border-top: 1px solid #d5e0d5; border-bottom: 1px solid #d5e0d5;">
-    <div class="container">
-      <div class="section-header">
-        <h2>Why Buy From Castlerock Lawnmowers?</h2>
-        <p>Local advice, pre-delivery setup, and ongoing servicing right here on the North Coast.</p>
-      </div>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>Assembled &amp; Tested</h3>
-          <p>Every new machine is properly set up, oiled, and tested before you take it home—no flat-pack headaches.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Full Workshop Servicing</h3>
-          <p>From blade sharpening and carburettor rebuilds to annual mower servicing, we keep your machines running.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Local North Coast Support</h3>
-          <p>Serving Castlerock, Coleraine, Portstewart, Portrush, Limavady, and surrounding areas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Castlerock Lawnmowers</h4>
-        <p>45 Seapark, Castlerock, Co. Londonderry, BT51 4TH</p>
-      </div>
-      <div>
-        <h4>Get In Touch</h4>
-        <p>Tel: <a href="tel:07934716954">07934 716954</a></p>
-        <p>Email: <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <p><a href="shop.html">Equipment For Sale</a></p>
-        <p><a href="services.html">Servicing &amp; Repair Prices</a></p>
-        <p><a href="contact.html">Workshop Location &amp; Enquiry</a></p>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      &copy; 2026 Castlerock Lawnmowers. All rights reserved.
+    <div class="container">
+      <p><strong>Castlerock Lawnmowers</strong> • 45 Seapark, Castlerock, BT51 4TH</p>
+      <p>Phone: <a href="tel:07934716954">07934 716954</a> • Email: <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
     </div>
   </footer>
-
 </body>
 </html>
