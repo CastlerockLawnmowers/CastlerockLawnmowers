@@ -5,1276 +5,501 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machinery &amp; Equipment | Castlerock Lawnmowers</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .top-controls {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 20px 0;
-    }
-    .back-btn {
-      display: inline-block;
-      background: #1b4332;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .pill-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .pill {
-      padding: 7px 14px;
-      border-radius: 20px;
-      background: #e9ecef;
-      color: #1b4332;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    .pill.active, .pill:hover {
-      background: #2d6a4f;
-      color: #fff;
-    }
-    .product-img-wrap {
-      width: 100%;
-      height: 210px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid #eee;
-      overflow: hidden;
-    }
-    .product-img-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .card-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">Castlerock Lawnmowers</a>
-      <nav class="main-nav">
-        <a href="index.html">Categories</a>
-        <a href="shop.html">Garden Tools</a>
-        <a href="machinery.html" class="active">Machinery</a>
-        <a href="services.html">Servicing &amp; Repairs</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo" onerror="this.style.display='none'">
+        </a>
+      </div>
+      <div class="header-center">
+        <h1 class="brand-title">Castlerock Lawnmowers</h1>
+        <p class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="hecht-badge">HECHT</div>
+        <span class="dealer-sub">Authorised Sales &amp; Service</span>
+      </div>
     </div>
+    <nav class="nav-bar">
+      <a href="index.html" class="pill-btn">PRODUCTS</a>
+      <a href="contact.html" class="pill-btn">CONTACT &amp; SERVICING</a>
+    </nav>
   </header>
-
   <main class="container">
-    <div class="top-controls">
-      <a href="index.html" class="back-btn">&larr; All Categories</a>
-      <a href="machinery.html" id="show-all-btn" class="pill" style="display:none;">Show All Machinery Categories</a>
+    <div class="cat-pills" id="catPills">
+      <a href="machinery.html" class="cat-pill">All Machinery</a>
+      <a href="machinery.html?cat=blowers" class="cat-pill">Blowers</a>
+      <a href="machinery.html?cat=splitters" class="cat-pill">Log Splitters</a>
+      <a href="machinery.html?cat=shredders" class="cat-pill">Shredders</a>
+      <a href="machinery.html?cat=scarifiers" class="cat-pill">Scarifiers</a>
+      <a href="machinery.html?cat=generators" class="cat-pill">Generators</a>
+      <a href="machinery.html?cat=washers" class="cat-pill">Pressure Washers</a>
+      <a href="machinery.html?cat=construction" class="cat-pill">Construction</a>
+      <a href="machinery.html?cat=tools" class="cat-pill">Trailers, Pumps &amp; Tools</a>
     </div>
-
-    <div class="pill-bar" id="pill-bar">
-      <a href="machinery.html?cat=blowers" class="pill" data-pill="blowers">Blowers & Vacuums</a>
-      <a href="machinery.html?cat=log-splitters" class="pill" data-pill="log-splitters">Log Splitters</a>
-      <a href="machinery.html?cat=shredders" class="pill" data-pill="shredders">Shredders & Chippers</a>
-      <a href="machinery.html?cat=scarifiers" class="pill" data-pill="scarifiers">Scarifiers</a>
-      <a href="machinery.html?cat=generators" class="pill" data-pill="generators">Generators</a>
-      <a href="machinery.html?cat=pressure-washers" class="pill" data-pill="pressure-washers">Pressure Washers</a>
-      <a href="machinery.html?cat=construction" class="pill" data-pill="construction">Construction & Compactors</a>
-      <a href="machinery.html?cat=spreaders-sprayers" class="pill" data-pill="spreaders-sprayers">Spreaders, Sprayers, Trailers & Pumps</a>
-      <a href="machinery.html?cat=tools" class="pill" data-pill="tools">Power Tools, Batteries & Ramps</a>
-      <a href="machinery.html?cat=used" class="pill" data-pill="used">Used & Ex-Demo Equipment</a>
-    </div>
-
-  <section id="blowers" class="cat-section" data-cat="blowers">
-    <div class="section-header">
-      <h2>Blowers & Vacuums</h2>
-      <span class="badge">11 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg" alt="Hecht 9436 Battery Blower 40V" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 9436 Battery Blower 40V</h3>
-          <p class="price">£75</p>
-          <p class="desc">40V cordless leaf blower, max air speed 160 km/h, lightweight 2.84kg (battery & charger sold separately).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_94ad0cda0f7b47d58e6194440a72666e~mv2.jpg" alt="Dolmar 75cc 4 Stroke Backpack Petrol Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Dolmar 75cc 4 Stroke Backpack Petrol Blower</h3>
-          <p class="price">£585</p>
-          <p class="desc">75.6cc 4-stroke commercial backpack blower with high air velocity and low emissions.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_02ef910b5afe45e7817d49910efcd244~mv2.jpg" alt="Dolmar 52cc 4 Stroke Backpack Petrol Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Dolmar 52cc 4 Stroke Backpack Petrol Blower</h3>
-          <p class="price">£405</p>
-          <p class="desc">52.5cc 4-stroke backpack leaf blower, 82 m/s max air velocity, low noise 96dB(A).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg" alt="Alpina ABL27V Blower Vacuum" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Alpina ABL27V Blower Vacuum</h3>
-          <p class="price">£245</p>
-          <p class="desc">27.6cc 2-stroke petrol leaf blower and garden vacuum with anti-vibration springs.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png" alt="Makita 25cc 4 Stroke Hand Held Petrol Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Makita 25cc 4 Stroke Hand Held Petrol Blower</h3>
-          <p class="price">£265</p>
-          <p class="desc">Makita BHX2501 easy-start 4-stroke handheld petrol blower, 4.4kg lightweight design.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Gardencare Backpack Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Gardencare Backpack Blower</h3>
-          <p class="price">£325</p>
-          <p class="desc">65cc 2-stroke backpack blower, max airspeed 205mph, joystick throttle control.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg" alt="Gardencare Handheld Blower Vac" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Gardencare Handheld Blower Vac</h3>
-          <p class="price">£195</p>
-          <p class="desc">26cc 2-stroke petrol blower & garden vacuum with 10:1 mulching ratio.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg" alt="Hecht 952 Backpack Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 952 Backpack Blower</h3>
-          <p class="price">£265</p>
-          <p class="desc">2HP petrol backpack leaf blower producing 864 m³/h airflow, weight 8.3kg.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg" alt="Hecht 8514 Vacuum & Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 8514 Vacuum & Blower</h3>
-          <p class="price">£775</p>
-          <p class="desc">Self-propelled 173cc 6HP petrol leaf vacuum & blower, 58cm width, 150L collection bag.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png" alt="Hecht 972 Pro Backpack Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 972 Pro Backpack Blower</h3>
-          <p class="price">£395</p>
-          <p class="desc">79.4cc 4.6HP professional backpack blower, 1440 m³/h max air output.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png" alt="Hecht 9254 Handheld Blower" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 9254 Handheld Blower</h3>
-          <p class="price">£175</p>
-          <p class="desc">25.4cc 2-stroke handheld blower & vacuum with steel mulching blades and 50L bag.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="log-splitters" class="cat-section" data-cat="log-splitters">
-    <div class="section-header">
-      <h2>Log Splitters</h2>
-      <span class="badge">4 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Hecht 8 ton vertical log splitter" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 8 ton vertical log splitter</h3>
-          <p class="price">£900</p>
-          <p class="desc">3kW electric motor powering a hydraulic ram, 8 ton maximum splitting pressure, weight 112kg.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_583bd73c1c5d4c8cbc57c0fe2d15e26f~mv2.jpg" alt="Hecht 6070 Vertical Electric Log Splitter 7 Ton" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 6070 Vertical Electric Log Splitter 7 Ton</h3>
-          <p class="price">£790</p>
-          <p class="desc">230V 3000W vertical hydraulic log splitter, 7 tons pressure, logs up to 55cm length and 30cm diameter.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_698d2db1f7ca4adfac593b4d85865ebc~mv2.jpg" alt="Hecht Horizontal Petrol Log Splitter 10T" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht Horizontal Petrol Log Splitter 10T</h3>
-          <p class="price">£850</p>
-          <p class="desc">212cc petrol engine, 10 tons splitting pressure, max wood length 520mm, 12-inch wheels with tow hitch.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_d5836c6ee9d241188ce273520d5f4465~mv2.png" alt="Hecht 676 Log Splitter" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 676 Log Splitter</h3>
-          <p class="price">£475</p>
-          <p class="desc">2kW 230V electric log splitter, 7 tons splitting force, logs up to 52cm, raised stand with wheels.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="shredders" class="cat-section" data-cat="shredders">
-    <div class="section-header">
-      <h2>Shredders & Chippers</h2>
-      <span class="badge">4 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3bd9eb89fe8f42fb8b06b7d734509bfb~mv2.jpg" alt="Professional Self Propelled Shredder and Vacuum" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Professional Self Propelled Shredder and Vacuum</h3>
-          <p class="price">£1395</p>
-          <p class="desc">196cc petrol engine, 60cm working width, cuts branches up to 5cm, 3m suction hose, 130L collecting bag.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Champion RT10005 Petrol Shredder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Champion RT10005 Petrol Shredder</h3>
-          <p class="price">£775</p>
-          <p class="desc">4.1kW Champion 4-stroke OHV petrol wood chipper shredder for branches up to 5cm (2 inch).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_fd551a769fc64ec79bd165051304b167~mv2.png" alt="Hecht 6208 Petrol Shredder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 6208 Petrol Shredder</h3>
-          <p class="price">£850</p>
-          <p class="desc">7HP petrol garden shredder suitable for cutting branches up to 70mm diameter.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_03a0634227a34e6db814dc72e7c69d42~mv2.jpg" alt="Hecht 6285XL Electric Shredder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 6285XL Electric Shredder</h3>
-          <p class="price">£295</p>
-          <p class="desc">2800W electric garden shredder for branches up to 4.4cm diameter with 60L collection box.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="scarifiers" class="cat-section" data-cat="scarifiers">
-    <div class="section-header">
-      <h2>Scarifiers</h2>
-      <span class="badge">2 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd5489bb56faf2e4dfa171~mv2.jpg" alt="Gardencare 40 cm Petrol Scarifier" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Gardencare 40 cm Petrol Scarifier</h3>
-          <p class="price">£365</p>
-          <p class="desc">GCS40 petrol lawn scarifier supplied with both 18-blade and 24-spring tine cassettes.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_bc642432d0c9484f9ebf3df75804c1c5~mv2.png" alt="Hecht Electric Scarifier" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht Electric Scarifier</h3>
-          <p class="price">£155</p>
-          <p class="desc">1500W electric lawn scarifier, 32cm working width, 35L catcher, 16 blades + wire roller.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="generators" class="cat-section" data-cat="generators">
-    <div class="section-header">
-      <h2>Generators</h2>
-      <span class="badge">3 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Champion Dual Fuel Generator" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Champion Dual Fuel Generator</h3>
-          <p class="price">£1025</p>
-          <p class="desc">439cc 4-stroke engine, manual & electric start, runs on petrol or LPG, 7.5 KVA / 6 KW output, 230V & 110V sockets.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg" alt="Champion 2.8Kw Petrol Generator" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Champion 2.8Kw Petrol Generator</h3>
-          <p class="price">£395</p>
-          <p class="desc">196cc Champion 4-stroke engine, up to 12 hrs runtime at 25% load, 230V & 110V sockets.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg" alt="Champion 3.5Kw Petrol Generator" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Champion 3.5Kw Petrol Generator</h3>
-          <p class="price">£525</p>
-          <p class="desc">224cc 7.5hp OHV engine, 3000W running / 3500W starting watts, low oil shut-off, 230V & 110V sockets.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="pressure-washers" class="cat-section" data-cat="pressure-washers">
-    <div class="section-header">
-      <h2>Pressure Washers</h2>
-      <span class="badge">3 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Rocwood High Pressure Washer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Rocwood High Pressure Washer</h3>
-          <p class="price">£325</p>
-          <p class="desc">7HP 4-stroke OHV petrol pressure washer, max 240 Bar (3480psi), brass axial pump, 10m hose.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg" alt="Hecht 324 High Pressure Washer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 324 High Pressure Washer</h3>
-          <p class="price">£220</p>
-          <p class="desc">2350W self-priming electric pressure washer, max 165 bar, 8m hose on integrated reel.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png" alt="Hecht 319 High Pressure Washer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 319 High Pressure Washer</h3>
-          <p class="price">£145</p>
-          <p class="desc">1800W electric pressure washer, 100 bar operating pressure, 5m hose, lightweight 6.2kg.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="construction" class="cat-section" data-cat="construction">
-    <div class="section-header">
-      <h2>Construction & Compactors</h2>
-      <span class="badge">6 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Hecht Powered Wheelbarrow" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht Powered Wheelbarrow</h3>
-          <p class="price">£1835</p>
-          <p class="desc">196cc 5.5HP 4-stroke wheeled mini dumper, 300kg load capacity, 3 forward + 1 reverse gear.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg" alt="Hecht 2052 50L Compressor" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 2052 50L Compressor</h3>
-          <p class="price">£230</p>
-          <p class="desc">1500W 50L oil air compressor, max output pressure 8 bar, 180 l/min suction power.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Hecht 1113 Vibrating Plate 16-inch" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1113 Vibrating Plate 16-inch</h3>
-          <p class="price">£615</p>
-          <p class="desc">196cc petrol plate compactor, 540x420mm plate, 13000N compaction force, folding wheels & pad.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg" alt="Hecht 1111 Vibrating Plate 14-inch" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1111 Vibrating Plate 14-inch</h3>
-          <p class="price">£550</p>
-          <p class="desc">196cc petrol plate compactor, 530x370mm plate, 11000N compaction force, folding wheels & pad.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg" alt="Hecht 2117 Construction Mixer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 2117 Construction Mixer</h3>
-          <p class="price">£345</p>
-          <p class="desc">550W 230V electric cement mixer with 120L drum volume.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg" alt="Hecht 9588 Concrete Saw" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 9588 Concrete Saw</h3>
-          <p class="price">£525</p>
-          <p class="desc">54cc petrol concrete cutter with water connection and 305mm cutting blade diameter.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="spreaders-sprayers" class="cat-section" data-cat="spreaders-sprayers">
-    <div class="section-header">
-      <h2>Spreaders, Sprayers, Trailers & Pumps</h2>
-      <span class="badge">23 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="80Kg Towable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>80Kg Towable Spreader</h3>
-          <p class="price">£265</p>
-          <p class="desc">Tow-behind polythene broadcast spreader with 80kg capacity and durable metal gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_f88160256beb4bcbac61bd729c978619~mv2.jpg" alt="60Kg Towable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>60Kg Towable Spreader</h3>
-          <p class="price">£220</p>
-          <p class="desc">Tow-behind polythene broadcast spreader with 60kg capacity and metal gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3f578efab50e4dbcad08de6ab8ea244c~mv2.jpg" alt="36Kg Towable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>36Kg Towable Spreader</h3>
-          <p class="price">£155</p>
-          <p class="desc">Tow-behind polythene broadcast spreader with 36kg capacity and metal gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_39c108ae64fa4bb8859a07f4aa2792ec~mv2.jpg" alt="60L Manual Adjustable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>60L Manual Adjustable Spreader</h3>
-          <p class="price">£215</p>
-          <p class="desc">60L push spreader for fertiliser, seed and winter salt with metal gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_f9b057ad5adf4c5ab88a775f73ed4055~mv2.jpg" alt="29L Manual Adjustable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>29L Manual Adjustable Spreader</h3>
-          <p class="price">£135</p>
-          <p class="desc">29L push spreader with metal gears for seed, fertiliser and salt.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_15819df88ed94388853c6305869616b8~mv2.jpg" alt="27L Manual Adjustable Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>27L Manual Adjustable Spreader</h3>
-          <p class="price">£85</p>
-          <p class="desc">27L manual push spreader with grip flow adjustment.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_5e0ca693f1654749b7925e9b6b65fc98~mv2.jpg" alt="20L Manual Spreader" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>20L Manual Spreader</h3>
-          <p class="price">£45</p>
-          <p class="desc">20L lightweight manual push spreader for fertiliser and grass seed.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_e4e1bb6163114632a2e39db0ad42c6d2~mv2.jpg" alt="65L Towable Sprayer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>65L Towable Sprayer</h3>
-          <p class="price">£500</p>
-          <p class="desc">Tow-behind sprayer with 7ft boom coverage, hand lance & nozzle.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_227f0c2fafc640f69432ece7c242eb11~mv2.jpg" alt="16L Manual Sprayer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>16L Manual Sprayer</h3>
-          <p class="price">£45</p>
-          <p class="desc">16L knapsack sprayer with 4 bar max pressure.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_8e347ac199c74afdb96eedecd1ed9cd4~mv2.jpg" alt="Hecht 5L Manual Sprayer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 5L Manual Sprayer</h3>
-          <p class="price">£18</p>
-          <p class="desc">5L hand pump pressure sprayer with adjustable jet nozzle.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" alt="High Side Tipping Cart Trailer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>High Side Tipping Cart Trailer</h3>
-          <p class="price">£165</p>
-          <p class="desc">Steel tipping garden trailer with removable hinged sides, 300kg capacity, pneumatic tyres.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_802637a9fbe347889959a2525177caf6~mv2.jpg" alt="Tipping Cart Trailer" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Tipping Cart Trailer</h3>
-          <p class="price">£135</p>
-          <p class="desc">Poly body tipping garden trailer, 150kg max load, pneumatic wheels.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4ca3d4d9097346deaf848ecc31f6a283~mv2.jpg" alt="Hecht 53080 Trailer Barrow" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 53080 Trailer Barrow</h3>
-          <p class="price">£255</p>
-          <p class="desc">2-in-1 tipping garden tractor trailer and push barrow, 300kg capacity.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_c84ac85d0b5047cd9a24ff7a9e364c3e~mv2.jpg" alt="Hecht 2 inch Water Pump" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 2 inch Water Pump</h3>
-          <p class="price">£225</p>
-          <p class="desc">4-stroke petrol water pump, 27m max delivery height, 36,000 l/h flow rate.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ed3d1d2251ad4a568b0e6d6c9f4a84be~mv2.jpg" alt="Hecht 1 inch Water Pump" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1 inch Water Pump</h3>
-          <p class="price">£165</p>
-          <p class="desc">43cc petrol water pump, 35m max delivery height, 15,000 l/h flow rate.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_832952970f6a4b2986c481d1bce7034b~mv2.jpg" alt="Hecht 3038 Oil Space Heater" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 3038 Oil Space Heater</h3>
-          <p class="price">£395</p>
-          <p class="desc">37kW (125,000 Btu) diesel/oil hot air space heater for workshops and ventilated sites.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg" alt="Hecht 8101 Petrol Sweeper 100cm" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 8101 Petrol Sweeper 100cm</h3>
-          <p class="price">£1200</p>
-          <p class="desc">173cc 6.5HP petrol rotary sweeper, 100cm working width, 3 forward + 2 reverse gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_57f257a1d73344a399b4935bcec0020a~mv2.jpg" alt="Hecht 8680SE Petrol Sweeper 80cm" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 8680SE Petrol Sweeper 80cm</h3>
-          <p class="price">£1130</p>
-          <p class="desc">Electric start self-propelled 80cm rotary sweeper, 4 forward + 2 reverse gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_57b3fe8990864f07bff7bbf312c74128~mv2.jpg" alt="Hecht 8615 Petrol Sweeper 60cm" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 8615 Petrol Sweeper 60cm</h3>
-          <p class="price">£825</p>
-          <p class="desc">Self-propelled 60cm rotary sweeper, 4 forward + 2 reverse gears.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0f499028fdf94c17a84d3778b26e8ede~mv2.jpg" alt="Trestle Log Horse with Chainsaw Holder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Trestle Log Horse with Chainsaw Holder</h3>
-          <p class="price">£85</p>
-          <p class="desc">Galvanised steel sawhorse with integrated chainsaw clamp holder.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ac9e9e64c83a4b42b8c01e58ed77a4be~mv2.jpg" alt="Trestle Log Horse X3" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Trestle Log Horse X3</h3>
-          <p class="price">£45</p>
-          <p class="desc">Folding galvanised steel logging trestle sawhorse.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4bbdcf4df7d34f739fcaf5ed27de2562~mv2.jpg" alt="Hecht 901 Saw Horse" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 901 Saw Horse</h3>
-          <p class="price">£115</p>
-          <p class="desc">Self-locking jaws clamp logs from 24mm to 230mm diameter, 100kg load capacity.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_6b7e379858ae4e4b86f85873bddb5399~mv2.jpg" alt="Gardencare Petrol Rotavator" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Gardencare Petrol Rotavator</h3>
-          <p class="price">£380</p>
-          <p class="desc">100cc Briggs & Stratton 500 Series cultivator with 4 tines and 40cm (16-inch) width.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="tools" class="cat-section" data-cat="tools">
-    <div class="section-header">
-      <h2>Power Tools, Batteries & Ramps</h2>
-      <span class="badge">17 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9dfec7af1b024a558af508f91a0ac402~mv2.jpg" alt="Loading Ramps (Pair)" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Loading Ramps (Pair)</h3>
-          <p class="price">£160</p>
-          <p class="desc">Folding aluminium ramps for ATVs & ride-on mowers, 1000kg capacity with support legs.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_81f9006bf6664d4b8c694fc99c5190a1~mv2.jpg" alt="Hecht 1323 Angle Grinder 9in" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1323 Angle Grinder 9in</h3>
-          <p class="price">£95</p>
-          <p class="desc">2350W 230mm (9-inch) corded angle grinder with soft-start and rotary handle.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_a9f17374838348c8902ddb5ade0f1f12~mv2.jpg" alt="Hecht 1670 Battery Circular Saw" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1670 Battery Circular Saw</h3>
-          <p class="price">£90</p>
-          <p class="desc">20V cordless 150mm circular saw, 48mm cutting depth (ACCU 1278 body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_7589da20e43945c2bce0054592ed350d~mv2.jpg" alt="Hecht 1510 Reciprocating Saw" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1510 Reciprocating Saw</h3>
-          <p class="price">£65</p>
-          <p class="desc">20V cordless reciprocating saw, 115mm wood cutting depth (ACCU 1278 body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9b29d2c31d714c188a8b4f812a0a37bd~mv2.jpg" alt="Hecht 1531 20V Battery Jigsaw" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 1531 20V Battery Jigsaw</h3>
-          <p class="price">£60</p>
-          <p class="desc">20V cordless jigsaw compatible with ACCU 1278 batteries (body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_a072ab0a8fe947c2a44b14ad254fd802~mv2.png" alt="Hecht 2090 Battery Air Compressor 20V" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 2090 Battery Air Compressor 20V</h3>
-          <p class="price">£60</p>
-          <p class="desc">20V portable cordless tyre & air compressor with digital display, max 7 bar (body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" alt="Hecht 50Nm 20V Cordless Drill Kit" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 50Nm 20V Cordless Drill Kit</h3>
-          <p class="price">£165</p>
-          <p class="desc">Brushless 50Nm 20V hammer drill complete with charger, 2x 2Ah batteries, case & bits.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_fd5366b5a2024b05b0218c3022ff8a3c~mv2.jpg" alt="Hecht 35Nm 20V Cordless Drill Kit" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 35Nm 20V Cordless Drill Kit</h3>
-          <p class="price">£125</p>
-          <p class="desc">35Nm 20V cordless hammer drill with quick charger, 2x 2Ah batteries, case & bits.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9f7d103b9b564d0b99824f6d0304b8ab~mv2.png" alt="Hecht 20V Cordless Impact Wrench" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 20V Cordless Impact Wrench</h3>
-          <p class="price">£95</p>
-          <p class="desc">300Nm 1/2-inch cordless impact wrench (ACCU 1278 body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_c619bb02ec5a4f3a9004b54ca82cdf3a~mv2.png" alt="Hecht 20V 4Ah Battery 001278B" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 20V 4Ah Battery 001278B</h3>
-          <p class="price">£60</p>
-          <p class="desc">20V 4.0Ah Li-ion battery for all ACCU Program 1278 tools.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_13ccb468472f4a61b54bc2c14e46e2a3~mv2.png" alt="Hecht 20V 2Ah Battery 001277B" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 20V 2Ah Battery 001277B</h3>
-          <p class="price">£40</p>
-          <p class="desc">20V 2.0Ah Li-ion battery for all ACCU Program 1278 tools.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9b9e318cc9ec4029ad10f428a2a54112~mv2.png" alt="Hecht 20V Fast Charger" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 20V Fast Charger</h3>
-          <p class="price">£25</p>
-          <p class="desc">Fast charger for 20V ACCU Program 1278 batteries.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_55643197a34d45d69038e68b936a6020~mv2.png" alt="Hecht 4.5-inch Cordless Angle Grinder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 4.5-inch Cordless Angle Grinder</h3>
-          <p class="price">£65</p>
-          <p class="desc">20V 115mm cordless angle grinder (ACCU 1278 body only).</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3a7957823dbf4b22b598c80ca24a1a13~mv2.jpg" alt="Hecht 4.5-inch Electric Angle Grinder" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 4.5-inch Electric Angle Grinder</h3>
-          <p class="price">£45</p>
-          <p class="desc">650W 115mm corded electric angle grinder, 12,000 rpm.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_58043b1854684f84bea5ce72f9b0a56f~mv2.jpg" alt="Hecht 76 Piece Tool Kit" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 76 Piece Tool Kit</h3>
-          <p class="price">£60</p>
-          <p class="desc">76-piece garage & DIY hand tool set in sturdy carry case.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_1386de78da0d4451813e198fc08f2237~mv2.jpg" alt="Hecht 94 Piece Socket & Bit Set" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht 94 Piece Socket & Bit Set</h3>
-          <p class="price">£75</p>
-          <p class="desc">94-piece 1/2-inch and 1/4-inch ratchet socket & bit set in case.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9b66f9efc8ed404588b5e9c14c066b36~mv2.jpg" alt="Hecht Cordless Screwdriver" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Hecht Cordless Screwdriver</h3>
-          <p class="price">£35</p>
-          <p class="desc">3.7V Li-ion swivel-handle cordless screwdriver with 52 bits and charger.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section id="used" class="cat-section" data-cat="used">
-    <div class="section-header">
-      <h2>Used & Ex-Demo Equipment</h2>
-      <span class="badge">3 items</span>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_904f1daadfed460993a8b21aec896a0a~mv2.jpg" alt="Wheeled Strimmer 52cc (Used)" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Wheeled Strimmer 52cc (Used)</h3>
-          <p class="price">£225</p>
-          <p class="desc">52cc Hecht wheeled strimmer, very little use, excellent condition, serviced and ready.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_791cd6e7e47145188df179475efa5a43~mv2.jpg" alt="Mountfield 16-inch Self Propelled Petrol Lawnmower (Used)" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Mountfield 16-inch Self Propelled Petrol Lawnmower (Used)</h3>
-          <p class="price">£110</p>
-          <p class="desc">Mountfield 16-inch self-propelled petrol mower, fully serviced and working as expected.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0f68696001e34b949f8464f266cf9d66~mv2.jpg" alt="Petrol Lawnmower Hand Propelled 16-inch (Used)" loading="lazy">
-        </div>
-        <div class="product-body">
-          <h3>Petrol Lawnmower Hand Propelled 16-inch (Used)</h3>
-          <p class="price">£100</p>
-          <p class="desc">16-inch hand-propelled petrol mower with Briggs & Stratton engine, fully serviced.</p>
-          <div class="card-actions">
-            <a href="tel:07934716954" class="btn btn-primary">Call to Enquire</a>
-            <a href="contact.html" class="btn btn-outline">Message</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
+    <section class="cat-section" data-cat="blowers">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Garden Blowers & Vacuums</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Gardencare Backpack Blower" data-price="£325.00" data-img="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" data-desc="65cc 2-stroke backpack blower with 205mph max airspeed, joystick throttle control, and padded harness.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Gardencare Backpack Blower" loading="lazy"></div>
+          <div class="tile-title">Gardencare Backpack Blower</div>
+          <div class="tile-price">£325.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Gardencare Handheld Blower" data-price="£195.00" data-img="https://static.wixstatic.com/media/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg" data-desc="26cc 2-stroke blower/vac with 124mph airspeed, 10:1 mulching ratio, and collection bag.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg" alt="Gardencare Handheld Blower" loading="lazy"></div>
+          <div class="tile-title">Gardencare Handheld Blower</div>
+          <div class="tile-price">£195.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 9436 Battery Blower 40V" data-price="£75.00" data-img="https://static.wixstatic.com/media/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg" data-desc="Lightweight 40V cordless leaf blower with max air speed of 160 km/h (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg" alt="Hecht 9436 Battery Blower 40V" loading="lazy"></div>
+          <div class="tile-title">Hecht 9436 Battery Blower 40V</div>
+          <div class="tile-price">£75.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Alpina ABL27V Blower Vac" data-price="£245.00" data-img="https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg" data-desc="27.6cc 2-stroke petrol leaf blower and vacuum with anti-vibration spring system.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg" alt="Alpina ABL27V Blower Vac" loading="lazy"></div>
+          <div class="tile-title">Alpina ABL27V Blower Vac</div>
+          <div class="tile-price">£245.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Makita 25cc Hand Held Petrol Blower" data-price="£265.00" data-img="https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png" data-desc="Lightweight 4.4kg 4-stroke handheld petrol blower with easy-start decompression.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png" alt="Makita 25cc Hand Held Petrol Blower" loading="lazy"></div>
+          <div class="tile-title">Makita 25cc Hand Held Petrol Blower</div>
+          <div class="tile-price">£265.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 952 Backpack Blower" data-price="£265.00" data-img="https://static.wixstatic.com/media/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg" data-desc="2HP petrol backpack leaf blower producing 864 m3/h airflow with padded back plate.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg" alt="Hecht 952 Backpack Blower" loading="lazy"></div>
+          <div class="tile-title">Hecht 952 Backpack Blower</div>
+          <div class="tile-price">£265.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 8514 Vacuum & Blower" data-price="£775.00" data-img="https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg" data-desc="Self-propelled 173cc 4-stroke wheeled vacuum and blower with 58cm working width and 150L bag.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg" alt="Hecht 8514 Vacuum & Blower" loading="lazy"></div>
+          <div class="tile-title">Hecht 8514 Vacuum & Blower</div>
+          <div class="tile-price">£775.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Makita 4 Stroke Blower" data-price="£295.00" data-img="https://static.wixstatic.com/media/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg" data-desc="MAKITA BHX2501 easy-start 4-stroke handheld petrol blower for leaves and debris.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg" alt="Makita 4 Stroke Blower" loading="lazy"></div>
+          <div class="tile-title">Makita 4 Stroke Blower</div>
+          <div class="tile-price">£295.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 972 Pro Backpack Blower" data-price="£395.00" data-img="https://static.wixstatic.com/media/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png" data-desc="Heavy-duty 79.4cc 4.6HP 2-stroke backpack blower delivering 1440 m3/h airflow.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png" alt="Hecht 972 Pro Backpack Blower" loading="lazy"></div>
+          <div class="tile-title">Hecht 972 Pro Backpack Blower</div>
+          <div class="tile-price">£395.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 9254 Handheld Blower" data-price="£175.00" data-img="https://static.wixstatic.com/media/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png" data-desc="Compact 25.4cc 2-stroke handheld blower and vacuum with steel mulching blades and 50L bag.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png" alt="Hecht 9254 Handheld Blower" loading="lazy"></div>
+          <div class="tile-title">Hecht 9254 Handheld Blower</div>
+          <div class="tile-price">£175.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="splitters">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Log Splitters</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 8 Ton Vertical Log Splitter" data-price="£900.00" data-img="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" data-desc="3kW electric motor powering a hydraulic ram with 8-ton maximum splitting pressure.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Hecht 8 Ton Vertical Log Splitter" loading="lazy"></div>
+          <div class="tile-title">Hecht 8 Ton Vertical Log Splitter</div>
+          <div class="tile-price">£900.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 6070 Vertical Electric Log Splitter 7T" data-price="£790.00" data-img="https://static.wixstatic.com/media/b243b4_583bd73c1c5d4c8cbc57c0fe2d15e26f~mv2.jpg" data-desc="3000W 230V vertical hydraulic wood splitter for logs up to 55cm long and 30cm diameter.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_583bd73c1c5d4c8cbc57c0fe2d15e26f~mv2.jpg" alt="Hecht 6070 Vertical Electric Log Splitter 7T" loading="lazy"></div>
+          <div class="tile-title">Hecht 6070 Vertical Electric Log Splitter 7T</div>
+          <div class="tile-price">£790.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht Horizontal Petrol Log Splitter 10T" data-price="£850.00" data-img="https://static.wixstatic.com/media/b243b4_698d2db1f7ca4adfac593b4d85865ebc~mv2.jpg" data-desc="212cc petrol wood splitter with 10-ton splitting force, 520mm max log length, and tow hitch.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_698d2db1f7ca4adfac593b4d85865ebc~mv2.jpg" alt="Hecht Horizontal Petrol Log Splitter 10T" loading="lazy"></div>
+          <div class="tile-title">Hecht Horizontal Petrol Log Splitter 10T</div>
+          <div class="tile-price">£850.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 676 Log Splitter" data-price="£475.00" data-img="https://static.wixstatic.com/media/b243b4_d5836c6ee9d241188ce273520d5f4465~mv2.png" data-desc="2kW electric log splitter on stand with 7-ton splitting force for logs up to 52cm.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_d5836c6ee9d241188ce273520d5f4465~mv2.png" alt="Hecht 676 Log Splitter" loading="lazy"></div>
+          <div class="tile-title">Hecht 676 Log Splitter</div>
+          <div class="tile-price">£475.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="shredders">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Shredders & Chippers</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Pro Self Propelled Shredder & Vacuum" data-price="£1,395.00" data-img="https://static.wixstatic.com/media/b243b4_3bd9eb89fe8f42fb8b06b7d734509bfb~mv2.jpg" data-desc="196cc self-propelled petrol vacuum and chipper/shredder for branches up to 5cm with 130L bag.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_3bd9eb89fe8f42fb8b06b7d734509bfb~mv2.jpg" alt="Pro Self Propelled Shredder & Vacuum" loading="lazy"></div>
+          <div class="tile-title">Pro Self Propelled Shredder & Vacuum</div>
+          <div class="tile-price">£1,395.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Champion RT10005 Petrol Shredder" data-price="£775.00" data-img="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" data-desc="4.1kW 4-stroke petrol wood chipper shredder handling branches up to 5cm (2 inch) diameter.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Champion RT10005 Petrol Shredder" loading="lazy"></div>
+          <div class="tile-title">Champion RT10005 Petrol Shredder</div>
+          <div class="tile-price">£775.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 6208 Petrol Shredder" data-price="£850.00" data-img="https://static.wixstatic.com/media/b243b4_fd551a769fc64ec79bd165051304b167~mv2.png" data-desc="7HP petrol garden shredder suitable for cutting branches up to 70mm diameter.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_fd551a769fc64ec79bd165051304b167~mv2.png" alt="Hecht 6208 Petrol Shredder" loading="lazy"></div>
+          <div class="tile-title">Hecht 6208 Petrol Shredder</div>
+          <div class="tile-price">£850.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 6285XL Electric Shredder" data-price="£295.00" data-img="https://static.wixstatic.com/media/b243b4_03a0634227a34e6db814dc72e7c69d42~mv2.jpg" data-desc="2800W electric garden shredder for branches up to 44mm with 60L collection box.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_03a0634227a34e6db814dc72e7c69d42~mv2.jpg" alt="Hecht 6285XL Electric Shredder" loading="lazy"></div>
+          <div class="tile-title">Hecht 6285XL Electric Shredder</div>
+          <div class="tile-price">£295.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="scarifiers">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Lawn Scarifiers</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Gardencare 40cm Petrol Scarifier" data-price="£365.00" data-img="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" data-desc="40cm petrol lawn scarifier supplied with both 18-blade and 24-spring tine cassettes.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Gardencare 40cm Petrol Scarifier" loading="lazy"></div>
+          <div class="tile-title">Gardencare 40cm Petrol Scarifier</div>
+          <div class="tile-price">£365.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht Electric Scarifier" data-price="£155.00" data-img="https://static.wixstatic.com/media/b243b4_bc642432d0c9484f9ebf3df75804c1c5~mv2.png" data-desc="Lightweight 8kg 1500W electric scarifier (32cm width) with 35L grass catcher and dual rollers.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_bc642432d0c9484f9ebf3df75804c1c5~mv2.png" alt="Hecht Electric Scarifier" loading="lazy"></div>
+          <div class="tile-title">Hecht Electric Scarifier</div>
+          <div class="tile-price">£155.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="generators">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Generators</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Champion Dual Fuel Generator 7.5kVA" data-price="£1,025.00" data-img="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" data-desc="439cc electric/manual start petrol & LPG dual fuel generator with 230V 32A & 110V 32A sockets.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Champion Dual Fuel Generator 7.5kVA" loading="lazy"></div>
+          <div class="tile-title">Champion Dual Fuel Generator 7.5kVA</div>
+          <div class="tile-price">£1,025.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Champion 2.8kW Petrol Generator" data-price="£395.00" data-img="https://static.wixstatic.com/media/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg" data-desc="196cc 4-stroke portable petrol generator with 230V & 110V 16A sockets and up to 12h runtime.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg" alt="Champion 2.8kW Petrol Generator" loading="lazy"></div>
+          <div class="tile-title">Champion 2.8kW Petrol Generator</div>
+          <div class="tile-price">£395.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Champion 3.5kW Petrol Generator" data-price="£525.00" data-img="https://static.wixstatic.com/media/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg" data-desc="224cc 7.5HP OHV petrol generator with 3000W running output, 14.4L tank, and low-oil shutoff.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg" alt="Champion 3.5kW Petrol Generator" loading="lazy"></div>
+          <div class="tile-title">Champion 3.5kW Petrol Generator</div>
+          <div class="tile-price">£525.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="washers">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Pressure Washers</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Rocwood High Pressure Washer 7HP" data-price="£325.00" data-img="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" data-desc="7HP 4-stroke petrol pressure washer (240 Bar max), brass axial pump, 10m hose, and 5 nozzles.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Rocwood High Pressure Washer 7HP" loading="lazy"></div>
+          <div class="tile-title">Rocwood High Pressure Washer 7HP</div>
+          <div class="tile-price">£325.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 324 High Pressure Washer" data-price="£220.00" data-img="https://static.wixstatic.com/media/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg" data-desc="2350W electric pressure washer (150 bar working pressure), integrated hose reel, and foam nozzle.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg" alt="Hecht 324 High Pressure Washer" loading="lazy"></div>
+          <div class="tile-title">Hecht 324 High Pressure Washer</div>
+          <div class="tile-price">£220.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 319 High Pressure Washer" data-price="£145.00" data-img="https://static.wixstatic.com/media/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png" data-desc="Compact 1800W electric pressure washer (100 bar) with 5m hose and adjustable nozzle.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png" alt="Hecht 319 High Pressure Washer" loading="lazy"></div>
+          <div class="tile-title">Hecht 319 High Pressure Washer</div>
+          <div class="tile-price">£145.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="construction">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Construction & Sweepers</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht Powered Wheelbarrow" data-price="£1,835.00" data-img="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" data-desc="196cc 4-stroke wheeled mini dumper with 300kg load capacity and 3 forward + 1 reverse gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Hecht Powered Wheelbarrow" loading="lazy"></div>
+          <div class="tile-title">Hecht Powered Wheelbarrow</div>
+          <div class="tile-price">£1,835.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 2052 50L Air Compressor" data-price="£230.00" data-img="https://static.wixstatic.com/media/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg" data-desc="1500W 50L oil air compressor with 8 bar max output pressure and 3m hose.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg" alt="Hecht 2052 50L Air Compressor" loading="lazy"></div>
+          <div class="tile-title">Hecht 2052 50L Air Compressor</div>
+          <div class="tile-price">£230.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1113 Vibrating Plate 16&quot;" data-price="£615.00" data-img="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" data-desc="196cc petrol plate compactor (540x420mm plate), 13000N compaction force, wheels & damping pad.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Hecht 1113 Vibrating Plate 16&quot;" loading="lazy"></div>
+          <div class="tile-title">Hecht 1113 Vibrating Plate 16"</div>
+          <div class="tile-price">£615.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 2117 Construction Cement Mixer" data-price="£345.00" data-img="https://static.wixstatic.com/media/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg" data-desc="550W 230V electric construction mixer with 120-litre drum capacity.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg" alt="Hecht 2117 Construction Cement Mixer" loading="lazy"></div>
+          <div class="tile-title">Hecht 2117 Construction Cement Mixer</div>
+          <div class="tile-price">£345.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 9588 Concrete Cut-Off Saw" data-price="£525.00" data-img="https://static.wixstatic.com/media/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg" data-desc="54cc petrol concrete saw with 305mm blade diameter and water feed connection.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg" alt="Hecht 9588 Concrete Cut-Off Saw" loading="lazy"></div>
+          <div class="tile-title">Hecht 9588 Concrete Cut-Off Saw</div>
+          <div class="tile-price">£525.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1111 Vibrating Plate 14&quot;" data-price="£550.00" data-img="https://static.wixstatic.com/media/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg" data-desc="196cc petrol plate compactor (530x370mm plate), 11000N compaction force, with transport wheels.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg" alt="Hecht 1111 Vibrating Plate 14&quot;" loading="lazy"></div>
+          <div class="tile-title">Hecht 1111 Vibrating Plate 14"</div>
+          <div class="tile-price">£550.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 8101 Petrol Sweeper 100cm" data-price="£1,200.00" data-img="https://static.wixstatic.com/media/b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg" data-desc="6.5HP 173cc petrol rotary yard sweeper with 100cm working width and 3 forward + 2 reverse gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg" alt="Hecht 8101 Petrol Sweeper 100cm" loading="lazy"></div>
+          <div class="tile-title">Hecht 8101 Petrol Sweeper 100cm</div>
+          <div class="tile-price">£1,200.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 8680SE Petrol Sweeper 80cm" data-price="£1,130.00" data-img="https://static.wixstatic.com/media/b243b4_57f257a1d73344a399b4935bcec0020a~mv2.jpg" data-desc="Electric-start self-propelled 80cm rotary sweeper with 4 forward + 2 reverse gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_57f257a1d73344a399b4935bcec0020a~mv2.jpg" alt="Hecht 8680SE Petrol Sweeper 80cm" loading="lazy"></div>
+          <div class="tile-title">Hecht 8680SE Petrol Sweeper 80cm</div>
+          <div class="tile-price">£1,130.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 8615 Petrol Sweeper 60cm" data-price="£825.00" data-img="https://static.wixstatic.com/media/b243b4_57b3fe8990864f07bff7bbf312c74128~mv2.jpg" data-desc="Self-propelled 60cm rotary yard brush with 4 forward + 2 reverse gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_57b3fe8990864f07bff7bbf312c74128~mv2.jpg" alt="Hecht 8615 Petrol Sweeper 60cm" loading="lazy"></div>
+          <div class="tile-title">Hecht 8615 Petrol Sweeper 60cm</div>
+          <div class="tile-price">£825.00</div>
+        </div>
+      </div>
+    </section>
+    <section class="cat-section" data-cat="tools">
+      <div class="section-top">
+        <a href="index.html" class="back-btn">&larr; All Categories</a>
+        <h2 class="section-heading">Spreaders, Trailers, Pumps & Tools</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="product-tile" onclick="openModal(this)" data-title="80Kg Towable Spreader" data-price="£265.00" data-img="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" data-desc="Tow-behind polythene spreader with 80kg capacity and durable metal gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="80Kg Towable Spreader" loading="lazy"></div>
+          <div class="tile-title">80Kg Towable Spreader</div>
+          <div class="tile-price">£265.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="60Kg Towable Spreader" data-price="£220.00" data-img="https://static.wixstatic.com/media/b243b4_f88160256beb4bcbac61bd729c978619~mv2.jpg" data-desc="Tow-behind polythene spreader with 60kg capacity and metal gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_f88160256beb4bcbac61bd729c978619~mv2.jpg" alt="60Kg Towable Spreader" loading="lazy"></div>
+          <div class="tile-title">60Kg Towable Spreader</div>
+          <div class="tile-price">£220.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="36Kg Towable Spreader" data-price="£155.00" data-img="https://static.wixstatic.com/media/b243b4_3f578efab50e4dbcad08de6ab8ea244c~mv2.jpg" data-desc="Compact tow-behind polythene spreader with 36kg capacity and metal gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_3f578efab50e4dbcad08de6ab8ea244c~mv2.jpg" alt="36Kg Towable Spreader" loading="lazy"></div>
+          <div class="tile-title">36Kg Towable Spreader</div>
+          <div class="tile-price">£155.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="60L Manual Adjustable Spreader" data-price="£215.00" data-img="https://static.wixstatic.com/media/b243b4_39c108ae64fa4bb8859a07f4aa2792ec~mv2.jpg" data-desc="60-litre push spreader for fertiliser, seed, or winter salt with metal gears.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_39c108ae64fa4bb8859a07f4aa2792ec~mv2.jpg" alt="60L Manual Adjustable Spreader" loading="lazy"></div>
+          <div class="tile-title">60L Manual Adjustable Spreader</div>
+          <div class="tile-price">£215.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="29L Manual Adjustable Spreader" data-price="£135.00" data-img="https://static.wixstatic.com/media/b243b4_f9b057ad5adf4c5ab88a775f73ed4055~mv2.jpg" data-desc="29-litre push spreader with metal gears and grip volume control.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_f9b057ad5adf4c5ab88a775f73ed4055~mv2.jpg" alt="29L Manual Adjustable Spreader" loading="lazy"></div>
+          <div class="tile-title">29L Manual Adjustable Spreader</div>
+          <div class="tile-price">£135.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="27L Manual Adjustable Spreader" data-price="£85.00" data-img="https://static.wixstatic.com/media/b243b4_15819df88ed94388853c6305869616b8~mv2.jpg" data-desc="27-litre push spreader with grip volume adjustment.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_15819df88ed94388853c6305869616b8~mv2.jpg" alt="27L Manual Adjustable Spreader" loading="lazy"></div>
+          <div class="tile-title">27L Manual Adjustable Spreader</div>
+          <div class="tile-price">£85.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="20L Manual Spreader" data-price="£45.00" data-img="https://static.wixstatic.com/media/b243b4_5e0ca693f1654749b7925e9b6b65fc98~mv2.jpg" data-desc="Lightweight 20-litre manual push spreader for seed and fertiliser.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_5e0ca693f1654749b7925e9b6b65fc98~mv2.jpg" alt="20L Manual Spreader" loading="lazy"></div>
+          <div class="tile-title">20L Manual Spreader</div>
+          <div class="tile-price">£45.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="65L Towable Sprayer" data-price="£500.00" data-img="https://static.wixstatic.com/media/b243b4_e4e1bb6163114632a2e39db0ad42c6d2~mv2.jpg" data-desc="Tow-behind chemical sprayer with 7ft boom coverage, hand lance, and nozzle.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_e4e1bb6163114632a2e39db0ad42c6d2~mv2.jpg" alt="65L Towable Sprayer" loading="lazy"></div>
+          <div class="tile-title">65L Towable Sprayer</div>
+          <div class="tile-price">£500.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="16L Manual Knapsack Sprayer" data-price="£45.00" data-img="https://static.wixstatic.com/media/b243b4_227f0c2fafc640f69432ece7c242eb11~mv2.jpg" data-desc="16-litre knapsack backpack sprayer with 4 bar max pressure.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_227f0c2fafc640f69432ece7c242eb11~mv2.jpg" alt="16L Manual Knapsack Sprayer" loading="lazy"></div>
+          <div class="tile-title">16L Manual Knapsack Sprayer</div>
+          <div class="tile-price">£45.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 5L Manual Sprayer" data-price="£18.00" data-img="https://static.wixstatic.com/media/b243b4_8e347ac199c74afdb96eedecd1ed9cd4~mv2.jpg" data-desc="5-litre handheld pump sprayer with adjustable jet and trigger lock.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_8e347ac199c74afdb96eedecd1ed9cd4~mv2.jpg" alt="Hecht 5L Manual Sprayer" loading="lazy"></div>
+          <div class="tile-title">Hecht 5L Manual Sprayer</div>
+          <div class="tile-price">£18.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="High Side Tipping Cart Trailer (300kg)" data-price="£165.00" data-img="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" data-desc="Steel tipping garden cart trailer with removable hinged sides, pneumatic wheels, and 300kg load capacity.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" alt="High Side Tipping Cart Trailer (300kg)" loading="lazy"></div>
+          <div class="tile-title">High Side Tipping Cart Trailer (300kg)</div>
+          <div class="tile-price">£165.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Tipping Cart Trailer (150kg)" data-price="£135.00" data-img="https://static.wixstatic.com/media/b243b4_802637a9fbe347889959a2525177caf6~mv2.jpg" data-desc="Poly-body tipping garden cart with pneumatic wheels and 150kg load capacity.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_802637a9fbe347889959a2525177caf6~mv2.jpg" alt="Tipping Cart Trailer (150kg)" loading="lazy"></div>
+          <div class="tile-title">Tipping Cart Trailer (150kg)</div>
+          <div class="tile-price">£135.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 53080 Trailer Barrow (300kg)" data-price="£255.00" data-img="https://static.wixstatic.com/media/b243b4_4ca3d4d9097346deaf848ecc31f6a283~mv2.jpg" data-desc="Heavy-duty 300kg tipping trailer/barrow suitable for most garden tractors.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_4ca3d4d9097346deaf848ecc31f6a283~mv2.jpg" alt="Hecht 53080 Trailer Barrow (300kg)" loading="lazy"></div>
+          <div class="tile-title">Hecht 53080 Trailer Barrow (300kg)</div>
+          <div class="tile-price">£255.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 2 Inch Petrol Water Pump" data-price="£225.00" data-img="https://static.wixstatic.com/media/b243b4_c84ac85d0b5047cd9a24ff7a9e364c3e~mv2.jpg" data-desc="4-stroke petrol water pump delivering up to 36,000 l/h with 27m max delivery height.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_c84ac85d0b5047cd9a24ff7a9e364c3e~mv2.jpg" alt="Hecht 2 Inch Petrol Water Pump" loading="lazy"></div>
+          <div class="tile-title">Hecht 2 Inch Petrol Water Pump</div>
+          <div class="tile-price">£225.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1 Inch Petrol Water Pump" data-price="£165.00" data-img="https://static.wixstatic.com/media/b243b4_ed3d1d2251ad4a568b0e6d6c9f4a84be~mv2.jpg" data-desc="43cc petrol water pump delivering up to 15,000 l/h with 35m max delivery height.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_ed3d1d2251ad4a568b0e6d6c9f4a84be~mv2.jpg" alt="Hecht 1 Inch Petrol Water Pump" loading="lazy"></div>
+          <div class="tile-title">Hecht 1 Inch Petrol Water Pump</div>
+          <div class="tile-price">£165.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 3038 Diesel/Oil Space Heater" data-price="£395.00" data-img="https://static.wixstatic.com/media/b243b4_832952970f6a4b2986c481d1bce7034b~mv2.jpg" data-desc="37kW (125,000 Btu) wheeled diesel/paraffin hot air heater with 38L tank for workshops and sites.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_832952970f6a4b2986c481d1bce7034b~mv2.jpg" alt="Hecht 3038 Diesel/Oil Space Heater" loading="lazy"></div>
+          <div class="tile-title">Hecht 3038 Diesel/Oil Space Heater</div>
+          <div class="tile-price">£395.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Gardencare Petrol Rotavator" data-price="£380.00" data-img="https://static.wixstatic.com/media/b243b4_6b7e379858ae4e4b86f85873bddb5399~mv2.jpg" data-desc="100cc Briggs & Stratton 500 Series garden tiller/cultivator with 400mm (16&quot;) working width.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_6b7e379858ae4e4b86f85873bddb5399~mv2.jpg" alt="Gardencare Petrol Rotavator" loading="lazy"></div>
+          <div class="tile-title">Gardencare Petrol Rotavator</div>
+          <div class="tile-price">£380.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Trestle Log Horse with Chainsaw Holder" data-price="£85.00" data-img="https://static.wixstatic.com/media/b243b4_0f499028fdf94c17a84d3778b26e8ede~mv2.jpg" data-desc="Galvanised steel log sawhorse with integrated chainsaw safety holder.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_0f499028fdf94c17a84d3778b26e8ede~mv2.jpg" alt="Trestle Log Horse with Chainsaw Holder" loading="lazy"></div>
+          <div class="tile-title">Trestle Log Horse with Chainsaw Holder</div>
+          <div class="tile-price">£85.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Trestle Log Horse X3" data-price="£45.00" data-img="https://static.wixstatic.com/media/b243b4_ac9e9e64c83a4b42b8c01e58ed77a4be~mv2.jpg" data-desc="Set of 3 steel trestle log sawhorse supports.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_ac9e9e64c83a4b42b8c01e58ed77a4be~mv2.jpg" alt="Trestle Log Horse X3" loading="lazy"></div>
+          <div class="tile-title">Trestle Log Horse X3</div>
+          <div class="tile-price">£45.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 901 Self-Locking Saw Horse" data-price="£115.00" data-img="https://static.wixstatic.com/media/b243b4_4bbdcf4df7d34f739fcaf5ed27de562~mv2.jpg" data-desc="Self-locking jaws hold logs from 24mm to 230mm diameter securely for one-person cutting.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_4bbdcf4df7d34f739fcaf5ed27de562~mv2.jpg" alt="Hecht 901 Self-Locking Saw Horse" loading="lazy"></div>
+          <div class="tile-title">Hecht 901 Self-Locking Saw Horse</div>
+          <div class="tile-price">£115.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Aluminium Loading Ramps (Pair)" data-price="£160.00" data-img="https://static.wixstatic.com/media/b243b4_9dfec7af1b024a558af508f91a0ac402~mv2.jpg" data-desc="Folding loading ramps for ATVs & ride-on mowers, 1000kg capacity with safety straps.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_9dfec7af1b024a558af508f91a0ac402~mv2.jpg" alt="Aluminium Loading Ramps (Pair)" loading="lazy"></div>
+          <div class="tile-title">Aluminium Loading Ramps (Pair)</div>
+          <div class="tile-price">£160.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1323 9&quot; Angle Grinder 2350W" data-price="£95.00" data-img="https://static.wixstatic.com/media/b243b4_81f9006bf6664d4b8c694fc99c5190a1~mv2.jpg" data-desc="2350W 230mm (9 inch) mains angle grinder with soft-start and rotary handle.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_81f9006bf6664d4b8c694fc99c5190a1~mv2.jpg" alt="Hecht 1323 9&quot; Angle Grinder 2350W" loading="lazy"></div>
+          <div class="tile-title">Hecht 1323 9" Angle Grinder 2350W</div>
+          <div class="tile-price">£95.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1670 20V Battery Circular Saw" data-price="£90.00" data-img="https://static.wixstatic.com/media/b243b4_a9f17374838348c8902ddb5ade0f1f12~mv2.jpg" data-desc="20V cordless 150mm circular saw (48mm cutting depth, body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_a9f17374838348c8902ddb5ade0f1f12~mv2.jpg" alt="Hecht 1670 20V Battery Circular Saw" loading="lazy"></div>
+          <div class="tile-title">Hecht 1670 20V Battery Circular Saw</div>
+          <div class="tile-price">£90.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1510 20V Reciprocating Saw" data-price="£65.00" data-img="https://static.wixstatic.com/media/b243b4_7589da20e43945c2bce0054592ed350d~mv2.jpg" data-desc="20V cordless reciprocating saw for wood and metal (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_7589da20e43945c2bce0054592ed350d~mv2.jpg" alt="Hecht 1510 20V Reciprocating Saw" loading="lazy"></div>
+          <div class="tile-title">Hecht 1510 20V Reciprocating Saw</div>
+          <div class="tile-price">£65.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 1531 20V Battery Jigsaw" data-price="£60.00" data-img="https://static.wixstatic.com/media/b243b4_9b29d2c31d714c188a8b4f812a0a37bd~mv2.jpg" data-desc="20V cordless jigsaw compatible with Hecht Accu 1278 battery system (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_9b29d2c31d714c188a8b4f812a0a37bd~mv2.jpg" alt="Hecht 1531 20V Battery Jigsaw" loading="lazy"></div>
+          <div class="tile-title">Hecht 1531 20V Battery Jigsaw</div>
+          <div class="tile-price">£60.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 2090 20V Battery Tyre Inflator" data-price="£60.00" data-img="https://static.wixstatic.com/media/b243b4_a072ab0a8fe947c2a44b14ad254fd802~mv2.png" data-desc="20V cordless air compressor with digital pressure display up to 7 bar (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_a072ab0a8fe947c2a44b14ad254fd802~mv2.png" alt="Hecht 2090 20V Battery Tyre Inflator" loading="lazy"></div>
+          <div class="tile-title">Hecht 2090 20V Battery Tyre Inflator</div>
+          <div class="tile-price">£60.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 50Nm 20V Cordless Drill Kit" data-price="£165.00" data-img="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" data-desc="Brushless 20V hammer drill/driver complete with 2x 2Ah batteries, quick charger, bits & case.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" alt="Hecht 50Nm 20V Cordless Drill Kit" loading="lazy"></div>
+          <div class="tile-title">Hecht 50Nm 20V Cordless Drill Kit</div>
+          <div class="tile-price">£165.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 35Nm 20V Cordless Drill Kit" data-price="£125.00" data-img="https://static.wixstatic.com/media/b243b4_fd5366b5a2024b05b0218c3022ff8a3c~mv2.jpg" data-desc="20V hammer drill/driver complete with 2x 2Ah batteries, quick charger, bits & carry box.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_fd5366b5a2024b05b0218c3022ff8a3c~mv2.jpg" alt="Hecht 35Nm 20V Cordless Drill Kit" loading="lazy"></div>
+          <div class="tile-title">Hecht 35Nm 20V Cordless Drill Kit</div>
+          <div class="tile-price">£125.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 20V Cordless Impact Wrench" data-price="£95.00" data-img="https://static.wixstatic.com/media/b243b4_9f7d103b9b564d0b99824f6d0304b8ab~mv2.png" data-desc="300Nm 1/2&quot; cordless impact wrench compatible with Accu 1278 batteries (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_9f7d103b9b564d0b99824f6d0304b8ab~mv2.png" alt="Hecht 20V Cordless Impact Wrench" loading="lazy"></div>
+          <div class="tile-title">Hecht 20V Cordless Impact Wrench</div>
+          <div class="tile-price">£95.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 4.5&quot; Cordless Angle Grinder" data-price="£65.00" data-img="https://static.wixstatic.com/media/b243b4_55643197a34d45d69038e68b936a6020~mv2.png" data-desc="20V 115mm cordless angle grinder (body only).">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_55643197a34d45d69038e68b936a6020~mv2.png" alt="Hecht 4.5&quot; Cordless Angle Grinder" loading="lazy"></div>
+          <div class="tile-title">Hecht 4.5" Cordless Angle Grinder</div>
+          <div class="tile-price">£65.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 4.5&quot; Electric Angle Grinder 650W" data-price="£45.00" data-img="https://static.wixstatic.com/media/b243b4_3a7957823dbf4b22b598c80ca24a1a13~mv2.jpg" data-desc="650W 115mm mains electric angle grinder.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_3a7957823dbf4b22b598c80ca24a1a13~mv2.jpg" alt="Hecht 4.5&quot; Electric Angle Grinder 650W" loading="lazy"></div>
+          <div class="tile-title">Hecht 4.5" Electric Angle Grinder 650W</div>
+          <div class="tile-price">£45.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 20V 4Ah Battery (001278B)" data-price="£60.00" data-img="https://static.wixstatic.com/media/b243b4_c619bb02ec5a4f3a9004b54ca82cdf3a~mv2.png" data-desc="High-capacity 20V 4.0Ah Li-ion battery for Hecht Accu 1278 tools.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_c619bb02ec5a4f3a9004b54ca82cdf3a~mv2.png" alt="Hecht 20V 4Ah Battery (001278B)" loading="lazy"></div>
+          <div class="tile-title">Hecht 20V 4Ah Battery (001278B)</div>
+          <div class="tile-price">£60.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 20V 2Ah Battery (001277B)" data-price="£40.00" data-img="https://static.wixstatic.com/media/b243b4_13ccb468472f4a61b54bc2c14e46e2a3~mv2.png" data-desc="20V 2.0Ah Li-ion battery for Hecht Accu 1278 tools.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_13ccb468472f4a61b54bc2c14e46e2a3~mv2.png" alt="Hecht 20V 2Ah Battery (001277B)" loading="lazy"></div>
+          <div class="tile-title">Hecht 20V 2Ah Battery (001277B)</div>
+          <div class="tile-price">£40.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 20V Fast Battery Charger" data-price="£25.00" data-img="https://static.wixstatic.com/media/b243b4_9b9e318cc9ec4029ad10f428a2a54112~mv2.png" data-desc="Mains charger for Hecht 20V 001277B & 001278B Li-ion batteries.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_9b9e318cc9ec4029ad10f428a2a54112~mv2.png" alt="Hecht 20V Fast Battery Charger" loading="lazy"></div>
+          <div class="tile-title">Hecht 20V Fast Battery Charger</div>
+          <div class="tile-price">£25.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 3.7V Cordless Screwdriver Set" data-price="£35.00" data-img="https://static.wixstatic.com/media/b243b4_9b66f9efc8ed404588b5e9c14c066b36~mv2.jpg" data-desc="Swivel-handle 3.7V rechargeable screwdriver in presentation box with 52 bits.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_9b66f9efc8ed404588b5e9c14c066b36~mv2.jpg" alt="Hecht 3.7V Cordless Screwdriver Set" loading="lazy"></div>
+          <div class="tile-title">Hecht 3.7V Cordless Screwdriver Set</div>
+          <div class="tile-price">£35.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 76 Piece Tool Kit" data-price="£60.00" data-img="https://static.wixstatic.com/media/b243b4_58043b1854684f84bea5ce72f9b0a56f~mv2.jpg" data-desc="76-piece home & workshop tool case with screwdrivers, pliers, spanners, and bits.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_58043b1854684f84bea5ce72f9b0a56f~mv2.jpg" alt="Hecht 76 Piece Tool Kit" loading="lazy"></div>
+          <div class="tile-title">Hecht 76 Piece Tool Kit</div>
+          <div class="tile-price">£60.00</div>
+        </div>
+        <div class="product-tile" onclick="openModal(this)" data-title="Hecht 94 Piece Socket & Bit Set" data-price="£75.00" data-img="https://static.wixstatic.com/media/b243b4_1386de78da0d4451813e198fc08f2237~mv2.jpg" data-desc="94-piece 1/2&quot; and 1/4&quot; ratchet socket and bit set in sturdy carry case.">
+          <div class="tile-img-wrap"><img src="https://static.wixstatic.com/media/b243b4_1386de78da0d4451813e198fc08f2237~mv2.jpg" alt="Hecht 94 Piece Socket & Bit Set" loading="lazy"></div>
+          <div class="tile-title">Hecht 94 Piece Socket & Bit Set</div>
+          <div class="tile-price">£75.00</div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Tel: <a href="tel:07934716954">07934 716954</a></p>
+  <div class="modal-backdrop" id="itemModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+      <img id="mImg" src="" alt="">
+      <h3 id="mTitle"></h3>
+      <div class="modal-price" id="mPrice"></div>
+      <p id="mDesc"></p>
+      <div class="modal-call">Interested? Call us on <a href="tel:07934716954">07934 716954</a></div>
     </div>
+  </div>
+  <footer class="site-footer">
+    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, Co. Londonderry, BT51 4TH</p>
+    <p>Call us to enquire: <a href="tel:07934716954">07934 716954</a> &bull; <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
   </footer>
-
   <script>
     (function() {
       const params = new URLSearchParams(window.location.search);
-      const selected = params.get('cat');
-      const sections = document.querySelectorAll('.cat-section');
-      const pills = document.querySelectorAll('.pill[data-pill]');
-      const showAllBtn = document.getElementById('show-all-btn');
-
-      if (selected) {
-        let matched = false;
-        sections.forEach(sec => {
-          if (sec.dataset.cat === selected) {
-            sec.style.display = 'block';
-            matched = true;
-          } else {
-            sec.style.display = 'none';
-          }
+      const cat = params.get('cat');
+      if (cat) {
+        document.querySelectorAll('.cat-section').forEach(sec => {
+          if (sec.dataset.cat !== cat) sec.style.display = 'none';
         });
-        pills.forEach(p => {
-          if (p.dataset.pill === selected) p.classList.add('active');
-        });
-        if (matched && showAllBtn) {
-          showAllBtn.style.display = 'inline-block';
-        }
       }
     })();
+    function openModal(el) {
+      document.getElementById('mImg').src = el.dataset.img;
+      document.getElementById('mTitle').textContent = el.dataset.title;
+      document.getElementById('mPrice').textContent = el.dataset.price;
+      document.getElementById('mDesc').textContent = el.dataset.desc;
+      document.getElementById('itemModal').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('itemModal').classList.remove('open');
+    }
   </script>
 </body>
 </html>

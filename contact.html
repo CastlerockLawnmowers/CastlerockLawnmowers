@@ -1,80 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact &amp; Workshop Location | Castlerock Lawnmowers</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Servicing | Castlerock Lawnmowers</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <span class="brand-title">Castlerock Lawnmowers</span>
-        <span class="brand-sub">Sales &bull; Servicing &bull; Repairs &bull; Castlerock &amp; Coleraine</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Garden Machinery</a>
-        <a href="machinery.html">Heavy &amp; Other Kit</a>
-        <a href="services.html">Servicing &amp; Repairs</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
+    <div class="header-top">
+      <div class="header-logo">
+        <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
+      </div>
+      <div class="header-center">
+        <h1><a href="index.html">Castlerock Lawnmowers</a></h1>
+        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="dealer-badge">HECHT</div>
+        <span class="dealer-sub">Authorised Sales &amp; Servicing</span>
+      </div>
     </div>
+    <nav class="nav-bar">
+      <a href="index.html" class="pill-btn">PRODUCTS</a>
+      <a href="contact.html" class="pill-btn active">CONTACT &amp; SERVICING</a>
+    </nav>
   </header>
 
-  <section class="page-banner">
-    <div class="container">
-      <h1>Contact Castlerock Lawnmowers</h1>
-      <p>Call in to view machines in stock, book a service or repair, or ask us to source specific garden machinery.</p>
-    </div>
-  </section>
-
-  <main class="container section">
-    <div class="contact-grid">
-      <div class="card contact-card">
-        <h2>Workshop &amp; Sales Details</h2>
-        <p><strong>Address:</strong><br />45 Seapark, Castlerock, Coleraine, BT51 4TH</p>
-        <p><strong>Telephone / WhatsApp:</strong><br /><a href="tel:07934716954" class="phone-link">07934 716954</a></p>
-        <p><strong>Email:</strong><br /><a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-        <p><strong>Areas Covered:</strong><br />Castlerock, Coleraine, Articlave, Downhill, Limavady, Portstewart, Portrush &amp; the wider Causeway Coast.</p>
-        <div class="callout-box">
-          <h3>Looking for something specific?</h3>
-          <p>Can't see the exact mower, chainsaw, or spare part you need on our website? Give us a ring on <strong>07934 716954</strong> and we'll do our best to source it for you.</p>
+  <main class="container">
+    <section class="section-block">
+      <h2 class="section-title">Contact &amp; Workshop Location</h2>
+      <div class="contact-grid">
+        <div class="info-card">
+          <h3>Get in Touch</h3>
+          <p><strong>Phone / Mobile:</strong> <a href="tel:07934716954">07934 716954</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
+          <p><strong>Workshop Address:</strong><br>45 Seapark, Castlerock, Coleraine, BT51 4TH</p>
+          <p class="note-text">Call ahead before visiting so we can make sure we are in the workshop and ready to help with your machine or product enquiry.</p>
+        </div>
+        <div class="info-card">
+          <h3>Local Coverage</h3>
+          <p>We supply and service garden machinery across the North Coast, including:</p>
+          <ul class="area-list">
+            <li>Castlerock &amp; Articlave</li>
+            <li>Coleraine &amp; Portstewart</li>
+            <li>Portrush &amp; Bushmills</li>
+            <li>Limavady &amp; Garvagh</li>
+            <li>Macosquin &amp; surrounding areas</li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <div class="card contact-card">
-        <h2>Send an Enquiry</h2>
-        <form action="mailto:info@castlerocklawnmowers.com" method="post" enctype="text/plain" class="enquiry-form">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="Name" required placeholder="e.g. John Smith" />
-
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="Phone" required placeholder="e.g. 07700 900000" />
-
-          <label for="subject">What can we help with?</label>
-          <select id="subject" name="Enquiry Type">
-            <option value="Machine Sales Enquiry">Machine Sales Enquiry</option>
-            <option value="Book a Service or Repair">Book a Service or Repair</option>
-            <option value="Used Equipment Availability">Used Equipment Availability</option>
-            <option value="Parts / Sourcing Request">Parts / Sourcing Request</option>
-          </select>
-
-          <label for="message">Machine Make / Model &amp; Details</label>
-          <textarea id="message" name="Message" rows="5" required placeholder="Tell us the machine you're interested in or what needs repaired..."></textarea>
-
-          <button type="submit" class="btn btn-primary">Send Email Enquiry</button>
-        </form>
+    <section class="section-block">
+      <h2 class="section-title">Servicing &amp; Repairs</h2>
+      <p class="section-intro">We service and repair all major makes and models of petrol, battery, and electric garden machinery. All services include full inspection, cleaning, and safety checks.</p>
+      <div class="table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Equipment Type</th>
+              <th>Service &amp; Repair Guide Price</th>
+              <th>Typical Work Included</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chainsaw Chain Sharpening</strong></td>
+              <td>From &pound;10</td>
+              <td>Precision chain sharpening &amp; tension check</td>
+            </tr>
+            <tr>
+              <td><strong>Hedge Trimmers</strong></td>
+              <td>From &pound;25</td>
+              <td>Blade sharpening, gearbox grease, spark plug &amp; tune-up</td>
+            </tr>
+            <tr>
+              <td><strong>Strimmers &amp; Brushcutters</strong></td>
+              <td>From &pound;25</td>
+              <td>Spark plug, air/fuel filter check, carburettor tune &amp; head check</td>
+            </tr>
+            <tr>
+              <td><strong>Push Petrol Lawnmowers</strong></td>
+              <td>From &pound;30</td>
+              <td>Oil change, new spark plug, air filter clean/replace, blade sharpen &amp; balance</td>
+            </tr>
+            <tr>
+              <td><strong>Self-Propelled Petrol Mowers</strong></td>
+              <td>From &pound;35</td>
+              <td>Full engine service, drive belt/gearbox check, blade sharpen &amp; cable adjustment</td>
+            </tr>
+            <tr>
+              <td><strong>Ride-On Mowers &amp; Small Engines</strong></td>
+              <td>From &pound;45</td>
+              <td>Engine oil &amp; filter, plugs, deck &amp; belt inspection, blade sharpening, battery check</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH</p>
-      <p>Tel: <a href="tel:07934716954">07934 716954</a> &bull; Email: <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-    </div>
+    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH</p>
+    <p>Call <a href="tel:07934716954">07934 716954</a> &bull; <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
   </footer>
+
 </body>
 </html>
