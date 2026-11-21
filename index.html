@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Castlerock Lawnmowers | Sales, Servicing &amp; Repairs</title>
+  <title>Products | Castlerock Lawnmowers</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -110,17 +110,17 @@
       color: #111111;
       box-shadow: 0 0 0 2px #facc15;
     }
-    .main-wrap {
+    .page-container, .container {
       max-width: 1140px;
       margin: 0 auto;
       padding: 32px 20px 56px;
     }
-    .cat-grid {
+    .cat-grid, .category-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 28px 20px;
     }
-    .cat-card {
+    .cat-card, .category-card {
       text-align: center;
       text-decoration: none;
       color: #c8102e;
@@ -129,24 +129,17 @@
       align-items: center;
       transition: transform 0.15s ease;
     }
-    .cat-card:hover {
+    .cat-card:hover, .category-card:hover {
       transform: translateY(-3px);
     }
-    .cat-img-box {
+    .cat-card img, .category-card img {
       width: 100%;
       max-width: 210px;
       height: 185px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      object-fit: contain;
       margin-bottom: 10px;
     }
-    .cat-img-box img {
-      max-width: 100%;
-      max-height: 185px;
-      object-fit: contain;
-    }
-    .cat-title {
+    .cat-card h3, .cat-card span, .category-card h3, .category-card span {
       font-size: 1.15rem;
       font-weight: 800;
       font-style: italic;
@@ -165,7 +158,7 @@
       font-weight: 700;
     }
     @media (max-width: 900px) {
-      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid, .category-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; text-align: center; }
@@ -198,11 +191,12 @@
     <nav class="nav-bar">
       <div class="nav-inner">
         <a href="index.html" class="nav-pill active">PRODUCTS</a>
-        <a href="services.html" class="nav-pill">SERVICES</a>
-        <a href="contact.html" class="nav-pill">CONTACT</a>
+        <a href="services.html" class="nav-pill ">SERVICES</a>
+        <a href="contact.html" class="nav-pill ">CONTACT</a>
       </div>
     </nav>
   </header>
+
 
   <main class="main-wrap">
     <div class="cat-grid">
