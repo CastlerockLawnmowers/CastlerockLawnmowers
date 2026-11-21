@@ -110,17 +110,17 @@
       color: #111111;
       box-shadow: 0 0 0 2px #facc15;
     }
-    .page-container, .container {
+    .main-wrap {
       max-width: 1140px;
       margin: 0 auto;
       padding: 32px 20px 56px;
     }
-    .cat-grid, .category-grid {
+    .cat-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 28px 20px;
     }
-    .cat-card, .category-card {
+    .cat-card {
       text-align: center;
       text-decoration: none;
       color: #c8102e;
@@ -129,17 +129,24 @@
       align-items: center;
       transition: transform 0.15s ease;
     }
-    .cat-card:hover, .category-card:hover {
+    .cat-card:hover {
       transform: translateY(-3px);
     }
-    .cat-card img, .category-card img {
+    .cat-img-box {
       width: 100%;
       max-width: 210px;
       height: 185px;
-      object-fit: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 10px;
     }
-    .cat-card h3, .cat-card span, .category-card h3, .category-card span {
+    .cat-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .cat-title {
       font-size: 1.15rem;
       font-weight: 800;
       font-style: italic;
@@ -158,7 +165,7 @@
       font-weight: 700;
     }
     @media (max-width: 900px) {
-      .cat-grid, .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .header-inner { flex-direction: column; text-align: center; }
@@ -196,7 +203,6 @@
       </div>
     </nav>
   </header>
-
 
   <main class="main-wrap">
     <div class="cat-grid">
@@ -246,15 +252,15 @@
         <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers"></div>
         <div class="cat-title">Scarifiers</div>
       </a>
-      <a class="cat-card" href="equipment.html?cat=tools-trailers">
-        <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" alt="Spreaders, Trailers &amp; Tools"></div>
+      <a class="cat-card" href="equipment.html?cat=tools">
+        <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_0b6b2b0a8e7a48a3a7a2611b40d65027~mv2.jpg" alt="Spreaders, Trailers &amp; Tools"></div>
         <div class="cat-title">Spreaders, Trailers &amp; Tools</div>
       </a>
     </div>
   </main>
 
   <footer class="site-footer">
-    Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a>
+    <p>&copy; Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, BT51 4TH &bull; <a href="tel:07934716954">07934 716954</a></p>
   </footer>
 </body>
 </html>
