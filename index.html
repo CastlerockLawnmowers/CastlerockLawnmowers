@@ -1,145 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Castlerock Lawnmowers | Garden &amp; Grounds Equipment</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castlerock Lawnmowers | Garden Machinery Sales &amp; Servicing</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .category-showcase {
+      max-width: 1150px;
+      margin: 28px auto 50px;
+      padding: 0 20px;
+    }
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 36px 28px;
+      align-items: end;
+    }
+    @media (max-width: 900px) {
+      .showcase-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
+    }
+    @media (max-width: 500px) {
+      .showcase-grid { grid-template-columns: 1fr; }
+    }
+    .showcase-item {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .showcase-item:hover {
+      transform: translateY(-5px);
+    }
+    .showcase-img-box {
+      width: 100%;
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      background: #ffffff;
+    }
+    .showcase-img-box img {
+      max-width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+    }
+    .showcase-label {
+      color: #c8102e;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 1.15rem;
+      letter-spacing: 0.2px;
+    }
+    .showcase-item:hover .showcase-label {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Header matching original site -->
   <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-logo">
-        <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo" onerror="this.style.display='none'" />
-      </a>
-      <div class="header-title">
-        <h1>Castlerock Lawnmowers</h1>
-        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
+    <div class="header-top">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo" onerror="this.style.display='none'">
+        </a>
       </div>
-      <div class="header-badges">
-        <div class="hecht-badge">HECHT<small>AUTHORISED DEALER</small></div>
-        <div class="card-note">Card &amp; Cash Accepted In-Store</div>
+      <div class="header-center">
+        <h1 class="brand-title"><a href="index.html">Castlerock Lawnmowers</a></h1>
+        <p class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="hecht-badge">HECHT</div>
+        <div class="dealer-sub">AUTHORISED DEALER</div>
+        <div class="payment-note">Card &amp; Cash Accepted</div>
       </div>
     </div>
+    <nav class="black-nav-bar">
+      <a href="index.html" class="yellow-pill active">PRODUCTS</a>
+      <a href="contact.html" class="yellow-pill">CONTACT &amp; SERVICING</a>
+    </nav>
   </header>
 
-  <!-- Black Bar with 2 Yellow Pill Buttons -->
-  <nav class="pill-nav">
-    <div class="pill-nav-inner">
-      <a href="index.html" class="pill-btn active">PRODUCTS</a>
-      <a href="contact.html" class="pill-btn">CONTACT &amp; SERVICING</a>
-    </div>
-  </nav>
+  <main class="category-showcase">
+    <div class="showcase-grid">
 
-  <!-- Main Categories Grid -->
-  <main class="container">
-    <div class="section-intro">
-      <h2>Browse Equipment by Category</h2>
-      <p>Select a category below to view our range and prices. Call <a href="tel:07934716954"><strong>07934 716954</strong></a> to check stock or find out more.</p>
-    </div>
-
-    <div class="category-grid">
-      <a href="shop.html?cat=lawnmowers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers" loading="lazy" />
+      <a href="shop.html?cat=lawnmowers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers">
         </div>
-        <div class="cat-label">Lawnmowers</div>
+        <span class="showcase-label">Lawnmowers</span>
       </a>
 
-      <a href="shop.html?cat=strimmers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers &amp; Brushcutters" loading="lazy" />
+      <a href="shop.html?cat=hedgetrimmers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Hedgetrimmers">
         </div>
-        <div class="cat-label">Strimmers &amp; Brushcutters</div>
+        <span class="showcase-label">Hedgetrimmers</span>
       </a>
 
-      <a href="shop.html?cat=chainsaws" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg" alt="Chainsaws" loading="lazy" />
+      <a href="shop.html?cat=chainsaws" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Chainsaws">
         </div>
-        <div class="cat-label">Chainsaws</div>
+        <span class="showcase-label">Chainsaws</span>
       </a>
 
-      <a href="shop.html?cat=hedgetrimmers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg" alt="Hedgetrimmers" loading="lazy" />
+      <a href="shop.html?cat=strimmers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers">
         </div>
-        <div class="cat-label">Hedgetrimmers</div>
+        <span class="showcase-label">Strimmers</span>
       </a>
 
-      <a href="machinery.html?cat=blowers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Leaf Blowers &amp; Vacuums" loading="lazy" />
+      <a href="machinery.html?cat=blowers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Blowers">
         </div>
-        <div class="cat-label">Leaf Blowers &amp; Vacuums</div>
+        <span class="showcase-label">Blowers</span>
       </a>
 
-      <a href="machinery.html?cat=log-splitters" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters" loading="lazy" />
+      <a href="machinery.html?cat=generators" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators">
         </div>
-        <div class="cat-label">Log Splitters</div>
+        <span class="showcase-label">Generators</span>
       </a>
 
-      <a href="machinery.html?cat=shredders" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Garden Shredders &amp; Chippers" loading="lazy" />
+      <a href="machinery.html?cat=construction" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Construction">
         </div>
-        <div class="cat-label">Shredders &amp; Chippers</div>
+        <span class="showcase-label">Construction</span>
       </a>
 
-      <a href="machinery.html?cat=scarifiers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Lawn Scarifiers" loading="lazy" />
+      <a href="machinery.html?cat=washers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers">
         </div>
-        <div class="cat-label">Scarifiers</div>
+        <span class="showcase-label">Pressure Washers</span>
       </a>
 
-      <a href="machinery.html?cat=generators" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators" loading="lazy" />
+      <a href="machinery.html?cat=splitters" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters">
         </div>
-        <div class="cat-label">Generators</div>
+        <span class="showcase-label">Log Splitters</span>
       </a>
 
-      <a href="machinery.html?cat=pressure-washers" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers" loading="lazy" />
+      <a href="machinery.html?cat=shredders" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Shredders">
         </div>
-        <div class="cat-label">Pressure Washers</div>
+        <span class="showcase-label">Shredders</span>
       </a>
 
-      <a href="machinery.html?cat=construction" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Construction Equipment" loading="lazy" />
+      <a href="machinery.html?cat=scarifiers" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers">
         </div>
-        <div class="cat-label">Construction Equipment</div>
+        <span class="showcase-label">Scarifiers</span>
       </a>
 
-      <a href="machinery.html?cat=tools" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg" alt="Power Tools &amp; Batteries" loading="lazy" />
+      <a href="machinery.html?cat=tools" class="showcase-item">
+        <div class="showcase-img-box">
+          <img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="Spreaders, Trailers &amp; Tools">
         </div>
-        <div class="cat-label">Power Tools &amp; Batteries</div>
+        <span class="showcase-label">Spreaders, Trailers &amp; Tools</span>
       </a>
 
-      <a href="machinery.html?cat=other" class="cat-tile">
-        <div class="cat-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="Spreaders, Sprayers, Trailers &amp; Pumps" loading="lazy" />
-        </div>
-        <div class="cat-label">Spreaders, Trailers &amp; Pumps</div>
-      </a>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH</p>
-      <p>Call <a href="tel:07934716954">07934 716954</a> &bull; Email <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-    </div>
+    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a></p>
   </footer>
 
 </body>
