@@ -6,7 +6,7 @@
   <title>Products | Castlerock Lawnmowers</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    html, body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
       color: #1f2937;
@@ -111,30 +111,35 @@
       box-shadow: 0 0 0 2px #facc15;
     }
     .main-wrap {
+      background-color: #ffffff;
       max-width: 1140px;
       margin: 0 auto;
-      padding: 36px 20px 56px;
+      padding: 36px 20px 60px;
     }
     .cat-grid {
+      background-color: #ffffff;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 32px 24px;
     }
     .cat-card {
+      background-color: #ffffff;
       text-align: center;
       text-decoration: none;
       color: #c8102e;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 12px;
+      border: none;
       transition: transform 0.15s ease;
     }
     .cat-card:hover {
       transform: translateY(-3px);
     }
     .cat-img-box {
+      background-color: #ffffff;
       width: 100%;
-      max-width: 220px;
       height: 190px;
       display: flex;
       align-items: center;
@@ -143,8 +148,11 @@
     }
     .cat-img-box img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: 185px;
+      width: auto;
+      height: auto;
       object-fit: contain;
+      background-color: #ffffff;
     }
     .cat-title {
       font-size: 1.15rem;
@@ -198,8 +206,8 @@
     <nav class="nav-bar">
       <div class="nav-inner">
         <a href="index.html" class="nav-pill active">PRODUCTS</a>
-        <a href="services.html" class="nav-pill ">SERVICES</a>
-        <a href="contact.html" class="nav-pill ">CONTACT</a>
+        <a href="services.html" class="nav-pill">SERVICES</a>
+        <a href="contact.html" class="nav-pill">CONTACT</a>
       </div>
     </nav>
   </header>
@@ -253,7 +261,7 @@
         <div class="cat-title">Scarifiers</div>
       </a>
       <a class="cat-card" href="equipment.html?cat=tools">
-        <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_86e82ec0b0614f3da35db50e6397111a~mv2.jpg" alt="Spreaders, Trailers &amp; Tools"></div>
+        <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_84ca242670d143f2ae4c336386974bc3~mv2.jpg" alt="Spreaders, Trailers &amp; Tools"></div>
         <div class="cat-title">Spreaders, Trailers &amp; Tools</div>
       </a>
     </div>
@@ -261,7 +269,7 @@
 
   <footer class="site-footer">
     <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, Co. Londonderry, BT51 4TH</p>
-    <p style="margin-top:6px;">Tel: <a href="tel:07934716954">07934 716954</a> &bull; Email: <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
+    <p style="margin-top: 6px;">Tel: <a href="tel:07934716954">07934 716954</a> &bull; Email: <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
   </footer>
 </body>
 </html>
