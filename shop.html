@@ -5,71 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products | Castlerock Lawnmowers</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f2f2f2; color: #222; }
-.site-header { background: #fff; border-bottom: 1px solid #ddd; }
-.header-inner { max-width: 1180px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-.logo-box img { max-height: 95px; width: auto; display: block; }
-.brand-center { text-align: center; flex: 1; }
-.brand-center h1 { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 2.2rem; color: #111; font-weight: bold; }
-.brand-center .phone { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.35rem; color: #111; margin-top: 4px; font-weight: bold; }
-.brand-center .phone a { color: #111; text-decoration: none; }
-.dealer-right { text-align: right; }
-.hecht-badge { font-weight: 900; font-size: 1.5rem; color: #c8102e; letter-spacing: 1px; }
-.hecht-sub { font-size: 0.72rem; font-weight: bold; color: #333; letter-spacing: 0.5px; margin-bottom: 6px; }
-.pay-pills span { display: inline-block; border: 1px solid #ccc; border-radius: 3px; padding: 2px 6px; font-size: 0.7rem; font-weight: bold; background: #fafafa; margin-left: 2px; }
-.nav-bar { background: #000; padding: 12px 20px; }
-.nav-inner { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-around; gap: 16px; flex-wrap: wrap; }
-.nav-pill { display: inline-block; min-width: 210px; text-align: center; padding: 10px 28px; border-radius: 999px; font-weight: bold; font-size: 0.92rem; letter-spacing: 0.8px; text-decoration: none; text-transform: uppercase; background: #f6c453; color: #111; transition: 0.15s; }
-.nav-pill:hover { background: #ffd978; }
-.nav-pill.active { background: #e6e9f8; color: #111; box-shadow: 0 0 0 2px #fff; }
-.main-wrap { max-width: 1180px; margin: 0 auto; padding: 26px 20px 50px; }
-.top-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
-.back-btn { display: inline-block; background: #111; color: #fff; text-decoration: none; padding: 9px 18px; border-radius: 999px; font-size: 0.88rem; font-weight: bold; }
-.back-btn:hover { background: #c8102e; }
-.cat-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.cat-pill { background: #fff; border: 1px solid #ccc; color: #222; text-decoration: none; padding: 7px 14px; border-radius: 999px; font-size: 0.84rem; font-weight: bold; }
-.cat-pill.current, .cat-pill:hover { background: #c8102e; color: #fff; border-color: #c8102e; }
-.cat-section { margin-bottom: 36px; }
-.cat-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.75rem; color: #c8102e; margin-bottom: 18px; border-bottom: 2px solid #ddd; padding-bottom: 6px; }
-.tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-@media (max-width: 950px) { .tile-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .tile-grid { grid-template-columns: 1fr; } .nav-pill { min-width: 140px; padding: 8px 16px; } }
-.tile { background: #fff; border-radius: 8px; padding: 16px 14px; text-align: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; justify-content: space-between; }
-.tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.14); }
-.tile img { width: 100%; height: 185px; object-fit: contain; margin-bottom: 12px; }
-.tile-name { font-size: 0.95rem; font-weight: bold; color: #222; margin-bottom: 6px; line-height: 1.3; }
-.tile-price { font-size: 1.15rem; font-weight: bold; color: #c8102e; }
-.site-footer { background: #111; color: #ddd; text-align: center; padding: 22px 15px; font-size: 0.9rem; margin-top: 40px; }
-.site-footer a { color: #f6c453; text-decoration: none; font-weight: bold; }
-.modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 999; align-items: center; justify-content: center; padding: 20px; }
-.modal-bg.open { display: flex; }
-.modal-card { background: #fff; max-width: 560px; width: 100%; border-radius: 10px; padding: 24px; position: relative; max-height: 90vh; overflow-y: auto; text-align: center; }
-.modal-close { position: absolute; top: 12px; right: 16px; font-size: 1.6rem; cursor: pointer; background: none; border: none; color: #444; }
-.modal-card img { max-height: 240px; width: auto; max-width: 100%; object-fit: contain; margin-bottom: 14px; }
-.modal-card h3 { font-size: 1.3rem; margin-bottom: 6px; color: #111; }
-.modal-price { font-size: 1.35rem; font-weight: bold; color: #c8102e; margin-bottom: 12px; }
-.modal-desc { font-size: 0.93rem; line-height: 1.55; color: #444; text-align: left; margin-bottom: 16px; }
-.modal-call { background: #f8f8f8; border: 1px solid #ddd; border-radius: 6px; padding: 10px; font-weight: bold; color: #111; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #222; }
+  .site-header { background: #fff; border-bottom: 1px solid #ddd; }
+  .header-inner { max-width: 1180px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .header-logo img { height: 95px; width: auto; display: block; }
+  .header-center { text-align: center; flex: 1; min-width: 240px; }
+  .brand-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: bold; font-size: 2.3rem; color: #c8102e; line-height: 1.1; }
+  .brand-phone { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: bold; font-size: 1.35rem; color: #111; margin-top: 6px; }
+  .brand-phone a { color: #111; text-decoration: none; }
+  .header-right { text-align: right; min-width: 160px; }
+  .dealer-badge { display: inline-block; background: #d40000; color: #fff; font-weight: bold; font-size: 0.78rem; padding: 6px 10px; border-radius: 3px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .dealer-sub { font-size: 0.75rem; color: #444; margin-top: 4px; font-weight: bold; }
+  .nav-bar { background: #1c1c1c; padding: 12px 20px; }
+  .nav-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .nav-pill { display: inline-block; min-width: 170px; text-align: center; padding: 9px 24px; border-radius: 999px; font-weight: bold; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; text-transform: uppercase; background: #ffe600; color: #111; border: 2px solid #ffe600; transition: 0.15s; }
+  .nav-pill.active { background: #e8e6f5; border-color: #e8e6f5; color: #111; }
+  .nav-pill:hover { opacity: 0.9; }
+  .main-wrap { max-width: 1180px; margin: 24px auto 50px; padding: 0 20px; }
+  .toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+  .back-btn { display: inline-block; background: #1c1c1c; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: bold; }
+  .cat-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cat-pill { padding: 7px 15px; border-radius: 999px; background: #fff; border: 1px solid #ccc; color: #222; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
+  .cat-pill.active, .cat-pill:hover { background: #c8102e; color: #fff; border-color: #c8102e; }
+  .cat-heading { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #c8102e; font-size: 1.75rem; margin-bottom: 18px; border-bottom: 2px solid #e0e0e0; padding-bottom: 6px; }
+  .tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 36px; }
+  @media (max-width: 960px) { .tile-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 680px) { .tile-grid { grid-template-columns: repeat(2, 1fr); } }
+  .tile { background: #fff; border: 1px solid #e2e2e2; border-radius: 6px; padding: 14px; text-align: center; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; justify-content: space-between; }
+  .tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+  .tile img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 10px; }
+  .tile-title { font-size: 0.92rem; color: #222; font-weight: bold; margin-bottom: 6px; line-height: 1.3; }
+  .tile-price { font-size: 1.05rem; color: #c8102e; font-weight: bold; }
+  .site-footer { background: #1c1c1c; color: #fff; text-align: center; padding: 16px 20px; font-size: 0.88rem; margin-top: 40px; }
+  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+  .modal-backdrop.open { display: flex; }
+  .modal-box { background: #fff; max-width: 560px; width: 100%; border-radius: 8px; padding: 24px; position: relative; max-height: 90vh; overflow-y: auto; text-align: center; }
+  .modal-close { position: absolute; top: 12px; right: 14px; background: #1c1c1c; color: #fff; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; }
+  .modal-box img { max-width: 100%; max-height: 240px; object-fit: contain; margin-bottom: 14px; }
+  .modal-title { font-size: 1.25rem; font-weight: bold; color: #111; margin-bottom: 6px; }
+  .modal-price { font-size: 1.3rem; font-weight: bold; color: #c8102e; margin-bottom: 12px; }
+  .modal-desc { font-size: 0.94rem; color: #444; line-height: 1.55; text-align: left; margin-bottom: 16px; }
+  .modal-call { background: #f8f8f8; border-top: 1px solid #eee; padding-top: 12px; font-weight: bold; color: #111; font-size: 0.98rem; }
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo-box">
-      <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
+    <a href="index.html" class="header-logo"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
+    <div class="header-center">
+      <div class="brand-title">Castlerock Lawnmowers</div>
+      <div class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></div>
     </div>
-    <div class="brand-center">
-      <h1>Castlerock Lawnmowers</h1>
-      <div class="phone">Mob: <a href="tel:07934716954">07934 716954</a></div>
-    </div>
-    <div class="dealer-right">
-      <div class="hecht-badge">HECHT</div>
-      <div class="hecht-sub">AUTHORISED DEALER</div>
-      <div class="pay-pills">
-        <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Cash</span>
-      </div>
+    <div class="header-right">
+      <div class="dealer-badge">HECHT</div>
+      <div class="dealer-sub">AUTHORISED DEALER</div>
     </div>
   </div>
   <nav class="nav-bar">
@@ -82,597 +72,62 @@ body { font-family: Arial, Helvetica, sans-serif; background: #f2f2f2; color: #2
 </header>
 
 <main class="main-wrap">
-  <div class="top-bar">
+  <div class="toolbar">
     <a href="index.html" class="back-btn">&larr; All Categories</a>
     <div class="cat-pills">
       <a href="shop.html?cat=lawnmowers" class="cat-pill" data-cat="lawnmowers">Lawnmowers</a>
-      <a href="shop.html?cat=hedgetrimmers" class="cat-pill" data-cat="hedgetrimmers">Hedgetrimmers</a>
-      <a href="shop.html?cat=chainsaws" class="cat-pill" data-cat="chainsaws">Chainsaws</a>
       <a href="shop.html?cat=strimmers" class="cat-pill" data-cat="strimmers">Strimmers</a>
+      <a href="shop.html?cat=chainsaws" class="cat-pill" data-cat="chainsaws">Chainsaws</a>
+      <a href="shop.html?cat=hedgetrimmers" class="cat-pill" data-cat="hedgetrimmers">Hedgetrimmers</a>
     </div>
   </div>
-
-  
-    <section class="cat-section" id="sec-lawnmowers">
-        <h2 class="cat-title">Lawnmowers</h2>
-        <div class="tile-grid">
-            
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg', &quot;Mountfield Elite 46cm Petrol Lawnmower Honda Engine&quot;, '£475', &quot;Self-propelled petrol lawnmower with Honda GCVx145 Autochoke engine, 46cm steel deck, 6 cutting heights, 60L grass bag and mulching plug.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Mountfield Elite 46cm Petrol Lawnmower Honda Engine" loading="lazy">
-            <div>
-                <div class="tile-name">Mountfield Elite 46cm Petrol Lawnmower Honda Engine</div>
-                <div class="tile-price">£475</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_bc16f949ec524bcfa2e432f8cf5f6827~mv2.jpg', &quot;Mountfield 41cm Petrol Lawnmower&quot;, '£275', &quot;Hand-propelled petrol mower with Mountfield ST120 Autochoke engine, 41cm steel chassis, 60L bag and mulching plug.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_bc16f949ec524bcfa2e432f8cf5f6827~mv2.jpg" alt="Mountfield 41cm Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Mountfield 41cm Petrol Lawnmower</div>
-                <div class="tile-price">£275</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_8c837608addc47fca9b0d7e853a911ab~mv2.jpg', &quot;30cm, 34cm, 38cm Mountfield Battery Lawnmower&quot;, '£195', &quot;Cordless 20V Lithium-ion lawnmower with 4Ah battery and charger included, 30L collector and lightweight rust-proof chassis.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_8c837608addc47fca9b0d7e853a911ab~mv2.jpg" alt="30cm, 34cm, 38cm Mountfield Battery Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">30cm, 34cm, 38cm Mountfield Battery Lawnmower</div>
-                <div class="tile-price">£195</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_fb14320253f644c5b4c86e871cc22cd2', &quot;Hecht 5533SW/E Self Propelled Mower&quot;, '£435', &quot;Self-propelled petrol lawnmower with 173cc engine, 50cm cutting width, 60L grass bag and 360-degree rotating front wheel.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_fb14320253f644c5b4c86e871cc22cd2" alt="Hecht 5533SW/E Self Propelled Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5533SW/E Self Propelled Mower</div>
-                <div class="tile-price">£435</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_d9491c43a9224f70abfbc456e3aafb4a~mv2.jpg', &quot;Hecht 5045S Battery Lawnmower 40V&quot;, '£350', &quot;40V cordless self-propelled mower with 46cm cutting width and 60L collecting box (battery and charger sold separately).&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_d9491c43a9224f70abfbc456e3aafb4a~mv2.jpg" alt="Hecht 5045S Battery Lawnmower 40V" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5045S Battery Lawnmower 40V</div>
-                <div class="tile-price">£350</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_8e540457160a4de398269a1d8ab01467~mv2.jpg', &quot;Hecht 587 Sickle Bar Mower&quot;, '£965', &quot;Self-propelled petrol sickle bar mower with 196cc engine, 87cm cutting width and 30-80mm height adjustment.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_8e540457160a4de398269a1d8ab01467~mv2.jpg" alt="Hecht 587 Sickle Bar Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 587 Sickle Bar Mower</div>
-                <div class="tile-price">£965</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_81b6088094214878b290dc8213bd676d~mv2.jpg', &quot;Alpina 46cm (18&quot;) Self Propelled Mulcher&quot;, '£435', &quot;Dedicated self-propelled mulching mower with 123cc STIGA OHV Autochoke engine and 45cm steel deck.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_81b6088094214878b290dc8213bd676d~mv2.jpg" alt="Alpina 46cm (18&quot;) Self Propelled Mulcher" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 46cm (18") Self Propelled Mulcher</div>
-                <div class="tile-price">£435</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_9c6232e6dd584816a5fec9b3a94f4127~mv2.jpg', &quot;LawnKing Professional 67cm (26&quot;) Self Propelled Mower&quot;, '£1,530', &quot;Commercial 344cc Briggs & Stratton self-propelled mower with 67cm steel deck and extra-large 130L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_9c6232e6dd584816a5fec9b3a94f4127~mv2.jpg" alt="LawnKing Professional 67cm (26&quot;) Self Propelled Mower" loading="lazy">
-            <div>
-                <div class="tile-name">LawnKing Professional 67cm (26") Self Propelled Mower</div>
-                <div class="tile-price">£1,530</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_91e45f1eb86241d992159a69275f1597~mv2.jpg', &quot;Marina 60cm (24&quot;) Self Propelled Professional Mower&quot;, '£875', &quot;3-speed self-propelled professional mower with 60cm steel deck, 4-blade disc system and 85L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_91e45f1eb86241d992159a69275f1597~mv2.jpg" alt="Marina 60cm (24&quot;) Self Propelled Professional Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Marina 60cm (24") Self Propelled Professional Mower</div>
-                <div class="tile-price">£875</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_a50336f6b37047afb4c464959203655c~mv2.jpg', &quot;Hecht 5564SX 56cm (22&quot;) Self Propelled Petrol Mower&quot;, '£550', &quot;4-speed self-propelled rotary mower with 56cm steel chassis, mulching kit, side ejection and 70L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_a50336f6b37047afb4c464959203655c~mv2.jpg" alt="Hecht 5564SX 56cm (22&quot;) Self Propelled Petrol Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5564SX 56cm (22") Self Propelled Petrol Mower</div>
-                <div class="tile-price">£550</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_adc1b4ff14174606bebc27bef9fba561~mv2.jpg', &quot;Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Honda)&quot;, '£775', &quot;Professional stainless steel deck mower powered by a Honda GCV160 engine with 70L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_adc1b4ff14174606bebc27bef9fba561~mv2.jpg" alt="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Honda)" loading="lazy">
-            <div>
-                <div class="tile-name">Marina 53cm (21") Self Propelled Petrol Lawnmower (Honda)</div>
-                <div class="tile-price">£775</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_c4bed2cb80c94ae8a44104916ccd2428~mv2.jpg', &quot;Marina 57cm (22&quot;) Self Propelled Petrol Lawnmower&quot;, '£795', &quot;MA.RI.NA KR 57 SK Kohler XT-7.75 professional mower with mulching function and heavy-duty deck.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_c4bed2cb80c94ae8a44104916ccd2428~mv2.jpg" alt="Marina 57cm (22&quot;) Self Propelled Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Marina 57cm (22") Self Propelled Petrol Lawnmower</div>
-                <div class="tile-price">£795</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_3a8d9390bd944ae0a85542b59b78db52~mv2.jpg', &quot;Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Kohler)&quot;, '£740', &quot;MA.RI.NA KR 52 SK Kohler XT-7.75 professional mower with mulching function and durable drive.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_3a8d9390bd944ae0a85542b59b78db52~mv2.jpg" alt="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Kohler)" loading="lazy">
-            <div>
-                <div class="tile-name">Marina 53cm (21") Self Propelled Petrol Lawnmower (Kohler)</div>
-                <div class="tile-price">£740</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_cd2888228a504508940df936131cfe79~mv2.jpg', &quot;LawnKing 50cm (20&quot;) Self Propelled Petrol Lawnmower&quot;, '£675', &quot;161cc Ready Start engine, aluminium alloy deck, large 210mm rear wheels and 70L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_cd2888228a504508940df936131cfe79~mv2.jpg" alt="LawnKing 50cm (20&quot;) Self Propelled Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">LawnKing 50cm (20") Self Propelled Petrol Lawnmower</div>
-                <div class="tile-price">£675</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_bb2c36e51c12435d9b76d2756534d1a5~mv2.jpg', &quot;Hecht 5534SWE 50cm (20&quot;) Variable Speed Electric Start&quot;, '£520', &quot;Key electric start 173cc self-propelled mower with 4 speeds, 51cm cutting width, mulching kit and side discharge.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_bb2c36e51c12435d9b76d2756534d1a5~mv2.jpg" alt="Hecht 5534SWE 50cm (20&quot;) Variable Speed Electric Start" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5534SWE 50cm (20") Variable Speed Electric Start</div>
-                <div class="tile-price">£520</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_464d87c188ee4c38a2cd00e9c6056581~mv2.jpg', &quot;Alpina 50cm (20&quot;) Self Propelled Petrol Lawnmower&quot;, '£455', &quot;4-in-1 self-propelled mower with 166cc STIGA AutoChoke engine, 51cm steel deck and 60L collector.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_464d87c188ee4c38a2cd00e9c6056581~mv2.jpg" alt="Alpina 50cm (20&quot;) Self Propelled Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 50cm (20") Self Propelled Petrol Lawnmower</div>
-                <div class="tile-price">£455</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_f3840c692c39437f928890b6eaa0e0b7~mv2.jpg', &quot;Hecht 548SW 46cm (18&quot;) Self Propelled Petrol Lawnmower&quot;, '£390', &quot;135cc OHV self-propelled mower with 46cm steel chassis, mulching kit, side discharge and 60L bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_f3840c692c39437f928890b6eaa0e0b7~mv2.jpg" alt="Hecht 548SW 46cm (18&quot;) Self Propelled Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 548SW 46cm (18") Self Propelled Petrol Lawnmower</div>
-                <div class="tile-price">£390</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_1b62c25bd48f4a458975b281abbabc04~mv2.jpg', &quot;Alpina 46cm (18&quot;) Self Propelled Petrol Lawnmower&quot;, '£435', &quot;139cc STIGA AutoChoke self-propelled mower with 46cm steel deck and 60L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_1b62c25bd48f4a458975b281abbabc04~mv2.jpg" alt="Alpina 46cm (18&quot;) Self Propelled Petrol Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 46cm (18") Self Propelled Petrol Lawnmower</div>
-                <div class="tile-price">£435</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_cb7429c2d2ab45ada51af1f3b19e8cf2~mv2.jpg', &quot;Hecht 546C 18&quot; Push Lawnmower&quot;, '£265', &quot;Lightweight 25kg hand-propelled petrol mower with 150cc engine, 46cm cut and 55L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_cb7429c2d2ab45ada51af1f3b19e8cf2~mv2.jpg" alt="Hecht 546C 18&quot; Push Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 546C 18" Push Lawnmower</div>
-                <div class="tile-price">£265</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_45ba4f3f773240dda08143f4d72d7add~mv2.jpg', &quot;Hecht 5406 ABS Plastic Deck 16&quot; Push Lawnmower&quot;, '£215', &quot;Ultra-light 18kg push mower with 99cc engine, 41cm rust-proof ABS deck and 45L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_45ba4f3f773240dda08143f4d72d7add~mv2.jpg" alt="Hecht 5406 ABS Plastic Deck 16&quot; Push Lawnmower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5406 ABS Plastic Deck 16" Push Lawnmower</div>
-                <div class="tile-price">£215</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_d24039e30118407b8a170cc71785d415~mv2.jpg', &quot;Alpina 38cm Electric Lawnmower 1400W&quot;, '£165', &quot;Quiet 1400W electric mower with 38cm cut, 3 cutting heights and folding handles.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_d24039e30118407b8a170cc71785d415~mv2.jpg" alt="Alpina 38cm Electric Lawnmower 1400W" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 38cm Electric Lawnmower 1400W</div>
-                <div class="tile-price">£165</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_a1990816fe9a4f8abefc317f16a60c4d~mv2.jpg', &quot;Alpina 30cm Electric Lawnmower 1000W&quot;, '£145', &quot;Compact 1000W electric push mower with 30cm cut and 25L grass collector for smaller lawns.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_a1990816fe9a4f8abefc317f16a60c4d~mv2.jpg" alt="Alpina 30cm Electric Lawnmower 1000W" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 30cm Electric Lawnmower 1000W</div>
-                <div class="tile-price">£145</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_7b4922aaf94e4ab89dece729d780a78b~mv2.jpg', &quot;Hecht 1233 Electric Lawnmower 1200W&quot;, '£125', &quot;1200W rotary electric mower with 33cm cutting width and central height adjustment.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_7b4922aaf94e4ab89dece729d780a78b~mv2.jpg" alt="Hecht 1233 Electric Lawnmower 1200W" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 1233 Electric Lawnmower 1200W</div>
-                <div class="tile-price">£125</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_5ac393c1865a4f18b77c5837ee9bbe32~mv2.jpg', &quot;Gardencare 16&quot; Push Petrol Mower&quot;, '£255', &quot;123cc Loncin engine, robust 40cm steel chassis and generous 45L grass bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_5ac393c1865a4f18b77c5837ee9bbe32~mv2.jpg" alt="Gardencare 16&quot; Push Petrol Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 16" Push Petrol Mower</div>
-                <div class="tile-price">£255</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_6b5d8b76c80d45b3ab2952a1e6b0d464~mv2.jpg', &quot;Gardencare 18&quot; Self Drive Petrol Mower&quot;, '£435', &quot;140cc Briggs & Stratton 500e engine, 46cm cut-to-the-edge deck, 10-inch rear wheels and 60L bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_6b5d8b76c80d45b3ab2952a1e6b0d464~mv2.jpg" alt="Gardencare 18&quot; Self Drive Petrol Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 18" Self Drive Petrol Mower</div>
-                <div class="tile-price">£435</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_a24d40ec6d7744ba86fc76f39ff92f2b~mv2.jpg', &quot;Gardencare 19&quot; Self Drive Variable Speed Rear Roller Mower&quot;, '£435', &quot;173cc OHV variable-speed mower with full rear roller for classic lawn stripes and 65L bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_a24d40ec6d7744ba86fc76f39ff92f2b~mv2.jpg" alt="Gardencare 19&quot; Self Drive Variable Speed Rear Roller Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 19" Self Drive Variable Speed Rear Roller Mower</div>
-                <div class="tile-price">£435</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_f7de3d64206e4085b8027c0b54e82f83~mv2.jpg', &quot;Gardencare 16&quot; Self Drive Petrol Mower&quot;, '£310', &quot;125cc Briggs & Stratton 450e self-propelled mower with 2-in-1 collection and mulching.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_f7de3d64206e4085b8027c0b54e82f83~mv2.jpg" alt="Gardencare 16&quot; Self Drive Petrol Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 16" Self Drive Petrol Mower</div>
-                <div class="tile-price">£310</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_082f59323d484d0cb5a4fb7510296b2d~mv2.jpg', &quot;Allett 14&quot; Petrol Cylinder Mower&quot;, '£1,050', &quot;British-made 5-blade precision cylinder mower with 79cc Loncin engine and steel rear roller.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_082f59323d484d0cb5a4fb7510296b2d~mv2.jpg" alt="Allett 14&quot; Petrol Cylinder Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Allett 14" Petrol Cylinder Mower</div>
-                <div class="tile-price">£1,050</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_87f3d5e1611b4eedba85bfb636994ebb~mv2.jpg', &quot;Alpina 653SHQ 53cm Self Propelled&quot;, '£565', &quot;Honda 160cc auto-choke 4-in-1 self-propelled mower with 53cm steel deck and 70L hybrid collector.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_87f3d5e1611b4eedba85bfb636994ebb~mv2.jpg" alt="Alpina 653SHQ 53cm Self Propelled" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 653SHQ 53cm Self Propelled</div>
-                <div class="tile-price">£565</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_eca8a8950b3747b3a027205acdba9c69~mv2.jpg', &quot;Alpina AL648SBE 48cm Push-Button Start&quot;, '£670', &quot;163cc Briggs & Stratton push-button start self-propelled mower with 48cm steel deck and 70L bag.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_eca8a8950b3747b3a027205acdba9c69~mv2.jpg" alt="Alpina AL648SBE 48cm Push-Button Start" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina AL648SBE 48cm Push-Button Start</div>
-                <div class="tile-price">£670</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_908e7eb5d70d403a94fc3f64145e122d~mv2.png', &quot;Hecht 546SX 46cm Self Propelled&quot;, '£345', &quot;Lightweight 30kg self-propelled mower with 139cc engine, 46cm deck and 60L collecting box.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_908e7eb5d70d403a94fc3f64145e122d~mv2.png" alt="Hecht 546SX 46cm Self Propelled" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 546SX 46cm Self Propelled</div>
-                <div class="tile-price">£345</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_bcd81484dbb844bda5a95f5f5f890032~mv2.jpg', &quot;Hecht 540 Hand Propelled 40cm Mower&quot;, '£225', &quot;20kg lightweight push mower with 127cc engine, 40cm cut and 40L grass box.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_bcd81484dbb844bda5a95f5f5f890032~mv2.jpg" alt="Hecht 540 Hand Propelled 40cm Mower" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 540 Hand Propelled 40cm Mower</div>
-                <div class="tile-price">£225</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_2560b2544d7143b685b4cbbd35238d4c~mv2.jpg', &quot;Hecht 541SW 41cm Self Propelled&quot;, '£275', &quot;Compact 24kg self-propelled mower with 127cc engine, 41cm cut and 45L grass box.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_2560b2544d7143b685b4cbbd35238d4c~mv2.jpg" alt="Hecht 541SW 41cm Self Propelled" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 541SW 41cm Self Propelled</div>
-                <div class="tile-price">£275</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_ab3eefff88784f8fb4a28ab03ddefb30~mv2.jpg', &quot;Hecht 548-SWE 48cm Electric Start Self Propelled&quot;, '£490', &quot;Push-button electric start + pull start 5-in-1 self-propelled mower with 60L grass box.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_ab3eefff88784f8fb4a28ab03ddefb30~mv2.jpg" alt="Hecht 548-SWE 48cm Electric Start Self Propelled" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 548-SWE 48cm Electric Start Self Propelled</div>
-                <div class="tile-price">£490</div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="cat-section" id="sec-strimmers">
-        <h2 class="cat-title">Strimmers & Brushcutters</h2>
-        <div class="tile-grid">
-            
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_9b87f9ccfece40619c9c06e82c13149b~mv2.jpg', &quot;Hecht 1040 Battery Strimmer 40V&quot;, '£105', &quot;40V cordless grass trimmer with 28-32cm cutting width (battery and charger sold separately).&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_9b87f9ccfece40619c9c06e82c13149b~mv2.jpg" alt="Hecht 1040 Battery Strimmer 40V" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 1040 Battery Strimmer 40V</div>
-                <div class="tile-price">£105</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg', &quot;Hecht 145 Petrol Strimmer 43cc&quot;, '£250', &quot;43cc 2-stroke brushcutter complete with shoulder harness, string head and 3-tooth metal blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Hecht 145 Petrol Strimmer 43cc" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 145 Petrol Strimmer 43cc</div>
-                <div class="tile-price">£250</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_2dedd52e12364b8499c72e9343d96fb8~mv2.jpg', &quot;Alpina 32cc Petrol Strimmer&quot;, '£250', &quot;32.6cc petrol brushcutter with bike handles and double harness for heavy overgrown grass.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_2dedd52e12364b8499c72e9343d96fb8~mv2.jpg" alt="Alpina 32cc Petrol Strimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 32cc Petrol Strimmer</div>
-                <div class="tile-price">£250</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_b63680db49a247609bc1718733d0d62a~mv2.jpg', &quot;Hecht 5022 Battery Strimmer 20V&quot;, '£75', &quot;Ultra-light 1.9kg 20V cordless trimmer with telescopic shaft and 25cm cutting width.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_b63680db49a247609bc1718733d0d62a~mv2.jpg" alt="Hecht 5022 Battery Strimmer 20V" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 5022 Battery Strimmer 20V</div>
-                <div class="tile-price">£75</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_e90d598bd786400eac7977beb2a19b48~mv2.jpg', &quot;Gardencare 33cc Petrol Strimmer&quot;, '£195', &quot;33cc EasyStart brushcutter with butterfly nylon head and 3-tooth bramble blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_e90d598bd786400eac7977beb2a19b48~mv2.jpg" alt="Gardencare 33cc Petrol Strimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 33cc Petrol Strimmer</div>
-                <div class="tile-price">£195</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_4aa5b29b77204994a7a11aad59efe462~mv2.jpg', &quot;Gardencare 26cc Petrol Strimmer&quot;, '£165', &quot;26cc EasyStart petrol trimmer with loop handle and operator harness.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_4aa5b29b77204994a7a11aad59efe462~mv2.jpg" alt="Gardencare 26cc Petrol Strimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 26cc Petrol Strimmer</div>
-                <div class="tile-price">£165</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_5ca6719eb1b647379cf90993992f4ee2~mv2.jpg', &quot;Alpina 25cc Petrol Strimmer&quot;, '£215', &quot;25.4cc Easy Start split-shaft brushcutter with bump-feed spool, 3-tooth blade and harness.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_5ca6719eb1b647379cf90993992f4ee2~mv2.jpg" alt="Alpina 25cc Petrol Strimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 25cc Petrol Strimmer</div>
-                <div class="tile-price">£215</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_f0110d5acbe34de79f3eba10ac321773~mv2.png', &quot;Hecht 1331 4-in-1 Multi Tool&quot;, '£275', &quot;32.7cc petrol multi-tool complete with brushcutter, strimmer, long-reach hedgetrimmer and polesaw attachments.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_f0110d5acbe34de79f3eba10ac321773~mv2.png" alt="Hecht 1331 4-in-1 Multi Tool" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 1331 4-in-1 Multi Tool</div>
-                <div class="tile-price">£275</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_10aee8bef7c6485eb6e0d7816c2fa7d7~mv2.jpg', &quot;Alpina T3048Li 48V Trimmer / Edger&quot;, '£115', &quot;48V cordless trimmer with rotating edging head and automatic twin-line feed (body only).&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_10aee8bef7c6485eb6e0d7816c2fa7d7~mv2.jpg" alt="Alpina T3048Li 48V Trimmer / Edger" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina T3048Li 48V Trimmer / Edger</div>
-                <div class="tile-price">£115</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_7c5efc22a842458aba531df903042048~mv2.jpg', &quot;Hecht 530 Electric Grass Trimmer 550W&quot;, '£65', &quot;Lightweight 2.6kg 550W electric trimmer with telescopic handle and 30cm cutting width.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_7c5efc22a842458aba531df903042048~mv2.jpg" alt="Hecht 530 Electric Grass Trimmer 550W" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 530 Electric Grass Trimmer 550W</div>
-                <div class="tile-price">£65</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_02e255e7fea24947a9fe4fbc13752485~mv2.jpg', &quot;Hecht 163 Heavy Duty 63.3cc Brushcutter&quot;, '£325', &quot;Extreme-power 63.3cc brushcutter with bike handles, double harness, nylon head and 3-tooth blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_02e255e7fea24947a9fe4fbc13752485~mv2.jpg" alt="Hecht 163 Heavy Duty 63.3cc Brushcutter" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 163 Heavy Duty 63.3cc Brushcutter</div>
-                <div class="tile-price">£325</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_26091e1054d5447a8d742297ac676c9f~mv2.jpg', &quot;Hecht 129 BTS Split Shaft Strimmer&quot;, '£165', &quot;Lightweight 6.5kg split-shaft petrol brushcutter with bump-feed line head, 3-tooth blade and strap.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_26091e1054d5447a8d742297ac676c9f~mv2.jpg" alt="Hecht 129 BTS Split Shaft Strimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 129 BTS Split Shaft Strimmer</div>
-                <div class="tile-price">£165</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_f3ac49e279844239a44b6d378da88fb4~mv2.jpg', &quot;Hecht 126 23cc Petrol Grass Trimmer&quot;, '£145', &quot;4.3kg 23cc 2-stroke trimmer with 35cm bump-feed head for neat lawn edging.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_f3ac49e279844239a44b6d378da88fb4~mv2.jpg" alt="Hecht 126 23cc Petrol Grass Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 126 23cc Petrol Grass Trimmer</div>
-                <div class="tile-price">£145</div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="cat-section" id="sec-chainsaws">
-        <h2 class="cat-title">Chainsaws</h2>
-        <div class="tile-grid">
-            
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg', &quot;Alpina 45cc Petrol Chainsaw 45cm&quot;, '£245', &quot;45cc Easy Start petrol chainsaw with 18-inch (45cm) bar, automatic oil pump and inertia chain brake.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg" alt="Alpina 45cc Petrol Chainsaw 45cm" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 45cc Petrol Chainsaw 45cm</div>
-                <div class="tile-price">£245</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg', &quot;Hecht 58cc Petrol Chainsaw with 2 Bars (16&quot; + 18&quot;)&quot;, '£320', &quot;Powerful 3.3HP 58cc chainsaw supplied with both 16-inch and 18-inch bars and quick chain tensioning.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Hecht 58cc Petrol Chainsaw with 2 Bars (16&quot; + 18&quot;)" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 58cc Petrol Chainsaw with 2 Bars (16" + 18")</div>
-                <div class="tile-price">£320</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_faea4ff8008d489a94cd35a473b0d7a7~mv2.jpg', &quot;Makita 35cc Petrol Chainsaw 40cm&quot;, '£345', &quot;High-performance 35cc (2.28hp) chainsaw with electronic ignition and vibration dampening.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_faea4ff8008d489a94cd35a473b0d7a7~mv2.jpg" alt="Makita 35cc Petrol Chainsaw 40cm" loading="lazy">
-            <div>
-                <div class="tile-name">Makita 35cc Petrol Chainsaw 40cm</div>
-                <div class="tile-price">£345</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_867e2dfdbea04050820389f37021eb0c~mv2.jpg', &quot;Alpina 40cc Petrol Chainsaw 40cm&quot;, '£225', &quot;40.1cc Easy Start chainsaw with 16-inch (40cm) bar and tool-free air filter access.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_867e2dfdbea04050820389f37021eb0c~mv2.jpg" alt="Alpina 40cc Petrol Chainsaw 40cm" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 40cc Petrol Chainsaw 40cm</div>
-                <div class="tile-price">£225</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_1d02d8522e594b82bd68c0a835f2603b~mv2.jpg', &quot;Alpina 37cc Petrol Chainsaw 35cm&quot;, '£205', &quot;37.2cc Easy Start chainsaw with 14-inch (35cm) bar for firewood and garden pruning.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_1d02d8522e594b82bd68c0a835f2603b~mv2.jpg" alt="Alpina 37cc Petrol Chainsaw 35cm" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 37cc Petrol Chainsaw 35cm</div>
-                <div class="tile-price">£205</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_55db3f4da02049fa95051c4fb33e5225~mv2.jpg', &quot;Makita 22cc 30cm Top Handle Petrol Chainsaw&quot;, '£495', &quot;Lightweight professional arborist top-handle chainsaw for trained tree surgeons.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_55db3f4da02049fa95051c4fb33e5225~mv2.jpg" alt="Makita 22cc 30cm Top Handle Petrol Chainsaw" loading="lazy">
-            <div>
-                <div class="tile-name">Makita 22cc 30cm Top Handle Petrol Chainsaw</div>
-                <div class="tile-price">£495</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_d73c0756ff374243ae2fc04d78f47251~mv2.jpg', &quot;Hecht 9940 40V 35cm Battery Chainsaw (Body Only)&quot;, '£220', &quot;40V cordless chainsaw with 35cm bar, automatic lubrication and tool-free chain tensioning.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_d73c0756ff374243ae2fc04d78f47251~mv2.jpg" alt="Hecht 9940 40V 35cm Battery Chainsaw (Body Only)" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 9940 40V 35cm Battery Chainsaw (Body Only)</div>
-                <div class="tile-price">£220</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_000094d5b3e6458b84d76460bee0932d~mv2.jpg', &quot;Gardencare 20&quot; Chainsaw (56cc)&quot;, '£195', &quot;Heavy-duty 56cc petrol chainsaw fitted with a 20-inch Oregon cutting bar.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_000094d5b3e6458b84d76460bee0932d~mv2.jpg" alt="Gardencare 20&quot; Chainsaw (56cc)" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 20" Chainsaw (56cc)</div>
-                <div class="tile-price">£195</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_a3f5f9f6a2af4646a3ad2598a59bb30a~mv2.jpg', &quot;Gardencare 16&quot; Chainsaw (40cc)&quot;, '£165', &quot;Reliable 40cc petrol chainsaw with 16-inch Oregon bar and easy-access maintenance cover.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_a3f5f9f6a2af4646a3ad2598a59bb30a~mv2.jpg" alt="Gardencare 16&quot; Chainsaw (40cc)" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 16" Chainsaw (40cc)</div>
-                <div class="tile-price">£165</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_d2b646057da9466280850793f00ae434~mv2.jpg', &quot;Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)&quot;, '£285', &quot;52cc chainsaw with Walbro carburettor, supplied complete with both 16-inch and 18-inch bars and chains.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_d2b646057da9466280850793f00ae434~mv2.jpg" alt="Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)</div>
-                <div class="tile-price">£285</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_f28809260a0a4f949ad1f2de69f6c906~mv2.jpg', &quot;Hecht Electric Chainsaw Sharpener&quot;, '£55', &quot;Bench-mounted electric chain sharpener with grinding wheel included.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_f28809260a0a4f949ad1f2de69f6c906~mv2.jpg" alt="Hecht Electric Chainsaw Sharpener" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht Electric Chainsaw Sharpener</div>
-                <div class="tile-price">£55</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_7b08f37d5cb14805b04b833bb1f9d91e~mv2.png', &quot;Hecht 929R 30cm Top Handle Saw&quot;, '£175', &quot;Compact 2.9kg 25.4cc top-handle petrol saw with 30cm bar and safety chain brake.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_7b08f37d5cb14805b04b833bb1f9d91e~mv2.png" alt="Hecht 929R 30cm Top Handle Saw" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 929R 30cm Top Handle Saw</div>
-                <div class="tile-price">£175</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_16a16c9e9ca14aa58e90e0453ec3d0f6~mv2.png', &quot;Hecht 941 Chainsaw 35cm&quot;, '£180', &quot;Lightweight 4.7kg petrol chainsaw with 35cm bar and anti-vibration handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_16a16c9e9ca14aa58e90e0453ec3d0f6~mv2.png" alt="Hecht 941 Chainsaw 35cm" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 941 Chainsaw 35cm</div>
-                <div class="tile-price">£180</div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="cat-section" id="sec-hedgetrimmers">
-        <h2 class="cat-title">Hedgetrimmers</h2>
-        <div class="tile-grid">
-            
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_934e8b428c8a4886b1ecf6ebfa8396df~mv2.jpg', &quot;Hecht 6022 Battery Trimmer 20V&quot;, '£75', &quot;20V cordless hedge trimmer with 51cm bar and 15mm cutting capacity (battery and charger sold separately).&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_934e8b428c8a4886b1ecf6ebfa8396df~mv2.jpg" alt="Hecht 6022 Battery Trimmer 20V" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 6022 Battery Trimmer 20V</div>
-                <div class="tile-price">£75</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_79231b1ee6c54c90b86c02841df8e5d1~mv2.jpg', &quot;Alpina 48cm Double Sided Battery Hedgetrimmer&quot;, '£245', &quot;24V cordless hedge trimmer complete with 4.0Ah battery, charger and 180-degree rotating handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_79231b1ee6c54c90b86c02841df8e5d1~mv2.jpg" alt="Alpina 48cm Double Sided Battery Hedgetrimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina 48cm Double Sided Battery Hedgetrimmer</div>
-                <div class="tile-price">£245</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg', &quot;Makita Long Reach Hedgetrimmer 2.5M&quot;, '£580', &quot;25.4cc 4-stroke pole hedge trimmer with 13-angle adjustable head and 180-degree folding shaft.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg" alt="Makita Long Reach Hedgetrimmer 2.5M" loading="lazy">
-            <div>
-                <div class="tile-name">Makita Long Reach Hedgetrimmer 2.5M</div>
-                <div class="tile-price">£580</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_e3b0a8d0c04d417f832fca3eea41ca59~mv2.jpg', &quot;Makita Dolmar Long Reach Hedgetrimmer&quot;, '£485', &quot;Compact 25.4cc 4-stroke articulated hedge trimmer with 49cm double-sided blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_e3b0a8d0c04d417f832fca3eea41ca59~mv2.jpg" alt="Makita Dolmar Long Reach Hedgetrimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Makita Dolmar Long Reach Hedgetrimmer</div>
-                <div class="tile-price">£485</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_ca41e79744b54032b8a296eed8c6c4a4~mv2.jpg', &quot;Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer&quot;, '£460', &quot;Professional lightweight 2-stroke hedge trimmer with 75cm blades and 5-position rotating handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_ca41e79744b54032b8a296eed8c6c4a4~mv2.jpg" alt="Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer</div>
-                <div class="tile-price">£460</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_85edb475f65c4cc79178b89fcc31e3f0~mv2.jpg', &quot;Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer&quot;, '£265', &quot;5.3kg single-sided petrol hedge trimmer with 67cm blade, 20mm capacity and anti-vibration springs.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_85edb475f65c4cc79178b89fcc31e3f0~mv2.jpg" alt="Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer</div>
-                <div class="tile-price">£265</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_4eb12d77afd14a8ea634f225a66143f3~mv2.jpg', &quot;Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer&quot;, '£450', &quot;Professional 24cc hedge trimmer with 60cm double-sided blades and 5-position rotating handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_4eb12d77afd14a8ea634f225a66143f3~mv2.jpg" alt="Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer</div>
-                <div class="tile-price">£450</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_0c2f07594d034bcc990a3db76e8d03e8~mv2.jpg', &quot;Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer&quot;, '£195', &quot;25.4cc petrol hedge trimmer with 60cm cutting width and rotating rear handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_0c2f07594d034bcc990a3db76e8d03e8~mv2.jpg" alt="Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer</div>
-                <div class="tile-price">£195</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_be3daa0434114f9c82af565d96ce3409~mv2.jpg', &quot;Makita 45cm Electric Double Sided Trimmer 550W&quot;, '£155', &quot;550W corded electric hedge trimmer with 45cm double-sided blades.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_be3daa0434114f9c82af565d96ce3409~mv2.jpg" alt="Makita 45cm Electric Double Sided Trimmer 550W" loading="lazy">
-            <div>
-                <div class="tile-name">Makita 45cm Electric Double Sided Trimmer 550W</div>
-                <div class="tile-price">£155</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg', &quot;Gardencare 75cm Petrol Hedgetrimmer (Kawasaki)&quot;, '£385', &quot;Commercial 27cc Kawasaki engine hedge trimmer with 75cm rotating double-sided blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Gardencare 75cm Petrol Hedgetrimmer (Kawasaki)" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 75cm Petrol Hedgetrimmer (Kawasaki)</div>
-                <div class="tile-price">£385</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_756b86f79413472c844af703de29de34~mv2.jpg', &quot;Gardencare 60cm Petrol Hedgetrimmer (Kawasaki)&quot;, '£365', &quot;Commercial 27cc Kawasaki engine hedge trimmer with 60cm rotating double-sided blade.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_756b86f79413472c844af703de29de34~mv2.jpg" alt="Gardencare 60cm Petrol Hedgetrimmer (Kawasaki)" loading="lazy">
-            <div>
-                <div class="tile-name">Gardencare 60cm Petrol Hedgetrimmer (Kawasaki)</div>
-                <div class="tile-price">£365</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_053a138667b44777aea97d7ad7b91949~mv2.jpg', &quot;Golden Star Kawasaki Hedge Trimmer 75cm&quot;, '£415', &quot;Japanese-built 22.5cc Kawasaki TJ23V heavy-duty single-sided 750mm hedge trimmer.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_053a138667b44777aea97d7ad7b91949~mv2.jpg" alt="Golden Star Kawasaki Hedge Trimmer 75cm" loading="lazy">
-            <div>
-                <div class="tile-name">Golden Star Kawasaki Hedge Trimmer 75cm</div>
-                <div class="tile-price">£415</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_8784864a25454c38960ee5a167632e04~mv2.jpg', &quot;Hecht 9275 Pro 75cm Hedge Trimmer&quot;, '£275', &quot;22.2cc double-sided 750mm pro hedge trimmer with rotating handle and 28mm branch capacity.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_8784864a25454c38960ee5a167632e04~mv2.jpg" alt="Hecht 9275 Pro 75cm Hedge Trimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Hecht 9275 Pro 75cm Hedge Trimmer</div>
-                <div class="tile-price">£275</div>
-            </div>
-        </div>
-        <div class="tile" onclick="openModal('https://static.wixstatic.com/media/b243b4_04847c358eab435282b92ceb863306ff~mv2.jpg', &quot;Alpina AHT55 Petrol Hedgetrimmer&quot;, '£235', &quot;24.5cc Easy Start hedge trimmer with 55cm laser-cut blades and 3-position rotating handle.&quot;)">
-            <img src="https://static.wixstatic.com/media/b243b4_04847c358eab435282b92ceb863306ff~mv2.jpg" alt="Alpina AHT55 Petrol Hedgetrimmer" loading="lazy">
-            <div>
-                <div class="tile-name">Alpina AHT55 Petrol Hedgetrimmer</div>
-                <div class="tile-price">£235</div>
-            </div>
-        </div>
-        </div>
-    </section>
+  <section class="cat-section" id="sec-lawnmowers"><h2 class="cat-heading">Lawnmowers</h2><div class="tile-grid"><div class="tile" data-title="Mountfield Elite 46cm Petrol Lawnmower Honda Engine" data-price="£475" data-desc="Self-propelled petrol-driven mower with Honda GCVx145 Autochoke engine, 46cm cutting width, steel chassis, 6 cutting heights, 60L collection bag, and mulching plug included." data-img="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Mountfield Elite 46cm Petrol Lawnmower Honda Engine" loading="lazy"><div class="tile-title">Mountfield Elite 46cm Petrol Lawnmower Honda Engine</div><div class="tile-price">£475</div></div><div class="tile" data-title="Mountfield 41cm Petrol Lawnmower" data-price="£275" data-desc="Hand-propelled petrol mower with Mountfield ST120 Auto choke engine, 41cm cutting width, steel chassis, 6 cutting heights, 60L bag, mulching plug, and fold-down handles." data-img="https://static.wixstatic.com/media/b243b4_bc16f949ec524bcfa2e432f8cf5f6827~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_bc16f949ec524bcfa2e432f8cf5f6827~mv2.jpg" alt="Mountfield 41cm Petrol Lawnmower" loading="lazy"><div class="tile-title">Mountfield 41cm Petrol Lawnmower</div><div class="tile-price">£275</div></div><div class="tile" data-title="30cm, 34cm, 38cm Mountfield Battery Lawnmower" data-price="£195" data-desc="Electress 30 Li cordless lawnmower with STIGA E-Power 20V 4Ah battery and charger included, 30cm cutting width, 3 cutting heights, and 30L collector." data-img="https://static.wixstatic.com/media/b243b4_8c837608addc47fca9b0d7e853a911ab~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_8c837608addc47fca9b0d7e853a911ab~mv2.jpg" alt="30cm, 34cm, 38cm Mountfield Battery Lawnmower" loading="lazy"><div class="tile-title">30cm, 34cm, 38cm Mountfield Battery Lawnmower</div><div class="tile-price">£195</div></div><div class="tile" data-title="Hecht 5045S Battery Lawnmower 40V" data-price="£350" data-desc="Accu lawn mower with self-propelled system, 46cm working width, Li-Ion 40V, and 60L collecting box. Battery and charger sold separately." data-img="https://static.wixstatic.com/media/b243b4_d9491c43a9224f70abfbc456e3aafb4a~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_d9491c43a9224f70abfbc456e3aafb4a~mv2.jpg" alt="Hecht 5045S Battery Lawnmower 40V" loading="lazy"><div class="tile-title">Hecht 5045S Battery Lawnmower 40V</div><div class="tile-price">£350</div></div><div class="tile" data-title="Hecht 587 Sickle Bar Mower" data-price="£965" data-desc="Self-propelled petrol sickle bar mower with 196cc engine, 87cm working width, 59kg weight, and 30-80mm cutting height adjustment." data-img="https://static.wixstatic.com/media/b243b4_8e540457160a4de398269a1d8ab01467~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_8e540457160a4de398269a1d8ab01467~mv2.jpg" alt="Hecht 587 Sickle Bar Mower" loading="lazy"><div class="tile-title">Hecht 587 Sickle Bar Mower</div><div class="tile-price">£965</div></div><div class="tile" data-title="Alpina 46cm (18&quot;) Self Propelled Mulcher" data-price="£435" data-desc="Dedicated self-propelled mulching mower with 123cc STIGA OHV Autochoke engine, 45cm cut, steel deck, ball-bearing wheels, and 5-stage height adjustment." data-img="https://static.wixstatic.com/media/b243b4_81b6088094214878b290dc8213bd676d~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_81b6088094214878b290dc8213bd676d~mv2.jpg" alt="Alpina 46cm (18&quot;) Self Propelled Mulcher" loading="lazy"><div class="tile-title">Alpina 46cm (18&quot;) Self Propelled Mulcher</div><div class="tile-price">£435</div></div><div class="tile" data-title="LawnKing Professional 67cm (26&quot;) Self Propelled Mower" data-price="£1,530" data-desc="Powered by a Briggs &amp; Stratton 344cc engine with extra-large 130L grass bag capacity and heavy-duty self-propelled steel deck." data-img="https://static.wixstatic.com/media/b243b4_9c6232e6dd584816a5fec9b3a94f4127~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_9c6232e6dd584816a5fec9b3a94f4127~mv2.jpg" alt="LawnKing Professional 67cm (26&quot;) Self Propelled Mower" loading="lazy"><div class="tile-title">LawnKing Professional 67cm (26&quot;) Self Propelled Mower</div><div class="tile-price">£1,530</div></div><div class="tile" data-title="Marina 60cm (24&quot;) Self Propelled Professional Mower" data-price="£875" data-desc="Professional 3-speed self-propelled mower with huge 24&quot; cutting width, 85L grassbag, steel deck, and 4-blade disc cutting system." data-img="https://static.wixstatic.com/media/b243b4_91e45f1eb86241d992159a69275f1597~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_91e45f1eb86241d992159a69275f1597~mv2.jpg" alt="Marina 60cm (24&quot;) Self Propelled Professional Mower" loading="lazy"><div class="tile-title">Marina 60cm (24&quot;) Self Propelled Professional Mower</div><div class="tile-price">£875</div></div><div class="tile" data-title="Hecht 5564SX 56cm (22&quot;) Self Propelled Petrol Mower" data-price="£550" data-desc="4-speed self-propelled rotary lawn mower with HECHT OHV 4-stroke engine, 56cm working width, mulching kit, side ejection, and 70L grassbag." data-img="https://static.wixstatic.com/media/b243b4_a50336f6b37047afb4c464959203655c~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_a50336f6b37047afb4c464959203655c~mv2.jpg" alt="Hecht 5564SX 56cm (22&quot;) Self Propelled Petrol Mower" loading="lazy"><div class="tile-title">Hecht 5564SX 56cm (22&quot;) Self Propelled Petrol Mower</div><div class="tile-price">£550</div></div><div class="tile" data-title="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower" data-price="£775" data-desc="Professional lawnmower with Honda GCV160 engine, durable stainless steel deck, and large 70L grassbag." data-img="https://static.wixstatic.com/media/b243b4_adc1b4ff14174606bebc27bef9fba561~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_adc1b4ff14174606bebc27bef9fba561~mv2.jpg" alt="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£775</div></div><div class="tile" data-title="Marina 57cm (22&quot;) Self Propelled Petrol Lawnmower" data-price="£795" data-desc="MA.RI.NA KR 57 SK Kohler XT-7.75 self-propelled professional lawn mower with mulching capability and heavy-duty build." data-img="https://static.wixstatic.com/media/b243b4_c4bed2cb80c94ae8a44104916ccd2428~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_c4bed2cb80c94ae8a44104916ccd2428~mv2.jpg" alt="Marina 57cm (22&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Marina 57cm (22&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£795</div></div><div class="tile" data-title="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Kohler)" data-price="£740" data-desc="MA.RI.NA KR 52 SK Kohler XT-7.75 self-propelled professional petrol lawn mower with mulching function." data-img="https://static.wixstatic.com/media/b243b4_3a8d9390bd944ae8a85542b59b78db52~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_3a8d9390bd944ae8a85542b59b78db52~mv2.jpg" alt="Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Kohler)" loading="lazy"><div class="tile-title">Marina 53cm (21&quot;) Self Propelled Petrol Lawnmower (Kohler)</div><div class="tile-price">£740</div></div><div class="tile" data-title="LawnKing 50cm (20&quot;) Self Propelled Petrol Lawnmower" data-price="£675" data-desc="Series 750 DOV 161cc Ready Start engine, aluminium alloy deck, large 210mm rear wheels, single-lever height adjuster (30-80mm), and 70L grassbag." data-img="https://static.wixstatic.com/media/b243b4_cd2888228a504508940df936131cfe79~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_cd2888228a504508940df936131cfe79~mv2.jpg" alt="LawnKing 50cm (20&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">LawnKing 50cm (20&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£675</div></div><div class="tile" data-title="Hecht 50cm (20&quot;) Self Propelled Petrol Lawnmower" data-price="£465" data-desc="Self-propelled petrol mower with 173cc engine, 50cm working width, 60L collecting box, and 360-degree rotating front wheel." data-img="https://static.wixstatic.com/media/b243b4_146b68890290420fb9aefa3263180ace~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_146b68890290420fb9aefa3263180ace~mv2.jpg" alt="Hecht 50cm (20&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Hecht 50cm (20&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£465</div></div><div class="tile" data-title="Hecht 5534SWE 50cm (20&quot;) Variable Speed Petrol Mower" data-price="£520" data-desc="Electric key-start 4-speed self-propelled mower with 173cc OHV engine, 51cm working width, mulching kit, and side ejection." data-img="https://static.wixstatic.com/media/b243b4_bb2c36e51c12435d9b76d2756534d1a5~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_bb2c36e51c12435d9b76d2756534d1a5~mv2.jpg" alt="Hecht 5534SWE 50cm (20&quot;) Variable Speed Petrol Mower" loading="lazy"><div class="tile-title">Hecht 5534SWE 50cm (20&quot;) Variable Speed Petrol Mower</div><div class="tile-price">£520</div></div><div class="tile" data-title="Alpina 50cm (20&quot;) Self Propelled Petrol Lawnmower" data-price="£455" data-desc="AL5 51 SAQ 4-in-1 mower (bagging, mulching, side/rear discharge) with 166cc STIGA AutoChoke engine, 51cm cut, steel deck, and 60L grassbag." data-img="https://static.wixstatic.com/media/b243b4_464d87c188ee4c38a2cd00e9c6056581~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_464d87c188ee4c38a2cd00e9c6056581~mv2.jpg" alt="Alpina 50cm (20&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Alpina 50cm (20&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£455</div></div><div class="tile" data-title="Hecht 548SW 46cm (18&quot;) Self Propelled Petrol Lawnmower" data-price="£390" data-desc="Self-propelled steel-chassis mower with 135cc HECHT OHV engine, 46cm working width, mulching kit, side ejection, and 60L grassbag." data-img="https://static.wixstatic.com/media/b243b4_f3840c692c39437f928890b6eaa0e0b7~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_f3840c692c39437f928890b6eaa0e0b7~mv2.jpg" alt="Hecht 548SW 46cm (18&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Hecht 548SW 46cm (18&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£390</div></div><div class="tile" data-title="Alpina 46cm (18&quot;) Self Propelled Petrol Lawnmower" data-price="£435" data-desc="Rear-wheel self-propelled steel-deck mower with 139cc STIGA AutoChoke engine, 46cm cut, single-point height adjustment, and 60L grassbag." data-img="https://static.wixstatic.com/media/b243b4_1b62c25bd48f4a458975b281abbabc04~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_1b62c25bd48f4a458975b281abbabc04~mv2.jpg" alt="Alpina 46cm (18&quot;) Self Propelled Petrol Lawnmower" loading="lazy"><div class="tile-title">Alpina 46cm (18&quot;) Self Propelled Petrol Lawnmower</div><div class="tile-price">£435</div></div><div class="tile" data-title="Hecht 546C 18&quot; Push Lawnmower" data-price="£265" data-desc="Hand-propelled petrol lawn mower with 150cc engine, 46cm working width, 55L collecting box, 25kg weight, and 25-70mm single-lever height adjuster." data-img="https://static.wixstatic.com/media/b243b4_cb7429c2d2ab45ada51af1f3b19e8cf2~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_cb7429c2d2ab45ada51af1f3b19e8cf2~mv2.jpg" alt="Hecht 546C 18&quot; Push Lawnmower" loading="lazy"><div class="tile-title">Hecht 546C 18&quot; Push Lawnmower</div><div class="tile-price">£265</div></div><div class="tile" data-title="Hecht 5406 ABS Plastic Deck 16&quot; Push Lawnmower" data-price="£215" data-desc="Lightweight 18kg petrol push mower with rust-free ABS deck, 99cc engine, 41cm cutting width, and 45L collecting box." data-img="https://static.wixstatic.com/media/b243b4_45ba4f3f773240dda08143f4d72d7add~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_45ba4f3f773240dda08143f4d72d7add~mv2.jpg" alt="Hecht 5406 ABS Plastic Deck 16&quot; Push Lawnmower" loading="lazy"><div class="tile-title">Hecht 5406 ABS Plastic Deck 16&quot; Push Lawnmower</div><div class="tile-price">£215</div></div><div class="tile" data-title="Alpina 38cm Electric Lawnmower 1400W" data-price="£165" data-desc="BL 380 E quiet 1400W electric mower with lightweight polypropylene deck, 38cm steel blade, 3 cutting heights (25-65mm), and foldable handle." data-img="https://static.wixstatic.com/media/b243b4_d24039e30118407b8a170cc71785d415~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_d24039e30118407b8a170cc71785d415~mv2.jpg" alt="Alpina 38cm Electric Lawnmower 1400W" loading="lazy"><div class="tile-title">Alpina 38cm Electric Lawnmower 1400W</div><div class="tile-price">£165</div></div><div class="tile" data-title="Alpina 30cm Electric Lawnmower 1000W" data-price="£145" data-desc="Compact 1000W electric push mower with 30cm cutting width, central height adjustment (25-65mm), and 25L grass collector." data-img="https://static.wixstatic.com/media/b243b4_a1990816fe9a4f8abefc317f16a60c4d~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_a1990816fe9a4f8abefc317f16a60c4d~mv2.jpg" alt="Alpina 30cm Electric Lawnmower 1000W" loading="lazy"><div class="tile-title">Alpina 30cm Electric Lawnmower 1000W</div><div class="tile-price">£145</div></div><div class="tile" data-title="Hecht 1233 Electric Lawnmower 1200W" data-price="£125" data-desc="1200W rotary electric lawn mower with plastic chassis, 33cm width of cut, and central cutting height adjustment (20-60mm)." data-img="https://static.wixstatic.com/media/b243b4_7b4922aaf94e4ab89dece729d780a78b~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_7b4922aaf94e4ab89dece729d780a78b~mv2.jpg" alt="Hecht 1233 Electric Lawnmower 1200W" loading="lazy"><div class="tile-title">Hecht 1233 Electric Lawnmower 1200W</div><div class="tile-price">£125</div></div><div class="tile" data-title="Gardencare 16&quot; Push Petrol Mower" data-price="£255" data-desc="LMX40P push mower with 123cc Loncin engine, robust steel chassis, 16&quot; cut, and generous 45L grass bag." data-img="https://static.wixstatic.com/media/b243b4_5ac393c1865a4f18b77c5837ee9bbe32~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_5ac393c1865a4f18b77c5837ee9bbe32~mv2.jpg" alt="Gardencare 16&quot; Push Petrol Mower" loading="lazy"><div class="tile-title">Gardencare 16&quot; Push Petrol Mower</div><div class="tile-price">£255</div></div><div class="tile" data-title="Gardencare 18&quot; Self Drive Petrol Mower" data-price="£435" data-desc="Briggs &amp; Stratton 500e Series 140cc self-propelled mower with 46cm (18&quot;) cut-to-the-edge deck, large 10&quot; rear wheels, and 60L grass bag." data-img="https://static.wixstatic.com/media/b243b4_6b5d8b76c80d45b3ab2952a1e6b0d464~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_6b5d8b76c80d45b3ab2952a1e6b0d464~mv2.jpg" alt="Gardencare 18&quot; Self Drive Petrol Mower" loading="lazy"><div class="tile-title">Gardencare 18&quot; Self Drive Petrol Mower</div><div class="tile-price">£435</div></div><div class="tile" data-title="Gardencare 19&quot; Self Drive Variable Speed Rear Roller Mower" data-price="£435" data-desc="173cc OHV variable-speed self-propelled mower with full-width rear roller for classic lawn stripes, 48cm cut, steel deck, and 65L bag." data-img="https://static.wixstatic.com/media/b243b4_a24d40ec6d7744ba86fc76f39ff92f2b~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_a24d40ec6d7744ba86fc76f39ff92f2b~mv2.jpg" alt="Gardencare 19&quot; Self Drive Variable Speed Rear Roller Mower" loading="lazy"><div class="tile-title">Gardencare 19&quot; Self Drive Variable Speed Rear Roller Mower</div><div class="tile-price">£435</div></div><div class="tile" data-title="Gardencare 16&quot; Self Drive Petrol Mower" data-price="£310" data-desc="Briggs &amp; Stratton 450e Series 125cc 2-in-1 collection &amp; mulching self-propelled mower with 42cm (16&quot;) deck and 6-stage height adjuster." data-img="https://static.wixstatic.com/media/b243b4_f7de3d64206e4085b8027c0b54e82f83~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_f7de3d64206e4085b8027c0b54e82f83~mv2.jpg" alt="Gardencare 16&quot; Self Drive Petrol Mower" loading="lazy"><div class="tile-title">Gardencare 16&quot; Self Drive Petrol Mower</div><div class="tile-price">£310</div></div><div class="tile" data-title="Allett 14&quot; Petrol Cylinder Mower" data-price="£1,050" data-desc="British-made Classic 14L self-propelled cylinder mower with 79cc Loncin engine, 5-blade quick-cartridge cylinder, steel rear roller, and 32L grassbox." data-img="https://static.wixstatic.com/media/b243b4_082f59323d484d0cb5a4fb7510296b2d~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_082f59323d484d0cb5a4fb7510296b2d~mv2.jpg" alt="Allett 14&quot; Petrol Cylinder Mower" loading="lazy"><div class="tile-title">Allett 14&quot; Petrol Cylinder Mower</div><div class="tile-price">£1,050</div></div><div class="tile" data-title="Alpina 653SHQ 53cm Self Propelled" data-price="£565" data-desc="4-in-1 53cm self-propelled steel-deck mower with Honda 160cc auto-choke engine, 6-position central height adjustment, and 70L grass catcher." data-img="https://static.wixstatic.com/media/b243b4_87f3d5e1611b4eedba85bfb636994ebb~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_87f3d5e1611b4eedba85bfb636994ebb~mv2.jpg" alt="Alpina 653SHQ 53cm Self Propelled" loading="lazy"><div class="tile-title">Alpina 653SHQ 53cm Self Propelled</div><div class="tile-price">£565</div></div><div class="tile" data-title="Alpina AL648SBE 48cm Self Propelled" data-price="£670" data-desc="48cm self-propelled steel-deck mower with 163cc Briggs &amp; Stratton push-button electric start engine, 70L collector, and mulching plug." data-img="https://static.wixstatic.com/media/b243b4_eca8a8950b3747b3a027205acdba9c69~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_eca8a8950b3747b3a027205acdba9c69~mv2.jpg" alt="Alpina AL648SBE 48cm Self Propelled" loading="lazy"><div class="tile-title">Alpina AL648SBE 48cm Self Propelled</div><div class="tile-price">£670</div></div><div class="tile" data-title="Hecht 546SX 46cm Self Propelled" data-price="£345" data-desc="Lightweight 30kg 46cm self-propelled mower with 139cc Hecht engine, ball-bearing wheels, single-lever height adjuster (30-80mm), and 60L box." data-img="https://static.wixstatic.com/media/b243b4_908e7eb5d70d403a94fc3f64145e122d~mv2.png" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_908e7eb5d70d403a94fc3f64145e122d~mv2.png" alt="Hecht 546SX 46cm Self Propelled" loading="lazy"><div class="tile-title">Hecht 546SX 46cm Self Propelled</div><div class="tile-price">£345</div></div><div class="tile" data-title="Hecht 540 Hand Propelled 40cm Mower" data-price="£225" data-desc="Ultra-light 20kg 40cm push petrol mower with 127cc Hecht engine, 25-75mm height adjustment, and 40L collecting box." data-img="https://static.wixstatic.com/media/b243b4_bcd81484dbb844bda5a95f5f5f890032~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_bcd81484dbb844bda5a95f5f5f890032~mv2.jpg" alt="Hecht 540 Hand Propelled 40cm Mower" loading="lazy"><div class="tile-title">Hecht 540 Hand Propelled 40cm Mower</div><div class="tile-price">£225</div></div><div class="tile" data-title="Hecht 541SW 41cm Self Propelled" data-price="£275" data-desc="Compact 24kg 41cm self-propelled petrol mower with 127cc Hecht engine, single-lever height adjuster (25-75mm), and 45L collecting box." data-img="https://static.wixstatic.com/media/b243b4_2560b2544d7143b685b4cbbd35238d4c~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_2560b2544d7143b685b4cbbd35238d4c~mv2.jpg" alt="Hecht 541SW 41cm Self Propelled" loading="lazy"><div class="tile-title">Hecht 541SW 41cm Self Propelled</div><div class="tile-price">£275</div></div><div class="tile" data-title="Hecht 548-SWE 48cm Electric Start Self Propelled" data-price="£490" data-desc="5-in-1 19&quot; self-propelled mower with push-button electric start + pull start, 5hp Hecht engine, GT gearbox, mulching kit, and 60L grass box." data-img="https://static.wixstatic.com/media/b243b4_ab3eefff88784f8fb4a28ab03ddefb30~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_ab3eefff88784f8fb4a28ab03ddefb30~mv2.jpg" alt="Hecht 548-SWE 48cm Electric Start Self Propelled" loading="lazy"><div class="tile-title">Hecht 548-SWE 48cm Electric Start Self Propelled</div><div class="tile-price">£490</div></div></div></section><section class="cat-section" id="sec-strimmers"><h2 class="cat-heading">Strimmers</h2><div class="tile-grid"><div class="tile" data-title="Hecht 1040 Battery Strimmer 40V" data-price="£105" data-desc="40V cordless grass trimmer with 28-32cm working width (ACCU program 5040). Battery and charger sold separately." data-img="https://static.wixstatic.com/media/b243b4_9b87f9ccfece40619c9c06e82c13149b~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_9b87f9ccfece40619c9c06e82c13149b~mv2.jpg" alt="Hecht 1040 Battery Strimmer 40V" loading="lazy"><div class="tile-title">Hecht 1040 Battery Strimmer 40V</div><div class="tile-price">£105</div></div><div class="tile" data-title="Hecht 145 Petrol Strimmer 43cc" data-price="£250" data-desc="2-stroke 43cc petrol brushcutter supplied with string head, 3-tooth metal blade, double harness, tools, and fuel mixing bottle." data-img="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Hecht 145 Petrol Strimmer 43cc" loading="lazy"><div class="tile-title">Hecht 145 Petrol Strimmer 43cc</div><div class="tile-price">£250</div></div><div class="tile" data-title="Alpina 32cc Petrol Strimmer" data-price="£250" data-desc="Powerful 32.6cc petrol brushcutter with ergonomic bike handles and double shoulder harness for tackling thick grass." data-img="https://static.wixstatic.com/media/b243b4_2dedd52e12364b8499c72e9343d96fb8~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_2dedd52e12364b8499c72e9343d96fb8~mv2.jpg" alt="Alpina 32cc Petrol Strimmer" loading="lazy"><div class="tile-title">Alpina 32cc Petrol Strimmer</div><div class="tile-price">£250</div></div><div class="tile" data-title="Hecht 5022 Battery Strimmer 20V" data-price="£75" data-desc="Lightweight 1.9kg 20V cordless grass trimmer with telescopic handle and 25cm working width (ACCU 1278 program). Battery &amp; charger sold separately." data-img="https://static.wixstatic.com/media/b243b4_b63680db49a247609bc1718733d0d62a~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_b63680db49a247609bc1718733d0d62a~mv2.jpg" alt="Hecht 5022 Battery Strimmer 20V" loading="lazy"><div class="tile-title">Hecht 5022 Battery Strimmer 20V</div><div class="tile-price">£75</div></div><div class="tile" data-title="Gardencare 33cc Petrol Strimmer" data-price="£195" data-desc="GC333L 33cc 2-stroke EasyStart brushcutter complete with easy-load butterfly nylon line head and 3-tooth metal bramble blade." data-img="https://static.wixstatic.com/media/b243b4_e90d598bd786400eac7977beb2a19b48~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_e90d598bd786400eac7977beb2a19b48~mv2.jpg" alt="Gardencare 33cc Petrol Strimmer" loading="lazy"><div class="tile-title">Gardencare 33cc Petrol Strimmer</div><div class="tile-price">£195</div></div><div class="tile" data-title="Gardencare 26cc Petrol Strimmer" data-price="£165" data-desc="26cc EasyStart petrol grass trimmer with D-type loop handle and operator shoulder harness." data-img="https://static.wixstatic.com/media/b243b4_4aa5b29b77204994a7a11aad59efe462~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_4aa5b29b77204994a7a11aad59efe462~mv2.jpg" alt="Gardencare 26cc Petrol Strimmer" loading="lazy"><div class="tile-title">Gardencare 26cc Petrol Strimmer</div><div class="tile-price">£165</div></div><div class="tile" data-title="Alpina 25cc Petrol Strimmer" data-price="£215" data-desc="ABR 26 J 25.4cc Easy Start petrol strimmer with split shaft, bump-feed twin-line head, 3-tooth brush blade, and single-shoulder harness." data-img="https://static.wixstatic.com/media/b243b4_5ca6719eb1b647379cf90993992f4ee2~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_5ca6719eb1b647379cf90993992f4ee2~mv2.jpg" alt="Alpina 25cc Petrol Strimmer" loading="lazy"><div class="tile-title">Alpina 25cc Petrol Strimmer</div><div class="tile-price">£215</div></div><div class="tile" data-title="Hecht Wheeled Trimmer" data-price="£275" data-desc="HECHT 155 51.7cc 2HP wheeled string trimmer with large aluminium wheels and 3-position tilting head—takes all the weight off your shoulders." data-img="https://static.wixstatic.com/media/b243b4_2ce271b3546d4015a1518b47546d93d3~mv2.png" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_2ce271b3546d4015a1518b47546d93d3~mv2.png" alt="Hecht Wheeled Trimmer" loading="lazy"><div class="tile-title">Hecht Wheeled Trimmer</div><div class="tile-price">£275</div></div><div class="tile" data-title="Hecht 1331 Multi Tool" data-price="£275" data-desc="4-in-1 32.7cc petrol multi-tool supplied with brushcutter blade, line trimmer head, 40cm hedge trimmer, 30.5cm polesaw, extension shaft, and harness." data-img="https://static.wixstatic.com/media/b243b4_f0110d5acbe34de79f3eba10ac321773~mv2.png" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_f0110d5acbe34de79f3eba10ac321773~mv2.png" alt="Hecht 1331 Multi Tool" loading="lazy"><div class="tile-title">Hecht 1331 Multi Tool</div><div class="tile-price">£275</div></div><div class="tile" data-title="Alpina T3048Li Trimmer / Edger" data-price="£115" data-desc="48V cordless grass trimmer &amp; lawn edger with push-button rotating head and automatic double-line feed (body only)." data-img="https://static.wixstatic.com/media/b243b4_10aee8bef7c6485eb6e0d7816c2fa7d7~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_10aee8bef7c6485eb6e0d7816c2fa7d7~mv2.jpg" alt="Alpina T3048Li Trimmer / Edger" loading="lazy"><div class="tile-title">Alpina T3048Li Trimmer / Edger</div><div class="tile-price">£115</div></div><div class="tile" data-title="Hecht 530 Electric Grass Trimmer" data-price="£65" data-desc="Lightweight 2.6kg 550W electric grass trimmer with 30cm working width, telescopic shaft, and adjustable cutting head angle." data-img="https://static.wixstatic.com/media/b243b4_7c5efc22a842458aba531df903042048~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_7c5efc22a842458aba531df903042048~mv2.jpg" alt="Hecht 530 Electric Grass Trimmer" loading="lazy"><div class="tile-title">Hecht 530 Electric Grass Trimmer</div><div class="tile-price">£65</div></div><div class="tile" data-title="Hecht 163 Heavy Duty Brushcutter" data-price="£325" data-desc="Heavy-duty 63.3cc petrol brushcutter with ergonomic bike handles, anti-vibration system, double harness, nylon head, and 3-tooth metal blade." data-img="https://static.wixstatic.com/media/b243b4_02e255e7fea24947a9fe4fbc13752485~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_02e255e7fea24947a9fe4fbc13752485~mv2.jpg" alt="Hecht 163 Heavy Duty Brushcutter" loading="lazy"><div class="tile-title">Hecht 163 Heavy Duty Brushcutter</div><div class="tile-price">£325</div></div><div class="tile" data-title="Hecht 129 BTS Split-Shaft Strimmer" data-price="£165" data-desc="Split-shaft 1.1HP petrol brushcutter with bump-feed double line head, 3-tooth metal disc, and shoulder strap." data-img="https://static.wixstatic.com/media/b243b4_26091e1054d5447a8d742297ac676c9f~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_26091e1054d5447a8d742297ac676c9f~mv2.jpg" alt="Hecht 129 BTS Split-Shaft Strimmer" loading="lazy"><div class="tile-title">Hecht 129 BTS Split-Shaft Strimmer</div><div class="tile-price">£165</div></div><div class="tile" data-title="Hecht 126 Petrol Strimmer" data-price="£145" data-desc="Lightweight 4.3kg 23cc 2-stroke petrol grass trimmer with 35cm cutting width and bump-feed line head." data-img="https://static.wixstatic.com/media/b243b4_f3ac49e279844239a44b6d378da88fb4~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_f3ac49e279844239a44b6d378da88fb4~mv2.jpg" alt="Hecht 126 Petrol Strimmer" loading="lazy"><div class="tile-title">Hecht 126 Petrol Strimmer</div><div class="tile-price">£145</div></div></div></section><section class="cat-section" id="sec-chainsaws"><h2 class="cat-heading">Chainsaws</h2><div class="tile-grid"><div class="tile" data-title="Alpina 45cc Petrol Chainsaw 45cm" data-price="£245" data-desc="45cc 2-stroke petrol chainsaw with Easy Start, 18&quot; (45cm) bar, automatic adjustable oil pump, inertia chain brake, and tool-free air filter access." data-img="https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg" alt="Alpina 45cc Petrol Chainsaw 45cm" loading="lazy"><div class="tile-title">Alpina 45cc Petrol Chainsaw 45cm</div><div class="tile-price">£245</div></div><div class="tile" data-title="Hecht 58cc Petrol Chainsaw with 2 Bars (16&quot; + 18&quot;)" data-price="£320" data-desc="Powerful 58cc (3.3HP) 2-stroke petrol chainsaw supplied with both 16&quot; and 18&quot; cutting bars, automatic lubrication, and quick chain tensioning." data-img="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Hecht 58cc Petrol Chainsaw with 2 Bars (16&quot; + 18&quot;)" loading="lazy"><div class="tile-title">Hecht 58cc Petrol Chainsaw with 2 Bars (16&quot; + 18&quot;)</div><div class="tile-price">£320</div></div><div class="tile" data-title="Makita 35cc Petrol Chainsaw 40cm" data-price="£345" data-desc="High-performance 35cc (2.28hp) petrol chainsaw with 40cm bar, electronic ignition, and vibration dampening." data-img="https://static.wixstatic.com/media/b243b4_faea4ff8008d489a94cd35a473b0d7a7~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_faea4ff8008d489a94cd35a473b0d7a7~mv2.jpg" alt="Makita 35cc Petrol Chainsaw 40cm" loading="lazy"><div class="tile-title">Makita 35cc Petrol Chainsaw 40cm</div><div class="tile-price">£345</div></div><div class="tile" data-title="Alpina 40cc Petrol Chainsaw 40cm" data-price="£225" data-desc="40.1cc 2-stroke petrol chainsaw with Easy Start, 16&quot; (40cm) bar, automatic oil pump, and inertia chain brake." data-img="https://static.wixstatic.com/media/b243b4_867e2dfdbea04050820389f37021eb0c~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_867e2dfdbea04050820389f37021eb0c~mv2.jpg" alt="Alpina 40cc Petrol Chainsaw 40cm" loading="lazy"><div class="tile-title">Alpina 40cc Petrol Chainsaw 40cm</div><div class="tile-price">£225</div></div><div class="tile" data-title="Alpina 37cc Petrol Chainsaw 35cm" data-price="£205" data-desc="37.2cc 2-stroke petrol chainsaw with Easy Start, 14&quot; (35cm) bar, automatic oil pump, and tool-free filter/plug access." data-img="https://static.wixstatic.com/media/b243b4_1d02d8522e594b82bd68c0a835f2603b~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_1d02d8522e594b82bd68c0a835f2603b~mv2.jpg" alt="Alpina 37cc Petrol Chainsaw 35cm" loading="lazy"><div class="tile-title">Alpina 37cc Petrol Chainsaw 35cm</div><div class="tile-price">£205</div></div><div class="tile" data-title="Makita 22cc 30cm Top Handle Petrol Chainsaw" data-price="£495" data-desc="Makita DCS230T lightweight professional top-handle tree-surgeon chainsaw with 22cc 2-stroke engine, easy-start electronic ignition, and inertia chain brake." data-img="https://static.wixstatic.com/media/b243b4_55db3f4da02049fa95051c4fb33e5225~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_55db3f4da02049fa95051c4fb33e5225~mv2.jpg" alt="Makita 22cc 30cm Top Handle Petrol Chainsaw" loading="lazy"><div class="tile-title">Makita 22cc 30cm Top Handle Petrol Chainsaw</div><div class="tile-price">£495</div></div><div class="tile" data-title="Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)" data-price="£285" data-desc="52cc (1.9kW) petrol chainsaw with Walbro carburettor, supplied complete with both 16&quot; and 18&quot; bars and chains." data-img="https://static.wixstatic.com/media/b243b4_d2b646057da9466280850793f00ae434~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_d2b646057da9466280850793f00ae434~mv2.jpg" alt="Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)" loading="lazy"><div class="tile-title">Hecht 953 Petrol Chainsaw 52cc (C/W 2 Bars)</div><div class="tile-price">£285</div></div><div class="tile" data-title="Hecht Chainsaw Sharpener" data-price="£55" data-desc="Bench/wall-mounted electric chainsaw chain sharpener with grinding wheel included." data-img="https://static.wixstatic.com/media/b243b4_f28809260a0a4f949ad1f2de69f6c906~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_f28809260a0a4f949ad1f2de69f6c906~mv2.jpg" alt="Hecht Chainsaw Sharpener" loading="lazy"><div class="tile-title">Hecht Chainsaw Sharpener</div><div class="tile-price">£55</div></div><div class="tile" data-title="Hecht 9940 40V 35cm Battery Chainsaw (Body Only)" data-price="£220" data-desc="40V cordless chainsaw with 35cm bar, tool-free chain tensioning, automatic chain lubrication, and safety chain brake (battery &amp; charger sold separately)." data-img="https://static.wixstatic.com/media/b243b4_d73c0756ff374243ae2fc04d78f47251~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_d73c0756ff374243ae2fc04d78f47251~mv2.jpg" alt="Hecht 9940 40V 35cm Battery Chainsaw (Body Only)" loading="lazy"><div class="tile-title">Hecht 9940 40V 35cm Battery Chainsaw (Body Only)</div><div class="tile-price">£220</div></div><div class="tile" data-title="Gardencare 20&quot; Chainsaw" data-price="£195" data-desc="56cc petrol chainsaw fitted with a 20&quot; Oregon cutting bar and tool-free maintenance access cover." data-img="https://static.wixstatic.com/media/b243b4_000094d5b3e6458b84d76460bee0932d~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_000094d5b3e6458b84d76460bee0932d~mv2.jpg" alt="Gardencare 20&quot; Chainsaw" loading="lazy"><div class="tile-title">Gardencare 20&quot; Chainsaw</div><div class="tile-price">£195</div></div><div class="tile" data-title="Gardencare 16&quot; Chainsaw" data-price="£165" data-desc="40cc petrol chainsaw fitted with a 16&quot; Oregon cutting bar and tool-free air filter &amp; spark plug access." data-img="https://static.wixstatic.com/media/b243b4_a3f5f9f6a2af4646a3ad2598a59bb30a~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_a3f5f9f6a2af4646a3ad2598a59bb30a~mv2.jpg" alt="Gardencare 16&quot; Chainsaw" loading="lazy"><div class="tile-title">Gardencare 16&quot; Chainsaw</div><div class="tile-price">£165</div></div><div class="tile" data-title="Hecht 929R 30cm Top Handle Saw" data-price="£175" data-desc="Compact 2.9kg top-handle 25.4cc (2HP) 2-stroke pruning saw with 30cm Hecht bar, belt hook, and safety chain brake." data-img="https://static.wixstatic.com/media/b243b4_7b08f37d5cb14805b04b833bb1f9d91e~mv2.png" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_7b08f37d5cb14805b04b833bb1f9d91e~mv2.png" alt="Hecht 929R 30cm Top Handle Saw" loading="lazy"><div class="tile-title">Hecht 929R 30cm Top Handle Saw</div><div class="tile-price">£175</div></div><div class="tile" data-title="Hecht 941 Chainsaw 35cm" data-price="£180" data-desc="Lightweight 4.7kg domestic petrol chainsaw with 35cm bar and anti-vibration system." data-img="https://static.wixstatic.com/media/b243b4_16a16c9e9ca14aa58e90e0453ec3d0f6~mv2.png" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_16a16c9e9ca14aa58e90e0453ec3d0f6~mv2.png" alt="Hecht 941 Chainsaw 35cm" loading="lazy"><div class="tile-title">Hecht 941 Chainsaw 35cm</div><div class="tile-price">£180</div></div></div></section><section class="cat-section" id="sec-hedgetrimmers"><h2 class="cat-heading">Hedgetrimmers</h2><div class="tile-grid"><div class="tile" data-title="Hecht 6022 Battery Trimmer 20V" data-price="£75" data-desc="20V cordless hedge trimmer with 51cm bar length and 15mm max cutting diameter (ACCU 1278 program). Battery and charger sold separately." data-img="https://static.wixstatic.com/media/b243b4_934e8b428c8a4886b1ecf6ebfa8396df~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_934e8b428c8a4886b1ecf6ebfa8396df~mv2.jpg" alt="Hecht 6022 Battery Trimmer 20V" loading="lazy"><div class="tile-title">Hecht 6022 Battery Trimmer 20V</div><div class="tile-price">£75</div></div><div class="tile" data-title="Alpina 48cm Double Sided Battery Hedgetrimmer" data-price="£245" data-desc="Alpina H 24 Li 24V cordless hedge trimmer supplied with 4.0Ah battery &amp; charger (up to 95 mins runtime), 180-degree rotating handle, and laser-cut blades." data-img="https://static.wixstatic.com/media/b243b4_79231b1ee6c54c90b86c02841df8e5d1~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_79231b1ee6c54c90b86c02841df8e5d1~mv2.jpg" alt="Alpina 48cm Double Sided Battery Hedgetrimmer" loading="lazy"><div class="tile-title">Alpina 48cm Double Sided Battery Hedgetrimmer</div><div class="tile-price">£245</div></div><div class="tile" data-title="Makita Long Reach Hedgetrimmer 2.5M" data-price="£580" data-desc="Makita EN4950H 25.4cc 4-stroke pole hedge trimmer with 13-angle adjustable head (135 degrees) and 180-degree foldable shaft for transport." data-img="https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_9e8d99668c2d434db7d30e79eabfbf32~mv2.jpg" alt="Makita Long Reach Hedgetrimmer 2.5M" loading="lazy"><div class="tile-title">Makita Long Reach Hedgetrimmer 2.5M</div><div class="tile-price">£580</div></div><div class="tile" data-title="Makita Dolmar Long Reach Hedgetrimmer" data-price="£485" data-desc="Short-shaft 25.4cc 4-stroke long-reach hedge trimmer with 49cm double-sided 13-angle articulating blade and 180-degree folding storage." data-img="https://static.wixstatic.com/media/b243b4_e3b0a8d0c04d417f832fca3eea41ca59~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_e3b0a8d0c04d417f832fca3eea41ca59~mv2.jpg" alt="Makita Dolmar Long Reach Hedgetrimmer" loading="lazy"><div class="tile-title">Makita Dolmar Long Reach Hedgetrimmer</div><div class="tile-price">£485</div></div><div class="tile" data-title="Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer" data-price="£460" data-desc="Professional low-weight 2-stroke hedge trimmer with 75cm double-sided blade, 4-spring anti-vibration system, and 5-position rotating handle." data-img="https://static.wixstatic.com/media/b243b4_ca41e79744b54032b8a296eed8c6c4a4~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_ca41e79744b54032b8a296eed8c6c4a4~mv2.jpg" alt="Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer" loading="lazy"><div class="tile-title">Dolmar 22cc 75cm Double Sided Petrol Hedge Trimmer</div><div class="tile-price">£460</div></div><div class="tile" data-title="Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer" data-price="£265" data-desc="Hecht 9375 5.3kg petrol hedge trimmer with 670mm single-sided blade, 20mm cutting capacity, steel-spring anti-vibration, and blade scabbard." data-img="https://static.wixstatic.com/media/b243b4_85edb475f65c4cc79178b89fcc31e3f0~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_85edb475f65c4cc79178b89fcc31e3f0~mv2.jpg" alt="Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer" loading="lazy"><div class="tile-title">Hecht 22cc 67cm Single Sided Petrol Hedge Trimmer</div><div class="tile-price">£265</div></div><div class="tile" data-title="Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer" data-price="£450" data-desc="Professional 24cc 2-stroke hedge trimmer with 60cm double-sided blade, 5-position rotatable handle, and 4-spring anti-vibration." data-img="https://static.wixstatic.com/media/b243b4_4eb12d77afd14a8ea634f225a66143f3~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_4eb12d77afd14a8ea634f225a66143f3~mv2.jpg" alt="Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer" loading="lazy"><div class="tile-title">Dolmar 24cc 60cm Double Sided Petrol Hedge Trimmer</div><div class="tile-price">£450</div></div><div class="tile" data-title="Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer" data-price="£195" data-desc="25.4cc 2-stroke petrol hedge trimmer with 60cm working width, 22mm branch capacity, vibration dampers, and rotating main handle." data-img="https://static.wixstatic.com/media/b243b4_0c2f07594d034bcc990a3db76e8d03e8~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_0c2f07594d034bcc990a3db76e8d03e8~mv2.jpg" alt="Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer" loading="lazy"><div class="tile-title">Hecht 25cc 60cm Double Sided Petrol Hedge Trimmer</div><div class="tile-price">£195</div></div><div class="tile" data-title="Makita 45cm Electric Double Sided Trimmer 550W" data-price="£155" data-desc="Makita UH4570 550W corded electric double-sided hedge trimmer with 45cm blade." data-img="https://static.wixstatic.com/media/b243b4_be3daa0434114f9c82af565d96ce3409~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_be3daa0434114f9c82af565d96ce3409~mv2.jpg" alt="Makita 45cm Electric Double Sided Trimmer 550W" loading="lazy"><div class="tile-title">Makita 45cm Electric Double Sided Trimmer 550W</div><div class="tile-price">£155</div></div><div class="tile" data-title="Gardencare 75cm Petrol Hedgetrimmer" data-price="£385" data-desc="GCHT0751R commercial hedge trimmer powered by a Japanese Kawasaki 27cc 2-stroke engine with 75cm double-sided blade and 180-degree rotating handle." data-img="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Gardencare 75cm Petrol Hedgetrimmer" loading="lazy"><div class="tile-title">Gardencare 75cm Petrol Hedgetrimmer</div><div class="tile-price">£385</div></div><div class="tile" data-title="Gardencare 60cm Petrol Hedgetrimmer" data-price="£365" data-desc="GCHT0601R commercial hedge trimmer powered by a Japanese Kawasaki 27cc 2-stroke engine with 60cm double-sided blade and 180-degree rotating handle." data-img="https://static.wixstatic.com/media/b243b4_756b86f79413472c844af703de29de34~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_756b86f79413472c844af703de29de34~mv2.jpg" alt="Gardencare 60cm Petrol Hedgetrimmer" loading="lazy"><div class="tile-title">Gardencare 60cm Petrol Hedgetrimmer</div><div class="tile-price">£365</div></div><div class="tile" data-title="Golden Star Kawasaki Hedge Trimmer" data-price="£415" data-desc="HTO-751S heavy-duty single-sided hedge trimmer with Japanese Kawasaki TJ23V 22.5cc engine and 750mm blade." data-img="https://static.wixstatic.com/media/b243b4_053a138667b44777aea97d7ad7b91949~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_053a138667b44777aea97d7ad7b91949~mv2.jpg" alt="Golden Star Kawasaki Hedge Trimmer" loading="lazy"><div class="tile-title">Golden Star Kawasaki Hedge Trimmer</div><div class="tile-price">£415</div></div><div class="tile" data-title="Hecht 9275 Pro Petrol Hedge Trimmer" data-price="£275" data-desc="22.2cc 2-stroke professional hedge trimmer with 750mm blade (690mm cut), 28mm branch capacity, rotatable handle, and steel-spring anti-vibration." data-img="https://static.wixstatic.com/media/b243b4_8784864a25454c38960ee5a167632e04~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_8784864a25454c38960ee5a167632e04~mv2.jpg" alt="Hecht 9275 Pro Petrol Hedge Trimmer" loading="lazy"><div class="tile-title">Hecht 9275 Pro Petrol Hedge Trimmer</div><div class="tile-price">£275</div></div><div class="tile" data-title="Alpina AHT55 Petrol Hedgetrimmer" data-price="£235" data-desc="24.5cc Easy Start petrol hedgetrimmer with 55cm diamond-ground double-sided blades, 35mm tooth spacing, and 3-position rotating rear handle." data-img="https://static.wixstatic.com/media/b243b4_04847c358eab435282b92ceb863306ff~mv2.jpg" onclick="openModal(this)"><img src="https://static.wixstatic.com/media/b243b4_04847c358eab435282b92ceb863306ff~mv2.jpg" alt="Alpina AHT55 Petrol Hedgetrimmer" loading="lazy"><div class="tile-title">Alpina AHT55 Petrol Hedgetrimmer</div><div class="tile-price">£235</div></div></div></section>
 </main>
 
-<div class="modal-bg" id="prodModal" onclick="if(event.target===this)closeModal()">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
+<footer class="site-footer">
+  Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: 07934 716954
+</footer>
+
+<div class="modal-backdrop" id="itemModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
     <img id="mImg" src="" alt="">
-    <h3 id="mTitle"></h3>
+    <div class="modal-title" id="mTitle"></div>
     <div class="modal-price" id="mPrice"></div>
-    <p class="modal-desc" id="mDesc"></p>
-    <div class="modal-call">Call 07934 716954 to check stock or find out more</div>
+    <div class="modal-desc" id="mDesc"></div>
+    <div class="modal-call">Interested? Call 07934 716954 to enquire</div>
   </div>
 </div>
 
-<footer class="site-footer">
-  Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, Coleraine, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a>
-</footer>
-
 <script>
-const params = new URLSearchParams(window.location.search);
-const cat = params.get('cat');
-if (cat) {
-  document.querySelectorAll('.cat-section').forEach(s => {
-    s.style.display = (s.id === 'sec-' + cat) ? 'block' : 'none';
-  });
-  document.querySelectorAll('.cat-pill').forEach(p => {
-    if (p.dataset.cat === cat) p.classList.add('current');
-  });
-}
-function openModal(img, title, price, desc) {
-  document.getElementById('mImg').src = img;
-  document.getElementById('mTitle').textContent = title;
-  document.getElementById('mPrice').textContent = price;
-  document.getElementById('mDesc').textContent = desc;
-  document.getElementById('prodModal').classList.add('open');
-}
-function closeModal() {
-  document.getElementById('prodModal').classList.remove('open');
-}
+  function openModal(el) {
+    document.getElementById('mImg').src = el.getAttribute('data-img');
+    document.getElementById('mTitle').textContent = el.getAttribute('data-title');
+    document.getElementById('mPrice').textContent = el.getAttribute('data-price');
+    document.getElementById('mDesc').textContent = el.getAttribute('data-desc');
+    document.getElementById('itemModal').classList.add('open');
+  }
+  function closeModal() {
+    document.getElementById('itemModal').classList.remove('open');
+  }
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var cat = (params.get('cat') || 'lawnmowers').toLowerCase();
+    var sections = document.querySelectorAll('.cat-section');
+    var matched = false;
+    sections.forEach(function(sec) {
+      if (sec.id === 'sec-' + cat) {
+        sec.style.display = 'block';
+        matched = true;
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+    if (!matched && sections.length) sections[0].style.display = 'block';
+    document.querySelectorAll('.cat-pill').forEach(function(pill) {
+      if (pill.getAttribute('data-cat') === cat) pill.classList.add('active');
+    });
+  })();
 </script>
 </body>
 </html>
