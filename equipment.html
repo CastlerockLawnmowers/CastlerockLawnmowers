@@ -7,128 +7,114 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #e6e7e9;
-      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      line-height: 1.5;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
-    .top-header {
+    .site-header {
       background: #ffffff;
-      border-bottom: 1px solid #d0d0d0;
-      padding: 12px 24px;
+      border-bottom: 1px solid #e5e7eb;
     }
     .header-inner {
-      max-width: 1180px;
+      max-width: 1140px;
       margin: 0 auto;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      flex-wrap: wrap;
     }
-    .logo-box img {
-      max-height: 92px;
+    .header-logo img {
+      height: 120px;
       width: auto;
       display: block;
     }
-    .brand-center {
+    .header-center {
       text-align: center;
       flex: 1;
-      min-width: 240px;
     }
-    .brand-center h1 {
-      font-family: Georgia, "Times New Roman", serif;
+    .header-center h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
       font-style: italic;
-      font-weight: bold;
       color: #c8102e;
-      font-size: 2.15rem;
-      line-height: 1.1;
-      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
     }
-    .brand-center .phone-line {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-weight: bold;
+    .header-phone {
+      margin-top: 6px;
       font-size: 1.35rem;
-      color: #111;
+      font-weight: 700;
+      color: #111827;
     }
-    .brand-center .phone-line a {
-      color: #111;
+    .header-phone a {
+      color: #111827;
       text-decoration: none;
     }
     .header-right {
       text-align: right;
-      min-width: 175px;
+      min-width: 170px;
     }
     .hecht-badge {
+      display: inline-block;
+      background: #c8102e;
+      color: #ffffff;
       font-weight: 900;
       font-size: 1.35rem;
-      color: #c8102e;
-      letter-spacing: 0.5px;
-      line-height: 1;
-    }
-    .hecht-sub {
-      font-size: 0.68rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #333;
-      margin-bottom: 8px;
-    }
-    .pay-badges {
-      display: inline-flex;
-      gap: 4px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-    .pay-pill {
-      background: #f3f4f6;
-      border: 1px solid #ccc;
+      padding: 4px 14px;
+      letter-spacing: 1.5px;
       border-radius: 3px;
-      padding: 2px 6px;
-      font-size: 0.7rem;
-      font-weight: bold;
-      color: #222;
+    }
+    .dealer-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #374151;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+    .payment-line {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 3px;
     }
     .nav-bar {
-      background: #141414;
-      padding: 12px 16px;
+      background: #111111;
+      padding: 10px 20px;
     }
     .nav-inner {
-      max-width: 960px;
+      max-width: 1140px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 14px;
+      justify-content: center;
+      gap: 28px;
       flex-wrap: wrap;
     }
     .nav-pill {
       display: inline-block;
-      min-width: 190px;
-      text-align: center;
-      padding: 9px 24px;
+      background: #facc15;
+      color: #111111;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 28px;
       border-radius: 999px;
-      font-weight: bold;
-      font-size: 0.88rem;
-      letter-spacing: 0.8px;
       text-decoration: none;
-      text-transform: uppercase;
-      background: #f5b942;
-      color: #111;
-      transition: transform 0.15s ease, background 0.15s ease;
+      letter-spacing: 0.6px;
+      transition: background 0.15s ease, transform 0.1s ease;
     }
     .nav-pill:hover {
-      background: #ffd166;
-      transform: translateY(-1px);
+      background: #fde047;
     }
     .nav-pill.active {
-      background: #e3e6f5;
-      color: #111;
+      background: #ffffff;
+      color: #111111;
+      box-shadow: 0 0 0 2px #facc15;
     }
     .main-wrap {
-      max-width: 1180px;
+      max-width: 1140px;
       width: 100%;
       margin: 0 auto;
       padding: 24px 20px 44px;
@@ -142,12 +128,12 @@
       gap: 12px;
       margin-bottom: 22px;
       padding-bottom: 12px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #e5e7eb;
     }
     .back-btn {
       display: inline-block;
-      background: #141414;
-      color: #fff;
+      background: #111111;
+      color: #ffffff;
       text-decoration: none;
       padding: 7px 15px;
       border-radius: 999px;
@@ -161,9 +147,9 @@
       gap: 8px;
     }
     .cat-pill {
-      background: #fff;
-      border: 1px solid #bbb;
-      color: #222;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      color: #1f2937;
       padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.82rem;
@@ -172,7 +158,7 @@
     }
     .cat-pill:hover, .cat-pill.active {
       background: #c8102e;
-      color: #fff;
+      color: #ffffff;
       border-color: #c8102e;
     }
     .cat-heading {
@@ -194,17 +180,6 @@
       .product-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .product-tile {
-      background: transparent;
-      text-align: center;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 8px;
-      transition: transform 0.15s ease;
-    }
-    .product-tile:hover {
-      transform: translateY(-3px);
-    }
-        .product-tile {
       background: #ffffff;
       border: 1px solid #d1d5db;
       border-radius: 10px;
@@ -230,7 +205,6 @@
       max-width: 100%;
       object-fit: contain;
     }
-
     .tile-title {
       font-family: Georgia, "Times New Roman", serif;
       font-style: italic;
@@ -243,7 +217,7 @@
     .tile-price {
       font-size: 1.05rem;
       font-weight: bold;
-      color: #111;
+      color: #111827;
     }
     .modal-backdrop {
       display: none;
@@ -257,7 +231,7 @@
     }
     .modal-backdrop.open { display: flex; }
     .modal-card {
-      background: #fff;
+      background: #ffffff;
       max-width: 580px;
       width: 100%;
       border-radius: 10px;
@@ -271,8 +245,8 @@
       position: absolute;
       top: 12px;
       right: 14px;
-      background: #141414;
-      color: #fff;
+      background: #111111;
+      color: #ffffff;
       border: none;
       width: 30px;
       height: 30px;
@@ -297,13 +271,13 @@
     .modal-price {
       font-size: 1.25rem;
       font-weight: bold;
-      color: #111;
+      color: #111827;
       margin-bottom: 12px;
     }
     .modal-desc {
       font-size: 0.94rem;
       line-height: 1.55;
-      color: #333;
+      color: #374151;
       margin-bottom: 16px;
     }
     .modal-call {
@@ -313,46 +287,55 @@
       font-weight: bold;
       font-size: 0.95rem;
     }
-    footer {
-      background: #141414;
-      color: #eee;
+    .site-footer {
+      background: #111111;
+      color: #e5e7eb;
       text-align: center;
-      padding: 14px 16px;
-      font-size: 0.85rem;
+      padding: 22px 20px;
+      font-size: 0.9rem;
+    }
+    .site-footer a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-right { text-align: center; }
+      .header-logo img { height: 95px; margin: 0 auto; }
+      .header-center h1 { font-size: 1.75rem; }
+      .nav-inner { gap: 12px; }
+      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
     }
   </style>
 </head>
 <body>
 
-  <header class="top-header">
+  <header class="site-header">
     <div class="header-inner">
-      <div class="logo-box">
-        <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo" /></a>
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+        </a>
       </div>
-      <div class="brand-center">
+      <div class="header-center">
         <h1>Castlerock Lawnmowers</h1>
-        <div class="phone-line">Mob: <a href="tel:07934716954">07934 716954</a></div>
+        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
       </div>
       <div class="header-right">
         <div class="hecht-badge">HECHT</div>
-        <div class="hecht-sub">AUTHORISED DEALER</div>
-        <div class="pay-badges">
-          <span class="pay-pill">VISA</span>
-          <span class="pay-pill">Mastercard</span>
-          <span class="pay-pill">PayPal</span>
-          <span class="pay-pill">Cash</span>
-        </div>
+        <div class="dealer-sub">AUTHORISED DEALER</div>
+        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
       </div>
     </div>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-pill active">PRODUCTS</a>
+        <a href="services.html" class="nav-pill">SERVICES</a>
+        <a href="contact.html" class="nav-pill">CONTACT</a>
+      </div>
+    </nav>
   </header>
-
-  <nav class="nav-bar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-pill active">PRODUCTS</a>
-      <a href="services.html" class="nav-pill">SERVICES</a>
-      <a href="contact.html" class="nav-pill">CONTACT</a>
-    </div>
-  </nav>
 
   <main class="main-wrap">
     <div class="sub-bar">
@@ -380,30 +363,26 @@
     </div>
   </div>
 
-  <footer>
-    Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: 07934 716954
+  <footer class="site-footer">
+    <strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a>
   </footer>
 
   <script>
     const WIX = "https://static.wixstatic.com/media/";
     const ITEMS = [
-      // LOG SPLITTERS ONLY
       { cat: "splitters", name: "Hecht 8 Ton Vertical Log Splitter", price: "£900", img: "b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg", desc: "3kW electric motor powering a hydraulic ram. 8 ton maximum splitting pressure. Weight 112kg." },
       { cat: "splitters", name: "Hecht Horizontal Petrol Log Splitter 10T", price: "£850", img: "b243b4_698d2db1f7ca4adfac593b4d85865ebc~mv2.jpg", desc: "Petrol wood splitter, 212cc engine, 10 tons splitting pressure, max wood length 520mm. 12-inch wheels with drawbar and tow hitch. Approx weight 126kg." },
       { cat: "splitters", name: "Hecht 6070 Vertical Electric Log Splitter 7 Ton", price: "£790", img: "b243b4_583bd73c1c5d4c8cbc57c0fe2d15e26f~mv2.jpg", desc: "Electric vertical wood splitter. Power input 230V 50Hz, 3000W. Log length up to 55cm, diameter up to 30cm. Splitting pressure 7 tons. Weight 98kg." },
       { cat: "splitters", name: "Hecht 676 Log Splitter", price: "£475", img: "b243b4_d5836c6ee9d241188ce273520d5f4465~mv2.png", desc: "2kW 230V electric log splitter on stand with transport wheels. Splits logs up to 52cm long with 7 tons maximum pressure. Weight 48kg." },
 
-      // SHREDDERS ONLY
       { cat: "shredders", name: "Professional Self Propelled Shredder & Vacuum", price: "£1,395", img: "b243b4_3bd9eb89fe8f42fb8b06b7d734509bfb~mv2.jpg", desc: "Combined self-propelled petrol vacuum and shredder. 196cc engine (4.1kW), 60cm working width, cuts branches up to 5cm diameter, 3m suction hose, 130L collecting bag." },
       { cat: "shredders", name: "Hecht 6208 Petrol Shredder", price: "£850", img: "b243b4_fd551a769fc64ec79bd165051304b167~mv2.png", desc: "Petrol powered garden shredder with 7HP engine. Suitable for cutting branches up to 70mm diameter." },
       { cat: "shredders", name: "Champion RT10005 Petrol Shredder", price: "£775", img: "b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg", desc: "Champion RT10005 5cm (2-inch) wood chipper shredder powered by 4.1kW 4-stroke OHV engine with 3.1L fuel tank." },
       { cat: "shredders", name: "Hecht 6285XL Electric Shredder", price: "£295", img: "b243b4_03a0634227a34e6db814dc72e7c69d42~mv2.jpg", desc: "2800W electric garden shredder for branches up to 4.4cm diameter, complete with large 60L plastic collecting box." },
 
-      // SCARIFIERS ONLY
       { cat: "scarifiers", name: "Gardencare 40cm Petrol Scarifier", price: "£365", img: "b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg", desc: "Gardencare GCS40 petrol lawn scarifier supplied with both an 18-blade cassette and a 24-spring tine cassette to remove moss and thatch." },
       { cat: "scarifiers", name: "Hecht Electric Scarifier", price: "£155", img: "b243b4_bc642432d0c9484f9ebf3df75804c1c5~mv2.png", desc: "1500W electric lawn scarifier, 32cm working width, 35L grass catcher, supplied with both 16 metal knives and spring tine roller. Lightweight 8kg." },
 
-      // SPREADERS, TRAILERS & TOOLS
       { cat: "tools", name: "Hecht 8101 Petrol Sweeper 100cm", price: "£1,200", img: "b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg", desc: "6.5HP 173cc petrol sweeper, 100cm working width, 3 forward + 2 reverse gears, 35cm brush diameter. Weight 80kg." },
       { cat: "tools", name: "Hecht 8680SE Petrol Sweeper 80cm", price: "£1,130", img: "b243b4_57f257a1d73344a399b4935bcec0020a~mv2.jpg", desc: "Multifunctional self-propelled 80cm sweeper with electric start, Hecht OHV engine, 4 forward + 2 reverse gears." },
       { cat: "tools", name: "Hecht 8615 Petrol Sweeper 60cm", price: "£825", img: "b243b4_57b3fe8990864f07bff7bbf312c74128~mv2.jpg", desc: "Multifunctional self-propelled 60cm sweeper with Hecht OHV engine, 4 forward + 2 reverse gears, 35cm brush diameter." },
