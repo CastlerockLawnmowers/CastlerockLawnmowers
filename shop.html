@@ -1,75 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Castlerock Lawnmowers</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #222; }
-  .site-header { background: #fff; border-bottom: 1px solid #ddd; }
-  .header-inner { max-width: 1180px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  .header-logo img { height: 95px; width: auto; display: block; }
-  .header-center { text-align: center; flex: 1; min-width: 240px; }
-  .brand-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: bold; font-size: 2.3rem; color: #c8102e; line-height: 1.1; }
-  .brand-phone { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: bold; font-size: 1.35rem; color: #111; margin-top: 6px; }
-  .brand-phone a { color: #111; text-decoration: none; }
-  .header-right { text-align: right; min-width: 160px; }
-  .dealer-badge { display: inline-block; background: #d40000; color: #fff; font-weight: bold; font-size: 0.78rem; padding: 6px 10px; border-radius: 3px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .dealer-sub { font-size: 0.75rem; color: #444; margin-top: 4px; font-weight: bold; }
-  .nav-bar { background: #1c1c1c; padding: 12px 20px; }
-  .nav-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-  .nav-pill { display: inline-block; min-width: 170px; text-align: center; padding: 9px 24px; border-radius: 999px; font-weight: bold; font-size: 0.9rem; letter-spacing: 0.5px; text-decoration: none; text-transform: uppercase; background: #ffe600; color: #111; border: 2px solid #ffe600; transition: 0.15s; }
-  .nav-pill.active { background: #e8e6f5; border-color: #e8e6f5; color: #111; }
-  .nav-pill:hover { opacity: 0.9; }
-  .main-wrap { max-width: 1180px; margin: 24px auto 50px; padding: 0 20px; }
-  .toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
-  .back-btn { display: inline-block; background: #1c1c1c; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: bold; }
-  .cat-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .cat-pill { padding: 7px 15px; border-radius: 999px; background: #fff; border: 1px solid #ccc; color: #222; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
-  .cat-pill.active, .cat-pill:hover { background: #c8102e; color: #fff; border-color: #c8102e; }
-  .cat-heading { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #c8102e; font-size: 1.75rem; margin-bottom: 18px; border-bottom: 2px solid #e0e0e0; padding-bottom: 6px; }
-  .tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 36px; }
-  @media (max-width: 960px) { .tile-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 680px) { .tile-grid { grid-template-columns: repeat(2, 1fr); } }
-  .tile { background: #fff; border: 1px solid #e2e2e2; border-radius: 6px; padding: 14px; text-align: center; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; justify-content: space-between; }
-  .tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
-  .tile img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 10px; }
-  .tile-title { font-size: 0.92rem; color: #222; font-weight: bold; margin-bottom: 6px; line-height: 1.3; }
-  .tile-price { font-size: 1.05rem; color: #c8102e; font-weight: bold; }
-  .site-footer { background: #1c1c1c; color: #fff; text-align: center; padding: 16px 20px; font-size: 0.88rem; margin-top: 40px; }
-  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
-  .modal-backdrop.open { display: flex; }
-  .modal-box { background: #fff; max-width: 560px; width: 100%; border-radius: 8px; padding: 24px; position: relative; max-height: 90vh; overflow-y: auto; text-align: center; }
-  .modal-close { position: absolute; top: 12px; right: 14px; background: #1c1c1c; color: #fff; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; }
-  .modal-box img { max-width: 100%; max-height: 240px; object-fit: contain; margin-bottom: 14px; }
-  .modal-title { font-size: 1.25rem; font-weight: bold; color: #111; margin-bottom: 6px; }
-  .modal-price { font-size: 1.3rem; font-weight: bold; color: #c8102e; margin-bottom: 12px; }
-  .modal-desc { font-size: 0.94rem; color: #444; line-height: 1.55; text-align: left; margin-bottom: 16px; }
-  .modal-call { background: #f8f8f8; border-top: 1px solid #eee; padding-top: 12px; font-weight: bold; color: #111; font-size: 0.98rem; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Castlerock Lawnmowers</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo img {
+      height: 120px;
+      width: auto;
+      display: block;
+    }
+    .header-center {
+      text-align: center;
+      flex: 1;
+    }
+    .header-center h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      font-style: italic;
+      color: #c8102e;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+    .header-phone {
+      margin-top: 6px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .header-phone a {
+      color: #111827;
+      text-decoration: none;
+    }
+    .header-right {
+      text-align: right;
+      min-width: 170px;
+    }
+    .hecht-badge {
+      display: inline-block;
+      background: #c8102e;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.35rem;
+      padding: 4px 14px;
+      letter-spacing: 1.5px;
+      border-radius: 3px;
+    }
+    .dealer-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #374151;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+    .payment-line {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+    .nav-bar {
+      background: #111111;
+      padding: 10px 20px;
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .nav-pill {
+      display: inline-block;
+      background: #facc15;
+      color: #111111;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: 0.6px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .nav-pill:hover {
+      background: #fde047;
+    }
+    .nav-pill.active {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: 0 0 0 2px #facc15;
+    }
+    .main-wrap {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 20px 50px;
+      flex: 1;
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .back-btn {
+      display: inline-block;
+      background: #111111;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 7px 15px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+    .back-btn:hover { background: #c8102e; }
+    .cat-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cat-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      color: #1f2937;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: bold;
+    }
+    .cat-pill.active, .cat-pill:hover {
+      background: #c8102e;
+      color: #ffffff;
+      border-color: #c8102e;
+    }
+    .cat-heading {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      color: #c8102e;
+      font-size: 1.85rem;
+      margin-bottom: 18px;
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px 18px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 960px) { .tile-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 680px) { .tile-grid { grid-template-columns: repeat(2, 1fr); } }
+    .tile {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tile:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+    .tile img {
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      background: #ffffff;
+    }
+    .tile-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: #c8102e;
+      font-weight: bold;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .tile-price {
+      font-size: 1.05rem;
+      color: #111827;
+      font-weight: bold;
+    }
+    .site-footer {
+      background: #111111;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.62); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+    .modal-backdrop.open { display: flex; }
+    .modal-box { background: #ffffff; max-width: 580px; width: 100%; border-radius: 10px; padding: 24px; position: relative; max-height: 88vh; overflow-y: auto; text-align: center; box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+    .modal-close { position: absolute; top: 12px; right: 14px; background: #111111; color: #ffffff; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 1rem; cursor: pointer; }
+    .modal-box img { max-width: 100%; max-height: 220px; object-fit: contain; margin-bottom: 14px; }
+    .modal-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.4rem; font-weight: bold; color: #c8102e; margin-bottom: 6px; }
+    .modal-price { font-size: 1.25rem; font-weight: bold; color: #111827; margin-bottom: 12px; }
+    .modal-desc { font-size: 0.94rem; color: #374151; line-height: 1.55; text-align: left; margin-bottom: 16px; }
+    .modal-call { background: #f3f4f6; border-left: 4px solid #c8102e; padding: 10px 14px; font-weight: bold; color: #111827; font-size: 0.95rem; text-align: left; }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-right { text-align: center; }
+      .header-logo img { height: 95px; margin: 0 auto; }
+      .header-center h1 { font-size: 1.75rem; }
+      .nav-inner { gap: 12px; }
+      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="header-logo"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
-    <div class="header-center">
-      <div class="brand-title">Castlerock Lawnmowers</div>
-      <div class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+        </a>
+      </div>
+      <div class="header-center">
+        <h1>Castlerock Lawnmowers</h1>
+        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="hecht-badge">HECHT</div>
+        <div class="dealer-sub">AUTHORISED DEALER</div>
+        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
+      </div>
     </div>
-    <div class="header-right">
-      <div class="dealer-badge">HECHT</div>
-      <div class="dealer-sub">AUTHORISED DEALER</div>
-    </div>
-  </div>
-  <nav class="nav-bar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-pill active">PRODUCTS</a>
-      <a href="services.html" class="nav-pill">SERVICES</a>
-      <a href="contact.html" class="nav-pill">CONTACT</a>
-    </div>
-  </nav>
-</header>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-pill active">PRODUCTS</a>
+        <a href="services.html" class="nav-pill">SERVICES</a>
+        <a href="contact.html" class="nav-pill">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+
 
 <main class="main-wrap">
   <div class="toolbar">
