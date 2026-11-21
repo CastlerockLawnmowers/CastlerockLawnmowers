@@ -1,69 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Castlerock Lawnmowers</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f2f2f2; color: #222; }
-  .site-header { background: #fff; padding: 14px 20px; border-bottom: 1px solid #ddd; }
-  .header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .header-logo img { max-height: 85px; width: auto; display: block; }
-  .header-center { text-align: center; flex: 1; }
-  .header-center h1 { font-family: Georgia, serif; font-style: italic; font-size: 2.1rem; color: #b81d24; margin-bottom: 4px; }
-  .header-center .mob { font-family: Georgia, serif; font-style: italic; font-size: 1.35rem; font-weight: bold; color: #111; }
-  .header-center .mob a { color: #111; text-decoration: none; }
-  .header-right { text-align: right; min-width: 170px; }
-  .hecht-badge { font-weight: 900; font-size: 1.4rem; color: #c8102e; letter-spacing: 1px; }
-  .hecht-sub { font-size: 0.72rem; font-weight: 700; color: #444; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .pay-badges { display: flex; gap: 4px; justify-content: flex-end; flex-wrap: wrap; }
-  .pay-badges span { font-size: 0.68rem; font-weight: 700; padding: 2px 6px; border: 1px solid #ccc; border-radius: 3px; background: #fafafa; color: #333; }
-  .nav-bar { background: #000; padding: 12px 16px; }
-  .nav-inner { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  .nav-pill { flex: 1; max-width: 260px; text-align: center; padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; background: #f5b942; color: #111; transition: transform 0.15s, background 0.15s; }
-  .nav-pill:hover { background: #ffc95c; transform: translateY(-1px); }
-  .nav-pill.active { background: #e6e8f8; color: #111; }
-  .main-wrap { max-width: 1180px; margin: 28px auto 50px; padding: 0 20px; }
-  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px 24px; }
-  .cat-card { text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px; border-radius: 8px; transition: transform 0.18s; }
-  .cat-card:hover { transform: translateY(-4px); }
-  .cat-img-box { width: 100%; height: 195px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-  .cat-img-box img { max-width: 100%; max-height: 185px; object-fit: contain; mix-blend-mode: multiply; }
-  .cat-title { font-family: Georgia, serif; font-style: italic; font-weight: 700; font-size: 1.05rem; color: #b81d24; }
-  .site-footer { background: #111; color: #eee; text-align: center; padding: 18px 16px; font-size: 0.9rem; }
-  .site-footer a { color: #f5b942; text-decoration: none; }
-  @media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) {
-    .header-inner { flex-direction: column; text-align: center; }
-    .header-right { text-align: center; }
-    .pay-badges { justify-content: center; }
-    .nav-inner { flex-direction: column; }
-    .nav-pill { width: 100%; max-width: none; }
-    .cat-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castlerock Lawnmowers | Sales, Servicing &amp; Repairs</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo img {
+      height: 120px;
+      width: auto;
+      display: block;
+    }
+    .header-center {
+      text-align: center;
+      flex: 1;
+    }
+    .header-center h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      font-style: italic;
+      color: #c8102e;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+    .header-phone {
+      margin-top: 6px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .header-phone a {
+      color: #111827;
+      text-decoration: none;
+    }
+    .header-right {
+      text-align: right;
+      min-width: 170px;
+    }
+    .hecht-badge {
+      display: inline-block;
+      background: #c8102e;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.35rem;
+      padding: 4px 14px;
+      letter-spacing: 1.5px;
+      border-radius: 3px;
+    }
+    .dealer-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #374151;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+    .payment-line {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+    .nav-bar {
+      background: #111111;
+      padding: 10px 20px;
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .nav-pill {
+      display: inline-block;
+      background: #facc15;
+      color: #111111;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: 0.6px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .nav-pill:hover {
+      background: #fde047;
+    }
+    .nav-pill.active {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: 0 0 0 2px #facc15;
+    }
+    .page-container, .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    .cat-grid, .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px 20px;
+    }
+    .cat-card, .category-card {
+      text-align: center;
+      text-decoration: none;
+      color: #c8102e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.15s ease;
+    }
+    .cat-card:hover, .category-card:hover {
+      transform: translateY(-3px);
+    }
+    .cat-card img, .category-card img {
+      width: 100%;
+      max-width: 210px;
+      height: 185px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .cat-card h3, .cat-card span, .category-card h3, .category-card span {
+      font-size: 1.15rem;
+      font-weight: 800;
+      font-style: italic;
+      color: #c8102e;
+    }
+    .site-footer {
+      background: #111111;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 0.9rem;
+    }
+    .site-footer a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      .cat-grid, .category-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-right { text-align: center; }
+      .header-logo img { height: 95px; margin: 0 auto; }
+      .header-center h1 { font-size: 1.75rem; }
+      .nav-inner { gap: 12px; }
+      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
+    }
+  </style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-logo">
-      <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
-    </div>
-    <div class="header-center">
-      <h1>Castlerock Lawnmowers</h1>
-      <div class="mob">Mob: <a href="tel:07934716954">07934 716954</a></div>
-    </div>
-    <div class="header-right">
-      <div class="hecht-badge">HECHT</div>
-      <div class="hecht-sub">AUTHORISED DEALER</div>
-      <div class="pay-badges">
-        <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Cash</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+        </a>
+      </div>
+      <div class="header-center">
+        <h1>Castlerock Lawnmowers</h1>
+        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="hecht-badge">HECHT</div>
+        <div class="dealer-sub">AUTHORISED DEALER</div>
+        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
       </div>
     </div>
-  </div>
-</header>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-pill active">PRODUCTS</a>
+        <a href="services.html" class="nav-pill ">SERVICES</a>
+        <a href="contact.html" class="nav-pill ">CONTACT</a>
+      </div>
+    </nav>
+  </header>
+
 
 <nav class="nav-bar">
   <div class="nav-inner">
