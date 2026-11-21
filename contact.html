@@ -5,103 +5,260 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Castlerock Lawnmowers</title>
   <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, Helvetica, sans-serif; background: #f2f4f7; color: #222; line-height: 1.5; }
-.top-header { background: #fff; border-bottom: 1px solid #ddd; padding: 14px 24px; }
-.header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.header-logo img { height: 95px; width: auto; object-fit: contain; display: block; }
-.header-center { text-align: center; flex: 1; min-width: 240px; }
-.header-center h1 { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 2.15rem; color: #c8102e; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 4px; }
-.header-center .phone-line { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.35rem; font-weight: bold; color: #111; }
-.header-center .phone-line a { color: #111; text-decoration: none; }
-.header-right { text-align: right; min-width: 190px; }
-.hecht-badge { font-weight: 900; font-size: 1.45rem; letter-spacing: 1px; color: #c8102e; line-height: 1.1; }
-.hecht-sub { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px; color: #444; font-weight: bold; margin-bottom: 8px; }
-.pay-badges { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
-.pay-pill { background: #f8f9fa; border: 1px solid #ccc; border-radius: 4px; padding: 2px 7px; font-size: 0.72rem; font-weight: bold; color: #1a1f71; }
-.nav-bar { background: #0d0d0d; padding: 14px 20px; }
-.nav-inner { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; gap: 16px; flex-wrap: wrap; }
-.nav-pill { display: inline-block; min-width: 220px; text-align: center; padding: 11px 28px; border-radius: 999px; font-weight: bold; font-size: 0.92rem; letter-spacing: 0.8px; text-decoration: none; text-transform: uppercase; background: #f5c242; color: #111; transition: all 0.15s ease; }
-.nav-pill:hover { background: #ffd25a; transform: translateY(-1px); }
-.nav-pill.active { background: #d6dcf5; color: #111; box-shadow: 0 0 0 2px #fff; }
-.main-wrap { max-width: 1140px; margin: 34px auto; padding: 0 24px 50px; }
-.page-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #c8102e; font-size: 1.85rem; margin-bottom: 18px; text-align: center; }
-.card-box { background: #fff; border: 1px solid #dcdcdc; border-radius: 10px; padding: 26px 30px; margin-bottom: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-.card-box h2 { color: #c8102e; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 2px solid #f5c242; padding-bottom: 6px; }
-.service-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.service-table th, .service-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #e6e6e6; }
-.service-table th { background: #1a1a1a; color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
-.price-col { font-weight: bold; color: #c8102e; white-space: nowrap; }
-.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
-.footer { background: #111; color: #ccc; text-align: center; padding: 22px 16px; font-size: 0.9rem; margin-top: 40px; }
-.footer strong { color: #f5c242; }
-@media (max-width: 720px) {
-  .header-inner { justify-content: center; text-align: center; }
-  .header-right { text-align: center; }
-  .pay-badges { justify-content: center; }
-  .nav-pill { min-width: 140px; padding: 10px 18px; font-size: 0.85rem; }
-}
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo img {
+      height: 120px;
+      width: auto;
+      display: block;
+    }
+    .header-center {
+      text-align: center;
+      flex: 1;
+    }
+    .header-center h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      font-style: italic;
+      color: #c8102e;
+      letter-spacing: 0.5px;
+      line-height: 1.15;
+    }
+    .header-phone {
+      margin-top: 6px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .header-phone a {
+      color: #111827;
+      text-decoration: none;
+    }
+    .header-right {
+      text-align: right;
+      min-width: 170px;
+    }
+    .hecht-badge {
+      display: inline-block;
+      background: #c8102e;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.35rem;
+      padding: 4px 14px;
+      letter-spacing: 1.5px;
+      border-radius: 3px;
+    }
+    .dealer-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #374151;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+    .payment-line {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+    .nav-bar {
+      background: #111111;
+      padding: 10px 20px;
+    }
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .nav-pill {
+      display: inline-block;
+      background: #facc15;
+      color: #111111;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      letter-spacing: 0.6px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .nav-pill:hover {
+      background: #fde047;
+    }
+    .nav-pill.active {
+      background: #ffffff;
+      color: #111111;
+      box-shadow: 0 0 0 2px #facc15;
+    }
+    .page-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    .page-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #c8102e;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .page-subtitle {
+      text-align: center;
+      color: #4b5563;
+      margin-bottom: 28px;
+      font-size: 1.02rem;
+    }
+    .site-footer {
+      background: #111111;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 0.9rem;
+    }
+    .site-footer a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-right { text-align: center; }
+      .header-logo img { height: 95px; margin: 0 auto; }
+      .header-center h1 { font-size: 1.75rem; }
+      .nav-inner { gap: 12px; }
+      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .contact-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 26px;
+    }
+    .contact-card h2 {
+      color: #111827;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      border-left: 4px solid #c8102e;
+      padding-left: 12px;
+    }
+    .contact-item {
+      margin-bottom: 14px;
+      font-size: 1.05rem;
+    }
+    .contact-item strong {
+      display: block;
+      color: #374151;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    .contact-item a {
+      color: #c8102e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .area-list {
+      padding-left: 20px;
+      color: #374151;
+      line-height: 1.85;
+    }
+  </style>
 </head>
 <body>
-
-<header class="top-header">
-  <div class="header-inner">
-    <div class="header-logo">
-      <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
-    </div>
-    <div class="header-center">
-      <h1>Castlerock Lawnmowers</h1>
-      <div class="phone-line">Mob: <a href="tel:07934716954">07934 716954</a></div>
-    </div>
-    <div class="header-right">
-      <div class="hecht-badge">HECHT</div>
-      <div class="hecht-sub">Authorised Dealer</div>
-      <div class="pay-badges">
-        <span class="pay-pill">VISA</span>
-        <span class="pay-pill">Mastercard</span>
-        <span class="pay-pill">PayPal</span>
-        <span class="pay-pill">Cash</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+        </a>
+      </div>
+      <div class="header-center">
+        <h1>Castlerock Lawnmowers</h1>
+        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
+      </div>
+      <div class="header-right">
+        <div class="hecht-badge">HECHT</div>
+        <div class="dealer-sub">AUTHORISED DEALER</div>
+        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
       </div>
     </div>
-  </div>
-</header>
-<nav class="nav-bar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-pill">Products</a>
-    <a href="services.html" class="nav-pill">Services</a>
-    <a href="contact.html" class="nav-pill active">Contact</a>
-  </div>
-</nav>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-pill ">PRODUCTS</a>
+        <a href="services.html" class="nav-pill ">SERVICES</a>
+        <a href="contact.html" class="nav-pill active">CONTACT</a>
+      </div>
+    </nav>
+  </header>
 
-<main class="main-wrap">
-  <h2 class="page-title">Contact &amp; Workshop Location</h2>
-  <div class="info-grid">
-    <div class="card-box">
-      <h2>Get in Touch</h2>
-      <p style="margin-bottom:10px;"><strong>Phone / Mobile:</strong> <a href="tel:07934716954" style="color:#c8102e; font-weight:bold; text-decoration:none;">07934 716954</a></p>
-      <p style="margin-bottom:10px;"><strong>Email:</strong> <a href="mailto:info@castlerocklawnmowers.com" style="color:#c8102e; font-weight:bold; text-decoration:none;">info@castlerocklawnmowers.com</a></p>
-      <p style="margin-bottom:14px;"><strong>Workshop Address:</strong><br>45 Seapark, Castlerock,<br>Coleraine, Co. Londonderry,<br>BT51 4TH</p>
-      <p style="background:#fff8e6; border-left:4px solid #f5c242; padding:10px 12px; font-size:0.95rem;">
-        Please call <strong>07934 716954</strong> ahead before visiting so we can make sure we are in the workshop and ready to help with your machine or product enquiry.
-      </p>
+  <main class="page-container">
+    <h2 class="page-title">Contact Castlerock Lawnmowers</h2>
+    <p class="page-subtitle">Call or message to enquire about any machine in stock or to arrange a workshop drop-off.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h2>Workshop &amp; Sales Enquiries</h2>
+        <div class="contact-item">
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:07934716954" style="font-size: 1.3rem;">07934 716954</a>
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Workshop Address</strong>
+          <span>45 Seapark, Castlerock, Co. Londonderry, BT51 4TH</span>
+        </div>
+        <div class="contact-item">
+          <strong>Viewing &amp; Drop-Off</strong>
+          <span>Please call ahead on <a href="tel:07934716954">07934 716954</a> before calling out to ensure we are in the workshop.</span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h2>Areas Covered</h2>
+        <p style="margin-bottom: 12px; color: #374151;">Supplying new garden machinery and providing servicing &amp; repairs across the North Coast:</p>
+        <ul class="area-list">
+          <li>Castlerock &amp; Articlave</li>
+          <li>Coleraine &amp; Macosquin</li>
+          <li>Portstewart &amp; Portrush</li>
+          <li>Limavady &amp; Drumsurn</li>
+          <li>Garvagh, Kilrea &amp; Ballymoney</li>
+        </ul>
+      </div>
     </div>
-    <div class="card-box">
-      <h2>Areas We Cover</h2>
-      <p style="margin-bottom:10px;">We supply and service garden machinery across the North Coast and surrounding areas, including:</p>
-      <ul style="padding-left:20px; line-height:1.9;">
-        <li>Castlerock &amp; Articlave</li>
-        <li>Coleraine &amp; Portstewart</li>
-        <li>Portrush &amp; Bushmills</li>
-        <li>Limavady &amp; Garvagh</li>
-        <li>Macosquin, Kilrea &amp; surrounding areas</li>
-      </ul>
-      <p style="margin-top:14px; font-size:0.95rem; color:#444;">Card, PayPal, and Cash accepted in store.</p>
-    </div>
-  </div>
-</main>
-<footer class="footer">
-  <strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Tel: <strong>07934 716954</strong>
-</footer>
+  </main>
+
+  <footer class="site-footer">
+    <p>Castlerock Lawnmowers &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Tel: <a href="tel:07934716954">07934 716954</a></p>
+  </footer>
 </body>
 </html>
