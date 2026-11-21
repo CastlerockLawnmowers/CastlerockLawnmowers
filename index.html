@@ -4,180 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Castlerock Lawnmowers | Garden Machinery Sales &amp; Servicing</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
-    .category-showcase {
-      max-width: 1150px;
-      margin: 28px auto 50px;
-      padding: 0 20px;
-    }
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 36px 28px;
-      align-items: end;
-    }
-    @media (max-width: 900px) {
-      .showcase-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 18px; }
-    }
-    @media (max-width: 500px) {
-      .showcase-grid { grid-template-columns: 1fr; }
-    }
-    .showcase-item {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-    .showcase-item:hover {
-      transform: translateY(-5px);
-    }
-    .showcase-img-box {
-      width: 100%;
-      height: 210px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      background: #ffffff;
-    }
-    .showcase-img-box img {
-      max-width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-    }
-    .showcase-label {
-      color: #c8102e;
-      font-weight: 800;
-      font-style: italic;
-      font-size: 1.15rem;
-      letter-spacing: 0.2px;
-    }
-    .showcase-item:hover .showcase-label {
-      text-decoration: underline;
-    }
-  </style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #ffffff; color: #1f2937; line-height: 1.5; }
+a { text-decoration: none; color: inherit; }
+
+/* Header matching original site */
+.site-header { background: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 14px 20px; }
+.header-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.header-logo img { height: 105px; width: auto; display: block; object-fit: contain; }
+.header-center { text-align: center; flex: 1; min-width: 240px; }
+.brand-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: bold; font-size: 2.1rem; color: #c8102e; letter-spacing: 0.5px; margin-bottom: 6px; }
+.brand-phone { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: bold; font-size: 1.45rem; color: #111827; }
+.brand-phone a:hover { color: #c8102e; }
+.header-right { text-align: right; min-width: 180px; }
+.hecht-badge { font-weight: 900; font-size: 1.5rem; color: #c8102e; letter-spacing: 1px; line-height: 1; }
+.hecht-sub { font-size: 0.72rem; font-weight: bold; color: #374151; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+.payment-badges { display: inline-flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.pay-pill { font-size: 0.72rem; font-weight: bold; padding: 3px 8px; border-radius: 4px; border: 1px solid #d1d5db; background: #f9fafb; color: #1f2937; }
+
+/* Black bar with 3 separated yellow pill tabs */
+.nav-bar { background: #111111; padding: 13px 20px; }
+.nav-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; gap: 24px; flex-wrap: wrap; }
+.nav-pill { display: inline-block; min-width: 210px; text-align: center; padding: 10px 28px; border-radius: 999px; font-weight: bold; font-size: 0.92rem; letter-spacing: 0.8px; text-transform: uppercase; background: #f6c957; color: #111111; transition: transform 0.15s, background 0.15s; box-shadow: 0 2px 4px rgba(0,0,0,0.25); }
+.nav-pill:hover { background: #fbd779; transform: translateY(-1px); }
+.nav-pill.active { background: #e6e6fa; color: #111111; }
+
+/* Main container & 4-column category grid matching original site */
+.container { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px 24px; }
+.cat-tile { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px; transition: transform 0.18s; }
+.cat-tile:hover { transform: translateY(-4px); }
+.cat-tile img { width: 100%; max-width: 215px; height: 175px; object-fit: contain; margin-bottom: 12px; }
+.cat-label { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: bold; font-size: 1.08rem; color: #c8102e; }
+.cat-tile:hover .cat-label { text-decoration: underline; }
+
+/* Footer */
+.site-footer { background: #111111; color: #d1d5db; text-align: center; padding: 22px 20px; font-size: 0.9rem; margin-top: 20px; }
+.site-footer strong { color: #ffffff; }
+
+@media (max-width: 900px) {
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-pill { min-width: 160px; padding: 9px 18px; }
+}
+@media (max-width: 540px) {
+  .header-inner { justify-content: center; text-align: center; }
+  .header-right { text-align: center; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .nav-inner { gap: 12px; }
+  .nav-pill { width: 100%; max-width: 280px; }
+}
+</style>
 </head>
 <body>
-
   <header class="site-header">
-    <div class="header-top">
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo" onerror="this.style.display='none'">
-        </a>
-      </div>
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+      </a>
       <div class="header-center">
-        <h1 class="brand-title"><a href="index.html">Castlerock Lawnmowers</a></h1>
-        <p class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></p>
+        <div class="brand-title">Castlerock Lawnmowers</div>
+        <div class="brand-phone">Mob: <a href="tel:07934716954">07934 716954</a></div>
       </div>
       <div class="header-right">
         <div class="hecht-badge">HECHT</div>
-        <div class="dealer-sub">AUTHORISED DEALER</div>
-        <div class="payment-note">Card &amp; Cash Accepted</div>
+        <div class="hecht-sub">Authorised Dealer</div>
+        <div class="payment-badges">
+          <span class="pay-pill">VISA</span>
+          <span class="pay-pill">Mastercard</span>
+          <span class="pay-pill">PayPal</span>
+          <span class="pay-pill">Cash</span>
+        </div>
       </div>
     </div>
-    <nav class="black-nav-bar">
-      <a href="index.html" class="yellow-pill active">PRODUCTS</a>
-      <a href="contact.html" class="yellow-pill">CONTACT &amp; SERVICING</a>
-    </nav>
   </header>
 
-  <main class="category-showcase">
-    <div class="showcase-grid">
+  <nav class="nav-bar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-pill active">PRODUCTS</a>
+      <a href="services.html" class="nav-pill">SERVICES</a>
+      <a href="contact.html" class="nav-pill">CONTACT</a>
+    </div>
+  </nav>
 
-      <a href="shop.html?cat=lawnmowers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers">
-        </div>
-        <span class="showcase-label">Lawnmowers</span>
+  <main class="container">
+    <div class="cat-grid">
+      <a class="cat-tile" href="shop.html?cat=lawnmowers">
+        <img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers" loading="lazy">
+        <span class="cat-label">Lawnmowers</span>
       </a>
-
-      <a href="shop.html?cat=hedgetrimmers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Hedgetrimmers">
-        </div>
-        <span class="showcase-label">Hedgetrimmers</span>
+      <a class="cat-tile" href="shop.html?cat=hedgetrimmers">
+        <img src="https://static.wixstatic.com/media/b243b4_79231b1ee6c54c90b86c02841df8e5d1~mv2.jpg" alt="Hedgetrimmers" loading="lazy">
+        <span class="cat-label">Hedgetrimmers</span>
       </a>
-
-      <a href="shop.html?cat=chainsaws" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Chainsaws">
-        </div>
-        <span class="showcase-label">Chainsaws</span>
+      <a class="cat-tile" href="shop.html?cat=chainsaws">
+        <img src="https://static.wixstatic.com/media/b243b4_39f072ebee1340408ae65d27abcae1ba~mv2.jpg" alt="Chainsaws" loading="lazy">
+        <span class="cat-label">Chainsaws</span>
       </a>
-
-      <a href="shop.html?cat=strimmers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers">
-        </div>
-        <span class="showcase-label">Strimmers</span>
+      <a class="cat-tile" href="shop.html?cat=strimmers">
+        <img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers" loading="lazy">
+        <span class="cat-label">Strimmers</span>
       </a>
-
-      <a href="machinery.html?cat=blowers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Blowers">
-        </div>
-        <span class="showcase-label">Blowers</span>
+      <a class="cat-tile" href="machinery.html?cat=blowers">
+        <img src="https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg" alt="Blowers" loading="lazy">
+        <span class="cat-label">Blowers</span>
       </a>
-
-      <a href="machinery.html?cat=generators" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators">
-        </div>
-        <span class="showcase-label">Generators</span>
+      <a class="cat-tile" href="machinery.html?cat=generators">
+        <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators" loading="lazy">
+        <span class="cat-label">Generators</span>
       </a>
-
-      <a href="machinery.html?cat=construction" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Construction">
-        </div>
-        <span class="showcase-label">Construction</span>
+      <a class="cat-tile" href="machinery.html?cat=construction">
+        <img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Construction" loading="lazy">
+        <span class="cat-label">Construction</span>
       </a>
-
-      <a href="machinery.html?cat=washers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers">
-        </div>
-        <span class="showcase-label">Pressure Washers</span>
+      <a class="cat-tile" href="machinery.html?cat=washers">
+        <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers" loading="lazy">
+        <span class="cat-label">Pressure Washers</span>
       </a>
-
-      <a href="machinery.html?cat=splitters" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters">
-        </div>
-        <span class="showcase-label">Log Splitters</span>
+      <a class="cat-tile" href="machinery.html?cat=splitters">
+        <img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters" loading="lazy">
+        <span class="cat-label">Log Splitters</span>
       </a>
-
-      <a href="machinery.html?cat=shredders" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Shredders">
-        </div>
-        <span class="showcase-label">Shredders</span>
+      <a class="cat-tile" href="machinery.html?cat=shredders">
+        <img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Shredders" loading="lazy">
+        <span class="cat-label">Shredders</span>
       </a>
-
-      <a href="machinery.html?cat=scarifiers" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers">
-        </div>
-        <span class="showcase-label">Scarifiers</span>
+      <a class="cat-tile" href="machinery.html?cat=scarifiers">
+        <img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers" loading="lazy">
+        <span class="cat-label">Scarifiers</span>
       </a>
-
-      <a href="machinery.html?cat=tools" class="showcase-item">
-        <div class="showcase-img-box">
-          <img src="https://static.wixstatic.com/media/b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg" alt="Spreaders, Trailers &amp; Tools">
-        </div>
-        <span class="showcase-label">Spreaders, Trailers &amp; Tools</span>
+      <a class="cat-tile" href="machinery.html?cat=other">
+        <img src="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" alt="Spreaders, Trailers & Tools" loading="lazy">
+        <span class="cat-label">Spreaders, Trailers & Tools</span>
       </a>
-
     </div>
   </main>
 
   <footer class="site-footer">
-    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a></p>
+    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Tel: <strong>07934 716954</strong></p>
   </footer>
-
 </body>
 </html>
