@@ -3,109 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Servicing | Castlerock Lawnmowers</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Contact Us | Castlerock Lawnmowers</title>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; background: #f2f4f7; color: #222; line-height: 1.5; }
+.top-header { background: #fff; border-bottom: 1px solid #ddd; padding: 14px 24px; }
+.header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.header-logo img { height: 95px; width: auto; object-fit: contain; display: block; }
+.header-center { text-align: center; flex: 1; min-width: 240px; }
+.header-center h1 { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 2.15rem; color: #c8102e; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 4px; }
+.header-center .phone-line { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 1.35rem; font-weight: bold; color: #111; }
+.header-center .phone-line a { color: #111; text-decoration: none; }
+.header-right { text-align: right; min-width: 190px; }
+.hecht-badge { font-weight: 900; font-size: 1.45rem; letter-spacing: 1px; color: #c8102e; line-height: 1.1; }
+.hecht-sub { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px; color: #444; font-weight: bold; margin-bottom: 8px; }
+.pay-badges { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
+.pay-pill { background: #f8f9fa; border: 1px solid #ccc; border-radius: 4px; padding: 2px 7px; font-size: 0.72rem; font-weight: bold; color: #1a1f71; }
+.nav-bar { background: #0d0d0d; padding: 14px 20px; }
+.nav-inner { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-around; align-items: center; gap: 16px; flex-wrap: wrap; }
+.nav-pill { display: inline-block; min-width: 220px; text-align: center; padding: 11px 28px; border-radius: 999px; font-weight: bold; font-size: 0.92rem; letter-spacing: 0.8px; text-decoration: none; text-transform: uppercase; background: #f5c242; color: #111; transition: all 0.15s ease; }
+.nav-pill:hover { background: #ffd25a; transform: translateY(-1px); }
+.nav-pill.active { background: #d6dcf5; color: #111; box-shadow: 0 0 0 2px #fff; }
+.main-wrap { max-width: 1140px; margin: 34px auto; padding: 0 24px 50px; }
+.page-title { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: #c8102e; font-size: 1.85rem; margin-bottom: 18px; text-align: center; }
+.card-box { background: #fff; border: 1px solid #dcdcdc; border-radius: 10px; padding: 26px 30px; margin-bottom: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+.card-box h2 { color: #c8102e; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 2px solid #f5c242; padding-bottom: 6px; }
+.service-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.service-table th, .service-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #e6e6e6; }
+.service-table th { background: #1a1a1a; color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.price-col { font-weight: bold; color: #c8102e; white-space: nowrap; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+.footer { background: #111; color: #ccc; text-align: center; padding: 22px 16px; font-size: 0.9rem; margin-top: 40px; }
+.footer strong { color: #f5c242; }
+@media (max-width: 720px) {
+  .header-inner { justify-content: center; text-align: center; }
+  .header-right { text-align: center; }
+  .pay-badges { justify-content: center; }
+  .nav-pill { min-width: 140px; padding: 10px 18px; font-size: 0.85rem; }
+}
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-top">
-      <div class="header-logo">
-        <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
-      </div>
-      <div class="header-center">
-        <h1><a href="index.html">Castlerock Lawnmowers</a></h1>
-        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
-      </div>
-      <div class="header-right">
-        <div class="dealer-badge">HECHT</div>
-        <span class="dealer-sub">Authorised Sales &amp; Servicing</span>
+<header class="top-header">
+  <div class="header-inner">
+    <div class="header-logo">
+      <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
+    </div>
+    <div class="header-center">
+      <h1>Castlerock Lawnmowers</h1>
+      <div class="phone-line">Mob: <a href="tel:07934716954">07934 716954</a></div>
+    </div>
+    <div class="header-right">
+      <div class="hecht-badge">HECHT</div>
+      <div class="hecht-sub">Authorised Dealer</div>
+      <div class="pay-badges">
+        <span class="pay-pill">VISA</span>
+        <span class="pay-pill">Mastercard</span>
+        <span class="pay-pill">PayPal</span>
+        <span class="pay-pill">Cash</span>
       </div>
     </div>
-    <nav class="nav-bar">
-      <a href="index.html" class="pill-btn">PRODUCTS</a>
-      <a href="contact.html" class="pill-btn active">CONTACT &amp; SERVICING</a>
-    </nav>
-  </header>
+  </div>
+</header>
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-pill">Products</a>
+    <a href="services.html" class="nav-pill">Services</a>
+    <a href="contact.html" class="nav-pill active">Contact</a>
+  </div>
+</nav>
 
-  <main class="container">
-    <section class="section-block">
-      <h2 class="section-title">Contact &amp; Workshop Location</h2>
-      <div class="contact-grid">
-        <div class="info-card">
-          <h3>Get in Touch</h3>
-          <p><strong>Phone / Mobile:</strong> <a href="tel:07934716954">07934 716954</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-          <p><strong>Workshop Address:</strong><br>45 Seapark, Castlerock, Coleraine, BT51 4TH</p>
-          <p class="note-text">Call ahead before visiting so we can make sure we are in the workshop and ready to help with your machine or product enquiry.</p>
-        </div>
-        <div class="info-card">
-          <h3>Local Coverage</h3>
-          <p>We supply and service garden machinery across the North Coast, including:</p>
-          <ul class="area-list">
-            <li>Castlerock &amp; Articlave</li>
-            <li>Coleraine &amp; Portstewart</li>
-            <li>Portrush &amp; Bushmills</li>
-            <li>Limavady &amp; Garvagh</li>
-            <li>Macosquin &amp; surrounding areas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <h2 class="section-title">Servicing &amp; Repairs</h2>
-      <p class="section-intro">We service and repair all major makes and models of petrol, battery, and electric garden machinery. All services include full inspection, cleaning, and safety checks.</p>
-      <div class="table-wrap">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th>Equipment Type</th>
-              <th>Service &amp; Repair Guide Price</th>
-              <th>Typical Work Included</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Chainsaw Chain Sharpening</strong></td>
-              <td>From &pound;10</td>
-              <td>Precision chain sharpening &amp; tension check</td>
-            </tr>
-            <tr>
-              <td><strong>Hedge Trimmers</strong></td>
-              <td>From &pound;25</td>
-              <td>Blade sharpening, gearbox grease, spark plug &amp; tune-up</td>
-            </tr>
-            <tr>
-              <td><strong>Strimmers &amp; Brushcutters</strong></td>
-              <td>From &pound;25</td>
-              <td>Spark plug, air/fuel filter check, carburettor tune &amp; head check</td>
-            </tr>
-            <tr>
-              <td><strong>Push Petrol Lawnmowers</strong></td>
-              <td>From &pound;30</td>
-              <td>Oil change, new spark plug, air filter clean/replace, blade sharpen &amp; balance</td>
-            </tr>
-            <tr>
-              <td><strong>Self-Propelled Petrol Mowers</strong></td>
-              <td>From &pound;35</td>
-              <td>Full engine service, drive belt/gearbox check, blade sharpen &amp; cable adjustment</td>
-            </tr>
-            <tr>
-              <td><strong>Ride-On Mowers &amp; Small Engines</strong></td>
-              <td>From &pound;45</td>
-              <td>Engine oil &amp; filter, plugs, deck &amp; belt inspection, blade sharpening, battery check</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH</p>
-    <p>Call <a href="tel:07934716954">07934 716954</a> &bull; <a href="mailto:info@castlerocklawnmowers.com">info@castlerocklawnmowers.com</a></p>
-  </footer>
-
+<main class="main-wrap">
+  <h2 class="page-title">Contact &amp; Workshop Location</h2>
+  <div class="info-grid">
+    <div class="card-box">
+      <h2>Get in Touch</h2>
+      <p style="margin-bottom:10px;"><strong>Phone / Mobile:</strong> <a href="tel:07934716954" style="color:#c8102e; font-weight:bold; text-decoration:none;">07934 716954</a></p>
+      <p style="margin-bottom:10px;"><strong>Email:</strong> <a href="mailto:info@castlerocklawnmowers.com" style="color:#c8102e; font-weight:bold; text-decoration:none;">info@castlerocklawnmowers.com</a></p>
+      <p style="margin-bottom:14px;"><strong>Workshop Address:</strong><br>45 Seapark, Castlerock,<br>Coleraine, Co. Londonderry,<br>BT51 4TH</p>
+      <p style="background:#fff8e6; border-left:4px solid #f5c242; padding:10px 12px; font-size:0.95rem;">
+        Please call <strong>07934 716954</strong> ahead before visiting so we can make sure we are in the workshop and ready to help with your machine or product enquiry.
+      </p>
+    </div>
+    <div class="card-box">
+      <h2>Areas We Cover</h2>
+      <p style="margin-bottom:10px;">We supply and service garden machinery across the North Coast and surrounding areas, including:</p>
+      <ul style="padding-left:20px; line-height:1.9;">
+        <li>Castlerock &amp; Articlave</li>
+        <li>Coleraine &amp; Portstewart</li>
+        <li>Portrush &amp; Bushmills</li>
+        <li>Limavady &amp; Garvagh</li>
+        <li>Macosquin, Kilrea &amp; surrounding areas</li>
+      </ul>
+      <p style="margin-top:14px; font-size:0.95rem; color:#444;">Card, PayPal, and Cash accepted in store.</p>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Tel: <strong>07934 716954</strong>
+</footer>
 </body>
 </html>
