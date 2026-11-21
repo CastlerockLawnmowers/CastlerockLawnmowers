@@ -3,44 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Castlerock Lawnmowers</title>
+<title>Castlerock Lawnmowers | Garden Machinery Sales &amp; Servicing</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f2f2f2; color: #222; }
-  .site-header { background: #fff; padding: 14px 20px; border-bottom: 1px solid #ddd; }
-  .header-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .header-logo img { max-height: 85px; width: auto; display: block; }
-  .header-center { text-align: center; flex: 1; }
-  .header-center h1 { font-family: Georgia, serif; font-style: italic; font-size: 2.1rem; color: #b81d24; margin-bottom: 4px; }
-  .header-center .mob { font-family: Georgia, serif; font-style: italic; font-size: 1.35rem; font-weight: bold; color: #111; }
-  .header-center .mob a { color: #111; text-decoration: none; }
-  .header-right { text-align: right; min-width: 170px; }
-  .hecht-badge { font-weight: 900; font-size: 1.4rem; color: #c8102e; letter-spacing: 1px; }
-  .hecht-sub { font-size: 0.72rem; font-weight: 700; color: #444; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .pay-badges { display: flex; gap: 4px; justify-content: flex-end; flex-wrap: wrap; }
-  .pay-badges span { font-size: 0.68rem; font-weight: 700; padding: 2px 6px; border: 1px solid #ccc; border-radius: 3px; background: #fafafa; color: #333; }
-  .nav-bar { background: #000; padding: 12px 16px; }
-  .nav-inner { max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  .nav-pill { flex: 1; max-width: 260px; text-align: center; padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.6px; text-decoration: none; text-transform: uppercase; background: #f5b942; color: #111; transition: transform 0.15s, background 0.15s; }
-  .nav-pill:hover { background: #ffc95c; transform: translateY(-1px); }
-  .nav-pill.active { background: #e6e8f8; color: #111; }
-  .main-wrap { max-width: 1180px; margin: 28px auto 50px; padding: 0 20px; }
-  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px 24px; }
-  .cat-card { text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px; border-radius: 8px; transition: transform 0.18s; }
-  .cat-card:hover { transform: translateY(-4px); }
-  .cat-img-box { width: 100%; height: 195px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-  .cat-img-box img { max-width: 100%; max-height: 185px; object-fit: contain; mix-blend-mode: multiply; }
-  .cat-title { font-family: Georgia, serif; font-style: italic; font-weight: 700; font-size: 1.05rem; color: #b81d24; }
-  .site-footer { background: #111; color: #eee; text-align: center; padding: 18px 16px; font-size: 0.9rem; }
-  .site-footer a { color: #f5b942; text-decoration: none; }
-  @media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) {
-    .header-inner { flex-direction: column; text-align: center; }
-    .header-right { text-align: center; }
-    .pay-badges { justify-content: center; }
-    .nav-inner { flex-direction: column; }
-    .nav-pill { width: 100%; max-width: none; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    color: #1e293b;
+    line-height: 1.5;
+  }
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .logo-box {
+    flex: 0 0 auto;
+  }
+  .logo-box img {
+    height: 120px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+  .brand-center {
+    flex: 1 1 320px;
+    text-align: center;
+  }
+  .brand-center h1 {
+    font-size: 2.3rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #c8102e;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .brand-center .phone-line {
+    margin-top: 6px;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #111827;
+  }
+  .brand-center .phone-line a {
+    color: #111827;
+    text-decoration: none;
+  }
+  .brand-center .phone-line a:hover {
+    color: #c8102e;
+  }
+  .dealer-right {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+  .hecht-badge {
+    border: 2px solid #c8102e;
+    border-radius: 6px;
+    padding: 6px 14px;
+    background: #fff;
+  }
+  .hecht-badge .hecht-word {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #c8102e;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  .hecht-badge .hecht-sub {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+  }
+  .cards-note {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #475569;
+    margin-top: 5px;
+  }
+  .nav-bar {
+    background: #111111;
+    padding: 12px 20px;
+  }
+  .nav-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .nav-pill {
+    display: inline-block;
+    min-width: 175px;
+    text-align: center;
+    padding: 9px 26px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    background: #facc15;
+    color: #111111;
+    border: 2px solid #facc15;
+    transition: transform 0.12s ease, background 0.12s ease;
+  }
+  .nav-pill:hover {
+    background: #fde047;
+    transform: translateY(-1px);
+  }
+  .nav-pill.active {
+    background: #f3e8ff;
+    color: #111111;
+    border-color: #f3e8ff;
+  }
+  .main-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 34px 20px 56px;
+  }
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+  }
+  .cat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 8px;
+    border-radius: 8px;
+    transition: transform 0.15s ease;
+  }
+  .cat-card:hover {
+    transform: translateY(-4px);
+  }
+  .cat-img-wrap {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .cat-img-wrap img {
+    max-width: 100%;
+    max-height: 165px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .cat-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #c8102e;
+    line-height: 1.25;
+  }
+  .site-footer {
+    background: #111111;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 22px 20px;
+    font-size: 0.92rem;
+  }
+  .site-footer a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .header-inner { justify-content: center; text-align: center; }
+  }
+  @media (max-width: 520px) {
     .cat-grid { grid-template-columns: 1fr; }
+    .brand-center h1 { font-size: 1.85rem; }
   }
 </style>
 </head>
@@ -48,82 +199,116 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="header-logo">
-      <a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a>
+    <div class="logo-box">
+      <a href="index.html">
+        <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
+      </a>
     </div>
-    <div class="header-center">
+    <div class="brand-center">
       <h1>Castlerock Lawnmowers</h1>
-      <div class="mob">Mob: <a href="tel:07934716954">07934 716954</a></div>
+      <div class="phone-line">Mob: <a href="tel:07934716954">07934 716954</a></div>
     </div>
-    <div class="header-right">
-      <div class="hecht-badge">HECHT</div>
-      <div class="hecht-sub">AUTHORISED DEALER</div>
-      <div class="pay-badges">
-        <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Cash</span>
+    <div class="dealer-right">
+      <div class="hecht-badge">
+        <span class="hecht-word">HECHT</span>
+        <span class="hecht-sub">AUTHORISED DEALER</span>
       </div>
+      <div class="cards-note">All Major Cards Accepted</div>
     </div>
   </div>
+  <nav class="nav-bar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-pill active">PRODUCTS</a>
+      <a href="services.html" class="nav-pill">SERVICES</a>
+      <a href="contact.html" class="nav-pill">CONTACT</a>
+    </div>
+  </nav>
 </header>
-
-<nav class="nav-bar">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-pill active">Products</a>
-    <a href="services.html" class="nav-pill">Services</a>
-    <a href="contact.html" class="nav-pill">Contact</a>
-  </div>
-</nav>
 
 <main class="main-wrap">
   <div class="cat-grid">
-    <a class="cat-card" href="shop.html?cat=lawnmowers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_718cb00a45b249c1abf5db40bbaa269a~mv2.jpg" alt="Lawnmowers"></div>
-      <div class="cat-title">Lawnmowers</div>
-    </a>
-    <a class="cat-card" href="shop.html?cat=hedgetrimmers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_51111800087c4295a621e17ce097b5f9~mv2.jpg" alt="Hedgetrimmers"></div>
-      <div class="cat-title">Hedgetrimmers</div>
-    </a>
-    <a class="cat-card" href="shop.html?cat=chainsaws">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_74ba24bada784de5841a19f1696ad935~mv2.jpg" alt="Chainsaws"></div>
-      <div class="cat-title">Chainsaws</div>
-    </a>
-    <a class="cat-card" href="shop.html?cat=strimmers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_768df58d38a6422e9b4634e13ee8ec99~mv2.jpg" alt="Strimmers"></div>
-      <div class="cat-title">Strimmers</div>
+    <a href="shop.html?cat=lawnmowers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_6d50c74999c64a85a101aa99272b8d72~mv2.jpg" alt="Lawnmowers">
+      </div>
+      <span class="cat-title">Lawnmowers</span>
     </a>
 
-    <a class="cat-card" href="machinery.html?cat=blowers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png" alt="Blowers"></div>
-      <div class="cat-title">Blowers</div>
-    </a>
-    <a class="cat-card" href="machinery.html?cat=generators">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Generators"></div>
-      <div class="cat-title">Generators</div>
-    </a>
-    <a class="cat-card" href="machinery.html?cat=construction">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Construction"></div>
-      <div class="cat-title">Construction</div>
-    </a>
-    <a class="cat-card" href="machinery.html?cat=pressure-washers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Pressure Washers"></div>
-      <div class="cat-title">Pressure Washers</div>
+    <a href="shop.html?cat=hedgetrimmers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_1e98bbca78b146ec8b904d6c4cb9a19a~mv2.jpg" alt="Hedgetrimmers">
+      </div>
+      <span class="cat-title">Hedgetrimmers</span>
     </a>
 
-    <a class="cat-card" href="equipment.html?cat=log-splitters">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg" alt="Log Splitters"></div>
-      <div class="cat-title">Log Splitters</div>
+    <a href="shop.html?cat=chainsaws" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_2f2f3bc8cb35461fb46a1945032c5d3a~mv2.jpg" alt="Chainsaws">
+      </div>
+      <span class="cat-title">Chainsaws</span>
     </a>
-    <a class="cat-card" href="equipment.html?cat=shredders">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg" alt="Shredders"></div>
-      <div class="cat-title">Shredders</div>
+
+    <a href="shop.html?cat=strimmers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_6a42b959a7bd4c3399cfef1649bb88c3~mv2.jpg" alt="Strimmers">
+      </div>
+      <span class="cat-title">Strimmers</span>
     </a>
-    <a class="cat-card" href="equipment.html?cat=scarifiers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg" alt="Scarifiers"></div>
-      <div class="cat-title">Scarifiers</div>
+
+    <a href="machinery.html?cat=blowers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_5e7d21df509f4c4cb6105beeb854ef9b~mv2.jpg" alt="Blowers">
+      </div>
+      <span class="cat-title">Blowers</span>
     </a>
-    <a class="cat-card" href="equipment.html?cat=tools-trailers">
-      <div class="cat-img-box"><img src="https://static.wixstatic.com/media/b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg" alt="Spreaders, Trailers & Tools"></div>
-      <div class="cat-title">Spreaders, Trailers &amp; Tools</div>
+
+    <a href="machinery.html?cat=generators" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_1c8db2fb851a4da8a72855c92b0c69c5~mv2.jpg" alt="Generators">
+      </div>
+      <span class="cat-title">Generators</span>
+    </a>
+
+    <a href="machinery.html?cat=construction" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_b5c9f10b7b8e4871a0368a14d1ef34d8~mv2.jpg" alt="Construction">
+      </div>
+      <span class="cat-title">Construction</span>
+    </a>
+
+    <a href="machinery.html?cat=pressure-washers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_53d734b1b59f473e9e4c36a4e91f1a0a~mv2.jpg" alt="Pressure Washers">
+      </div>
+      <span class="cat-title">Pressure Washers</span>
+    </a>
+
+    <a href="equipment.html?cat=log-splitters" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_2d7b1fa55ab84c7c9bc6b7e7f93b0a2c~mv2.jpg" alt="Log Splitters">
+      </div>
+      <span class="cat-title">Log Splitters</span>
+    </a>
+
+    <a href="equipment.html?cat=shredders" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_9a5a3cf88e1d4a48b630c02835b32e0f~mv2.jpg" alt="Shredders">
+      </div>
+      <span class="cat-title">Shredders</span>
+    </a>
+
+    <a href="equipment.html?cat=scarifiers" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_124469bc53b8484cbda278d702447232~mv2.jpg" alt="Scarifiers">
+      </div>
+      <span class="cat-title">Scarifiers</span>
+    </a>
+
+    <a href="equipment.html?cat=tools" class="cat-card">
+      <div class="cat-img-wrap">
+        <img src="https://static.wixstatic.com/media/b243b4_3f6e180c0d39481d80df5ec3c6a37cc4~mv2.jpg" alt="Spreaders, Trailers &amp; Tools">
+      </div>
+      <span class="cat-title">Spreaders, Trailers &amp; Tools</span>
     </a>
   </div>
 </main>
