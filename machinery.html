@@ -6,343 +6,63 @@
   <title>Products | Castlerock Lawnmowers</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #1f2937;
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .site-header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .header-logo img {
-      height: 120px;
-      width: auto;
-      display: block;
-    }
-    .header-center {
-      text-align: center;
-      flex: 1;
-    }
-    .header-center h1 {
-      font-size: 2.3rem;
-      font-weight: 800;
-      font-style: italic;
-      color: #c8102e;
-      letter-spacing: 0.5px;
-      line-height: 1.15;
-    }
-    .header-phone {
-      margin-top: 6px;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #111827;
-    }
-    .header-phone a {
-      color: #111827;
-      text-decoration: none;
-    }
-    .header-right {
-      text-align: right;
-      min-width: 170px;
-    }
-    .hecht-badge {
-      display: inline-block;
-      background: #c8102e;
-      color: #ffffff;
-      font-weight: 900;
-      font-size: 1.35rem;
-      padding: 4px 14px;
-      letter-spacing: 1.5px;
-      border-radius: 3px;
-    }
-    .dealer-sub {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #374151;
-      margin-top: 4px;
-      letter-spacing: 0.5px;
-    }
-    .payment-line {
-      font-size: 0.78rem;
-      color: #6b7280;
-      margin-top: 3px;
-    }
-    .nav-bar {
-      background: #111111;
-      padding: 10px 20px;
-    }
-    .nav-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-    .nav-pill {
-      display: inline-block;
-      background: #facc15;
-      color: #111111;
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 8px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      letter-spacing: 0.6px;
-      transition: background 0.15s ease, transform 0.1s ease;
-    }
-    .nav-pill:hover {
-      background: #fde047;
-    }
-    .nav-pill.active {
-      background: #ffffff;
-      color: #111111;
-      box-shadow: 0 0 0 2px #facc15;
-    }
-
-    /* Main Catalogue Area */
-    .container {
-      max-width: 1140px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 24px 20px 48px;
-      flex: 1;
-    }
-    .top-controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .back-btn {
-      display: inline-block;
-      background: #111111;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #1f2937; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+    .site-header { background: #ffffff; border-bottom: 1px solid #e5e7eb; }
+    .header-inner { max-width: 1140px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .header-logo img { height: 120px; width: auto; display: block; }
+    .header-center { text-align: center; flex: 1; }
+    .header-center h1 { font-size: 2.3rem; font-weight: 800; font-style: italic; color: #c8102e; letter-spacing: 0.5px; line-height: 1.15; }
+    .header-phone { margin-top: 6px; font-size: 1.35rem; font-weight: 700; color: #111827; }
+    .header-phone a { color: #111827; text-decoration: none; }
+    .header-right { text-align: right; min-width: 170px; }
+    .hecht-badge { display: inline-block; background: #c8102e; color: #ffffff; font-weight: 900; font-size: 1.35rem; padding: 4px 14px; letter-spacing: 1.5px; border-radius: 3px; }
+    .dealer-sub { font-size: 0.75rem; font-weight: 700; color: #374151; margin-top: 4px; letter-spacing: 0.5px; }
+    .payment-line { font-size: 0.78rem; color: #6b7280; margin-top: 3px; }
+    .nav-bar { background: #111111; padding: 10px 20px; }
+    .nav-inner { max-width: 1140px; margin: 0 auto; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+    .nav-pill { display: inline-block; background: #facc15; color: #111111; font-weight: 800; font-size: 0.95rem; padding: 8px 28px; border-radius: 999px; text-decoration: none; letter-spacing: 0.6px; transition: background 0.15s ease, transform 0.1s ease; }
+    .nav-pill:hover { background: #fde047; }
+    .nav-pill.active { background: #ffffff; color: #111111; box-shadow: 0 0 0 2px #facc15; }
+    .container { max-width: 1140px; width: 100%; margin: 0 auto; padding: 24px 20px 48px; flex: 1; }
+    .top-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb; }
+    .back-btn { display: inline-block; background: #111111; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: bold; }
     .back-btn:hover { background: #c8102e; }
-    .cat-pills {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .cat-pill {
-      background: #ffffff;
-      border: 1px solid #d1d5db;
-      color: #1f2937;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .cat-pill.active, .cat-pill:hover {
-      background: #c8102e;
-      border-color: #c8102e;
-      color: #ffffff;
-    }
-    .cat-heading {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 1.85rem;
-      color: #c8102e;
-      margin-bottom: 18px;
-    }
-
-    /* 4-Column Clean Price-Only Product Tiles */
-    .tiles-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px 18px;
-    }
+    .cat-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .cat-pill { background: #ffffff; border: 1px solid #d1d5db; color: #1f2937; padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: bold; cursor: pointer; text-decoration: none; }
+    .cat-pill.active, .cat-pill:hover { background: #c8102e; border-color: #c8102e; color: #ffffff; }
+    .cat-heading { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.85rem; color: #c8102e; margin-bottom: 18px; }
+    .tiles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 18px; }
     @media (max-width: 960px) { .tiles-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .tiles-grid { grid-template-columns: 1fr; } }
-
-    .tile {
-      background: #ffffff;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      padding: 18px 14px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .tile:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border-color: #c8102e;
-    }
-    .tile-img-wrap {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-      background: #ffffff;
-    }
-    .tile-img-wrap img {
-      max-height: 170px;
-      max-width: 100%;
-      object-fit: contain;
-    }
-    .tile-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #c8102e;
-      margin-bottom: 4px;
-      line-height: 1.25;
-    }
-    .tile-price {
-      font-size: 1.05rem;
-      font-weight: bold;
-      color: #111827;
-    }
-
-    /* Simple Spec Pop-up Modal */
-    .modal-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.65);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
+    .tile { background: #ffffff; border: 1px solid #d1d5db; border-radius: 10px; padding: 18px 14px; text-align: center; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; display: flex; flex-direction: column; justify-content: space-between; }
+    .tile:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-color: #c8102e; }
+    .tile-img-wrap { height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: #ffffff; }
+    .tile-img-wrap img { max-height: 170px; max-width: 100%; object-fit: contain; }
+    .tile-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1rem; font-weight: bold; color: #c8102e; margin-bottom: 4px; line-height: 1.25; }
+    .tile-price { font-size: 1.05rem; font-weight: bold; color: #111827; }
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 1000; align-items: center; justify-content: center; padding: 16px; }
     .modal-backdrop.open { display: flex; }
-    .modal-card {
-      background: #ffffff;
-      max-width: 520px;
-      width: 100%;
-      border-radius: 10px;
-      padding: 24px;
-      position: relative;
-      text-align: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    }
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: #111111;
-      color: #ffffff;
-      border: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .modal-card img {
-      max-height: 220px;
-      max-width: 100%;
-      object-fit: contain;
-      margin-bottom: 14px;
-    }
-    .modal-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 1.35rem;
-      font-weight: bold;
-      color: #c8102e;
-      margin-bottom: 6px;
-    }
-    .modal-price {
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: #111827;
-      margin-bottom: 12px;
-    }
-    .modal-desc {
-      font-size: 0.94rem;
-      line-height: 1.55;
-      color: #374151;
-      margin-bottom: 16px;
-    }
-    .modal-call {
-      background: #f3f4f6;
-      border-left: 4px solid #c8102e;
-      padding: 10px 14px;
-      font-weight: bold;
-      font-size: 0.95rem;
-      color: #111827;
-    }
-
-    footer {
-      background: #111111;
-      color: #e5e7eb;
-      text-align: center;
-      padding: 22px 20px;
-      font-size: 0.9rem;
-    }
+    .modal-card { background: #ffffff; max-width: 520px; width: 100%; border-radius: 10px; padding: 24px; position: relative; text-align: center; box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+    .modal-close { position: absolute; top: 12px; right: 14px; background: #111111; color: #ffffff; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 1rem; cursor: pointer; }
+    .modal-card img { max-height: 220px; max-width: 100%; object-fit: contain; margin-bottom: 14px; }
+    .modal-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 1.35rem; font-weight: bold; color: #c8102e; margin-bottom: 6px; }
+    .modal-price { font-size: 1.25rem; font-weight: bold; color: #111827; margin-bottom: 12px; }
+    .modal-desc { font-size: 0.94rem; line-height: 1.55; color: #374151; margin-bottom: 16px; }
+    .modal-call { background: #f3f4f6; border-left: 4px solid #c8102e; padding: 10px 14px; font-weight: bold; font-size: 0.95rem; color: #111827; }
+    footer { background: #111111; color: #e5e7eb; text-align: center; padding: 22px 20px; font-size: 0.9rem; }
     footer strong { color: #facc15; }
-
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; text-align: center; }
-      .header-right { text-align: center; }
-      .header-logo img { height: 95px; margin: 0 auto; }
-      .header-center h1 { font-size: 1.75rem; }
-      .nav-inner { gap: 12px; }
-      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
-    }
+    @media (max-width: 768px) { .header-inner { flex-direction: column; text-align: center; } .header-right { text-align: center; } .header-logo img { height: 95px; margin: 0 auto; } .header-center h1 { font-size: 1.75rem; } .nav-inner { gap: 12px; } .nav-pill { padding: 7px 20px; font-size: 0.88rem; } }
   </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
-        </a>
-      </div>
-      <div class="header-center">
-        <h1>Castlerock Lawnmowers</h1>
-        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
-      </div>
-      <div class="header-right">
-        <div class="hecht-badge">HECHT</div>
-        <div class="dealer-sub">AUTHORISED DEALER</div>
-        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
-      </div>
+      <div class="header-logo"><a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a></div>
+      <div class="header-center"><h1>Castlerock Lawnmowers</h1><p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p></div>
+      <div class="header-right"><div class="hecht-badge">HECHT</div><div class="dealer-sub">AUTHORISED DEALER</div><div class="payment-line">Sales &bull; Servicing &bull; Repairs</div></div>
     </div>
-    <nav class="nav-bar">
-      <div class="nav-inner">
-        <a href="index.html" class="nav-pill active">PRODUCTS</a>
-        <a href="services.html" class="nav-pill">SERVICES</a>
-        <a href="contact.html" class="nav-pill">CONTACT</a>
-      </div>
-    </nav>
+    <nav class="nav-bar"><div class="nav-inner"><a href="index.html" class="nav-pill active">PRODUCTS</a><a href="services.html" class="nav-pill">SERVICES</a><a href="contact.html" class="nav-pill">CONTACT</a></div></nav>
   </header>
-
   <main class="container">
     <div class="top-controls">
       <a href="index.html" class="back-btn">&larr; All Categories</a>
@@ -353,168 +73,32 @@
         <a href="machinery.html?cat=pressure-washers" class="cat-pill" data-pill="pressure-washers">Pressure Washers</a>
       </div>
     </div>
-
     <h1 class="cat-heading" id="catTitle">Blowers</h1>
-
     <div class="tiles-grid" id="tilesGrid">
-      
-      <div class="tile" data-cat="blowers" onclick="openModal('Gardencare Handheld Blower', '£195', 'https://static.wixstatic.com/media/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg', '26cc 2-stroke handheld leaf blower and garden vacuum with 124mph max airspeed and 10:1 mulching collection bag.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_85f547be8cf14736bd77552c297a95db~mv2.jpg" alt="Gardencare Handheld Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Gardencare Handheld Blower</div>
-        <div class="tile-price">£195</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 9254 Handheld Blower', '£175', 'https://static.wixstatic.com/media/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png', '25.4cc 2-stroke handheld leaf blower and vacuum with steel mulching blades and 50L collecting bag.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_15e9740427d34af98df10053bf38b8af~mv2.png" alt="Hecht 9254 Handheld Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 9254 Handheld Blower</div>
-        <div class="tile-price">£175</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Alpina ABL27V', '£245', 'https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg', '27.6cc 2-stroke blower and vacuum with anti-vibration spring system and 72m/s air speed.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_13d5bbc06726437d913e75c757a7bf2b~mv2.jpg" alt="Alpina ABL27V" loading="lazy">
-        </div>
-        <div class="tile-title">Alpina ABL27V</div>
-        <div class="tile-price">£245</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Makita 25cc 2 Stroke Hand Held Petrol Blower', '£265', 'https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png', 'Lightweight 4.4kg Makita BHX2501 handheld blower with easy-start engine and high air volume.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_7eb2a315840e4cc5ac3eb723a3e02974~mv2.png" alt="Makita 25cc 2 Stroke Hand Held Petrol Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Makita 25cc 2 Stroke Hand Held Petrol Blower</div>
-        <div class="tile-price">£265</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Makita 4 Stroke Blower', '£295', 'https://static.wixstatic.com/media/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg', 'Makita BHX2501 4-stroke petrol handheld blower with mechanical decompression for easy starting.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_a6cd5350df864623bd81931a70bfe733~mv2.jpg" alt="Makita 4 Stroke Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Makita 4 Stroke Blower</div>
-        <div class="tile-price">£295</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 9436 Battery Blower 40V', '£75', 'https://static.wixstatic.com/media/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg', '40V cordless battery leaf blower with up to 160 km/h air speed. Lightweight 2.84kg (battery &amp; charger sold separately).')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_0a21a062a3644eebb84bcb58c25f37b8~mv2.jpg" alt="Hecht 9436 Battery Blower 40V" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 9436 Battery Blower 40V</div>
-        <div class="tile-price">£75</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 952 Backpack Blower', '£265', 'https://static.wixstatic.com/media/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg', '2HP backpack leaf blower producing 864 m³/h airflow with padded backplate and adjustable harness.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_1ad959fde85447ffaf06562172974f05~mv2.jpg" alt="Hecht 952 Backpack Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 952 Backpack Blower</div>
-        <div class="tile-price">£265</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Gardencare Backpack Blower', '£325', 'https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg', '65cc 2-stroke backpack blower with 205mph max airspeed and tube-mounted joystick controls.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_74d606209bf84d488d37e657f8b599b5~mv2.jpg" alt="Gardencare Backpack Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Gardencare Backpack Blower</div>
-        <div class="tile-price">£325</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 972 Pro Backpack Blower', '£395', 'https://static.wixstatic.com/media/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png', '79.4cc 4.6HP professional backpack leaf blower delivering 1440 m³/h air output with 2.5L tank.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_bdb167efcb544b5cb75bd547bc7b8647~mv2.png" alt="Hecht 972 Pro Backpack Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 972 Pro Backpack Blower</div>
-        <div class="tile-price">£395</div>
-      </div>
-      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 8514 Vacuum &amp; Blower', '£775', 'https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg', 'Self-propelled 173cc 6HP wheeled vacuum &amp; blower with 58cm working width and 150L collection bag.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_fa3859db741c48c4abca7b739066eded~mv2.jpg" alt="Hecht 8514 Vacuum &amp; Blower" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 8514 Vacuum &amp; Blower</div>
-        <div class="tile-price">£775</div>
-      </div>
-      <div class="tile" data-cat="generators" onclick="openModal('Champion 2.8Kw Petrol Generator', '£395', 'https://static.wixstatic.com/media/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg', '196cc 4-stroke portable petrol generator with 1x 230V 16A and 1x 110V 16A sockets. Up to 12 hours run time.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_23b707b1b55b430aa7f061514652beb6~mv2.jpg" alt="Champion 2.8Kw Petrol Generator" loading="lazy">
-        </div>
-        <div class="tile-title">Champion 2.8Kw Petrol Generator</div>
-        <div class="tile-price">£395</div>
-      </div>
-      <div class="tile" data-cat="generators" onclick="openModal('Champion 3.5Kw Petrol Generator', '£525', 'https://static.wixstatic.com/media/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg', '224cc 7.5hp 4-stroke OHV generator with 3000W running / 3500W starting watts, 14.4L tank, and low oil shut-off.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_ec1bba86624145a8b3117c62837bb94e~mv2.jpg" alt="Champion 3.5Kw Petrol Generator" loading="lazy">
-        </div>
-        <div class="tile-title">Champion 3.5Kw Petrol Generator</div>
-        <div class="tile-price">£525</div>
-      </div>
-      <div class="tile" data-cat="generators" onclick="openModal('Champion Dual Fuel Generator', '£1025', 'https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg', '439cc electric &amp; manual start Dual Fuel generator (runs on petrol or LPG). 7.5 KVA / 6 KW output, Stage V compliant.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_5a4df756d2ea4737b8d13bce6d8043b1~mv2.jpg" alt="Champion Dual Fuel Generator" loading="lazy">
-        </div>
-        <div class="tile-title">Champion Dual Fuel Generator</div>
-        <div class="tile-price">£1025</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht 2052 50L Compressor', '£230', 'https://static.wixstatic.com/media/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg', '1500W 50L oil air compressor with 8 bar max pressure, 180 l/min suction power, and 3m hose.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_a2fe0da871e94d5a8e825c59b1d50e7c~mv2.jpg" alt="Hecht 2052 50L Compressor" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 2052 50L Compressor</div>
-        <div class="tile-price">£230</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht 2117 Construction Mixer', '£345', 'https://static.wixstatic.com/media/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg', '550W electric 230V construction cement mixer with 120L drum volume.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_6d7fed367b654a87a516b2a905d0ab86~mv2.jpg" alt="Hecht 2117 Construction Mixer" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 2117 Construction Mixer</div>
-        <div class="tile-price">£345</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht 9588 Concrete Saw', '£525', 'https://static.wixstatic.com/media/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg', '54cc petrol concrete cutter with 305mm blade diameter, water connection, and lightweight 10kg build.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_25b60d07f1014b958fba8ab02b486f9c~mv2.jpg" alt="Hecht 9588 Concrete Saw" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 9588 Concrete Saw</div>
-        <div class="tile-price">£525</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht 1111 Vibrating Plate 14&quot;', '£550', 'https://static.wixstatic.com/media/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg', '196cc petrol plate compactor (530 x 370mm plate) with 11000 N compaction pressure, folding wheels, and damping pad.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_0e670379de0946b480b58045f301c55a~mv2.jpg" alt="Hecht 1111 Vibrating Plate 14&quot;" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 1111 Vibrating Plate 14&quot;</div>
-        <div class="tile-price">£550</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht 1113 Vibrating Plate 16&quot;', '£615', 'https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg', '196cc petrol plate compactor (540 x 420mm plate) with 13000 N compaction pressure, 30cm compaction depth, folding wheels, and damping pad.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_4627ca1a205b4a2ba092d5f9f9366f29~mv2.jpg" alt="Hecht 1113 Vibrating Plate 16&quot;" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 1113 Vibrating Plate 16&quot;</div>
-        <div class="tile-price">£615</div>
-      </div>
-      <div class="tile" data-cat="construction" onclick="openModal('Hecht Powered Wheelbarrow', '£1835', 'https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg', '196cc 5.5HP wheeled mini transporter with 3 forward + 1 reverse gear and 300kg load capacity.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_3a702e95341f466181b1ca038da5b8bd~mv2.jpg" alt="Hecht Powered Wheelbarrow" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht Powered Wheelbarrow</div>
-        <div class="tile-price">£1835</div>
-      </div>
-      <div class="tile" data-cat="pressure-washers" onclick="openModal('Hecht 319 High Pressure Washer', '£145', 'https://static.wixstatic.com/media/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png', '1800W electric pressure washer with 100 bar operating pressure, 420 l/h flow rate, and 5m pressure hose.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png/v1/fill/w_420,h_420,al_c,q_80/b243b4_433ae975694641c685d1671bb1c25ddc~mv2.png" alt="Hecht 319 High Pressure Washer" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 319 High Pressure Washer</div>
-        <div class="tile-price">£145</div>
-      </div>
-      <div class="tile" data-cat="pressure-washers" onclick="openModal('Hecht 324 High Pressure Washer', '£220', 'https://static.wixstatic.com/media/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg', '2350W self-priming electric pressure washer up to 165 bar max pressure with integrated hose reel, 8m hose, and foam nozzle.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_17ac7dd52796486884394e6691ea218f~mv2.jpg" alt="Hecht 324 High Pressure Washer" loading="lazy">
-        </div>
-        <div class="tile-title">Hecht 324 High Pressure Washer</div>
-        <div class="tile-price">£220</div>
-      </div>
-      <div class="tile" data-cat="pressure-washers" onclick="openModal('Rocwood High Pressure Washer', '£325', 'https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg', '7HP 4-stroke OHV petrol pressure washer (2500psi rated / 3480psi max) with brass axial pump, 10m hose, and 5 quick-connect nozzles.')">
-        <div class="tile-img-wrap">
-          <img src="https://static.wixstatic.com/media/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg/v1/fill/w_420,h_420,al_c,q_80/b243b4_890d3488a3cf41418b061ecdaa00e80a~mv2.jpg" alt="Rocwood High Pressure Washer" loading="lazy">
-        </div>
-        <div class="tile-title">Rocwood High Pressure Washer</div>
-        <div class="tile-price">£325</div>
-      </div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Gardencare Handheld Blower', '£195', 'images/5E-GCBV262.jpg', '26cc 2-stroke handheld leaf blower and garden vacuum with 124mph max airspeed and 10:1 mulching collection bag.')"><div class="tile-img-wrap"><img src="images/5E-GCBV262.jpg" alt="Gardencare Handheld Blower" loading="lazy"></div><div class="tile-title">Gardencare Handheld Blower</div><div class="tile-price">£195</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 9254 Handheld Blower', '£175', 'images/Hecht3_edited.png', '25.4cc 2-stroke handheld leaf blower and vacuum with steel mulching blades and 50L collecting bag.')"><div class="tile-img-wrap"><img src="images/Hecht3_edited.png" alt="Hecht 9254 Handheld Blower" loading="lazy"></div><div class="tile-title">Hecht 9254 Handheld Blower</div><div class="tile-price">£175</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Alpina ABL27V', '£245', 'images/Alpina ABL27V.jpg', '27.6cc 2-stroke blower and vacuum with anti-vibration spring system and 72m/s air speed.')"><div class="tile-img-wrap"><img src="images/Alpina ABL27V.jpg" alt="Alpina ABL27V" loading="lazy"></div><div class="tile-title">Alpina ABL27V</div><div class="tile-price">£245</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Makita 25cc 2 Stroke Hand Held Petrol Blower', '£265', 'images/Makita BHX 2501_edited_edited.png', 'Lightweight 4.4kg Makita BHX2501 handheld blower with easy-start engine and high air volume.')"><div class="tile-img-wrap"><img src="images/Makita BHX 2501_edited_edited.png" alt="Makita 25cc 2 Stroke Hand Held Petrol Blower" loading="lazy"></div><div class="tile-title">Makita 25cc 2 Stroke Hand Held Petrol Blower</div><div class="tile-price">£265</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Makita 4 Stroke Blower', '£295', 'images/Blower.jpeg', 'Makita BHX2501 4-stroke petrol handheld blower with mechanical decompression for easy starting.')"><div class="tile-img-wrap"><img src="images/Blower.jpeg" alt="Makita 4 Stroke Blower" loading="lazy"></div><div class="tile-title">Makita 4 Stroke Blower</div><div class="tile-price">£295</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 9436 Battery Blower 40V', '£75', 'images/Batt Blower.jpg', '40V cordless battery leaf blower with up to 160 km/h air speed. Lightweight 2.84kg (battery &amp; charger sold separately).')"><div class="tile-img-wrap"><img src="images/Batt Blower.jpg" alt="Hecht 9436 Battery Blower 40V" loading="lazy"></div><div class="tile-title">Hecht 9436 Battery Blower 40V</div><div class="tile-price">£75</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 952 Backpack Blower', '£265', 'images/hecht6.jpg', '2HP backpack leaf blower producing 864 m³/h airflow with padded backplate and adjustable harness.')"><div class="tile-img-wrap"><img src="images/hecht6.jpg" alt="Hecht 952 Backpack Blower" loading="lazy"></div><div class="tile-title">Hecht 952 Backpack Blower</div><div class="tile-price">£265</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Gardencare Backpack Blower', '£325', 'images/5E-GCB650.jpg', '65cc 2-stroke backpack blower with 205mph max airspeed and tube-mounted joystick controls.')"><div class="tile-img-wrap"><img src="images/5E-GCB650.jpg" alt="Gardencare Backpack Blower" loading="lazy"></div><div class="tile-title">Gardencare Backpack Blower</div><div class="tile-price">£325</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 972 Pro Backpack Blower', '£395', 'images/HECHT-972-PROFI-petrol-blower-300x300_edited.png', '79.4cc 4.6HP professional backpack leaf blower delivering 1440 m³/h air output with 2.5L tank.')"><div class="tile-img-wrap"><img src="images/HECHT-972-PROFI-petrol-blower-300x300_edited.png" alt="Hecht 972 Pro Backpack Blower" loading="lazy"></div><div class="tile-title">Hecht 972 Pro Backpack Blower</div><div class="tile-price">£395</div></div>
+      <div class="tile" data-cat="blowers" onclick="openModal('Hecht 8514 Vacuum &amp; Blower', '£775', 'images/8514.jpg', 'Self-propelled 173cc 6HP wheeled vacuum &amp; blower with 58cm working width and 150L collection bag.')"><div class="tile-img-wrap"><img src="images/8514.jpg" alt="Hecht 8514 Vacuum &amp; Blower" loading="lazy"></div><div class="tile-title">Hecht 8514 Vacuum &amp; Blower</div><div class="tile-price">£775</div></div>
+      <div class="tile" data-cat="generators" onclick="openModal('Champion 2.8Kw Petrol Generator', '£395', 'images/Champion-CPG3500-2800W-Open-Frame-Petrol-Generator-600x600.jpg', '196cc 4-stroke portable petrol generator with 1x 230V 16A and 1x 110V 16A sockets. Up to 12 hours run time.')"><div class="tile-img-wrap"><img src="images/Champion-CPG3500-2800W-Open-Frame-Petrol-Generator-600x600.jpg" alt="Champion 2.8Kw Petrol Generator" loading="lazy"></div><div class="tile-title">Champion 2.8Kw Petrol Generator</div><div class="tile-price">£395</div></div>
+      <div class="tile" data-cat="generators" onclick="openModal('Champion 3.5Kw Petrol Generator', '£525', 'images/Champion-CPG4000E1-3500W-Open-Frame-Petrol-Generator-2-600x600.jpg', '224cc 7.5hp 4-stroke OHV generator with 3000W running / 3500W starting watts, 14.4L tank, and low oil shut-off.')"><div class="tile-img-wrap"><img src="images/Champion-CPG4000E1-3500W-Open-Frame-Petrol-Generator-2-600x600.jpg" alt="Champion 3.5Kw Petrol Generator" loading="lazy"></div><div class="tile-title">Champion 3.5Kw Petrol Generator</div><div class="tile-price">£525</div></div>
+      <div class="tile" data-cat="generators" onclick="openModal('Champion Dual Fuel Generator', '£1025', 'images/Champion-CPG7500E2-DF-7000W-Open-Frame-Dual-Fuel-Generator-1-1100x1100.jpg', '439cc electric &amp; manual start Dual Fuel generator (runs on petrol or LPG). 7.5 KVA / 6 KW output, Stage V compliant.')"><div class="tile-img-wrap"><img src="images/Champion-CPG7500E2-DF-7000W-Open-Frame-Dual-Fuel-Generator-1-1100x1100.jpg" alt="Champion Dual Fuel Generator" loading="lazy"></div><div class="tile-title">Champion Dual Fuel Generator</div><div class="tile-price">£1025</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht 2052 50L Compressor', '£230', 'images/50L Compressor.jpg', '1500W 50L oil air compressor with 8 bar max pressure, 180 l/min suction power, and 3m hose.')"><div class="tile-img-wrap"><img src="images/50L Compressor.jpg" alt="Hecht 2052 50L Compressor" loading="lazy"></div><div class="tile-title">Hecht 2052 50L Compressor</div><div class="tile-price">£230</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht 2117 Construction Mixer', '£345', 'images/2117.jpg', '550W electric 230V construction cement mixer with 120L drum volume.')"><div class="tile-img-wrap"><img src="images/2117.jpg" alt="Hecht 2117 Construction Mixer" loading="lazy"></div><div class="tile-title">Hecht 2117 Construction Mixer</div><div class="tile-price">£345</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht 9588 Concrete Saw', '£525', 'images/9588-1.jpg', '54cc petrol concrete cutter with 305mm blade diameter, water connection, and lightweight 10kg build.')"><div class="tile-img-wrap"><img src="images/9588-1.jpg" alt="Hecht 9588 Concrete Saw" loading="lazy"></div><div class="tile-title">Hecht 9588 Concrete Saw</div><div class="tile-price">£525</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht 1111 Vibrating Plate 14&quot;', '£550', 'images/1111.jpg', '196cc petrol plate compactor (530 x 370mm plate) with 11000 N compaction pressure, folding wheels, and damping pad.')"><div class="tile-img-wrap"><img src="images/1111.jpg" alt="Hecht 1111 Vibrating Plate 14&quot;" loading="lazy"></div><div class="tile-title">Hecht 1111 Vibrating Plate 14&quot;</div><div class="tile-price">£550</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht 1113 Vibrating Plate 16&quot;', '£615', 'images/1113.jpg', '196cc petrol plate compactor (540 x 420mm plate) with 13000 N compaction pressure, 30cm compaction depth, folding wheels, and damping pad.')"><div class="tile-img-wrap"><img src="images/1113.jpg" alt="Hecht 1113 Vibrating Plate 16&quot;" loading="lazy"></div><div class="tile-title">Hecht 1113 Vibrating Plate 16&quot;</div><div class="tile-price">£615</div></div>
+      <div class="tile" data-cat="construction" onclick="openModal('Hecht Powered Wheelbarrow', '£1835', 'images/Hecht Powered Wheelbarrow.jpg', '196cc 5.5HP wheeled mini transporter with 3 forward + 1 reverse gear and 300kg load capacity.')"><div class="tile-img-wrap"><img src="images/Hecht Powered Wheelbarrow.jpg" alt="Hecht Powered Wheelbarrow" loading="lazy"></div><div class="tile-title">Hecht Powered Wheelbarrow</div><div class="tile-price">£1835</div></div>
+      <div class="tile" data-cat="pressure-washers" onclick="openModal('Hecht 319 High Pressure Washer', '£145', 'images/Pressure Washer_edited.png', '1800W electric pressure washer with 100 bar operating pressure, 420 l/h flow rate, and 5m pressure hose.')"><div class="tile-img-wrap"><img src="images/Pressure Washer_edited.png" alt="Hecht 319 High Pressure Washer" loading="lazy"></div><div class="tile-title">Hecht 319 High Pressure Washer</div><div class="tile-price">£145</div></div>
+      <div class="tile" data-cat="pressure-washers" onclick="openModal('Hecht 324 High Pressure Washer', '£220', 'images/324.jpg', '2350W self-priming electric pressure washer up to 165 bar max pressure with integrated hose reel, 8m hose, and foam nozzle.')"><div class="tile-img-wrap"><img src="images/324.jpg" alt="Hecht 324 High Pressure Washer" loading="lazy"></div><div class="tile-title">Hecht 324 High Pressure Washer</div><div class="tile-price">£220</div></div>
+      <div class="tile" data-cat="pressure-washers" onclick="openModal('Rocwood High Pressure Washer', '£325', 'images/61lRHWejGoL._AC_SL1000_.jpg', '7HP 4-stroke OHV petrol pressure washer (2500psi rated / 3480psi max) with brass axial pump, 10m hose, and 5 quick-connect nozzles.')"><div class="tile-img-wrap"><img src="images/61lRHWejGoL._AC_SL1000_.jpg" alt="Rocwood High Pressure Washer" loading="lazy"></div><div class="tile-title">Rocwood High Pressure Washer</div><div class="tile-price">£325</div></div>
     </div>
   </main>
-
   <div class="modal-backdrop" id="specModal" onclick="if(event.target===this) closeModal()">
     <div class="modal-card">
       <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -525,31 +109,16 @@
       <div class="modal-call">Call 07934 716954 to check stock or find out more</div>
     </div>
   </div>
-
-  <footer>
-    <strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: 07934 716954
-  </footer>
-
+  <footer><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: 07934 716954</footer>
   <script>
-    const names = {
-      "blowers": "Blowers",
-      "generators": "Generators",
-      "construction": "Construction",
-      "pressure-washers": "Pressure Washers"
-    };
-
+    const names = { "blowers": "Blowers", "generators": "Generators", "construction": "Construction", "pressure-washers": "Pressure Washers" };
     function applyFilter() {
       const params = new URLSearchParams(window.location.search);
       const cat = params.get("cat") || "blowers";
       document.getElementById("catTitle").textContent = names[cat] || "Equipment";
-      document.querySelectorAll(".tile").forEach(tile => {
-        tile.style.display = (tile.dataset.cat === cat) ? "flex" : "none";
-      });
-      document.querySelectorAll(".cat-pill").forEach(pill => {
-        pill.classList.toggle("active", pill.dataset.pill === cat);
-      });
+      document.querySelectorAll(".tile").forEach(tile => { tile.style.display = (tile.dataset.cat === cat) ? "flex" : "none"; });
+      document.querySelectorAll(".cat-pill").forEach(pill => { pill.classList.toggle("active", pill.dataset.pill === cat); });
     }
-
     function openModal(title, price, img, desc) {
       document.getElementById("mTitle").textContent = title;
       document.getElementById("mPrice").textContent = price;
@@ -557,11 +126,7 @@
       document.getElementById("mDesc").textContent = desc;
       document.getElementById("specModal").classList.add("open");
     }
-
-    function closeModal() {
-      document.getElementById("specModal").classList.remove("open");
-    }
-
+    function closeModal() { document.getElementById("specModal").classList.remove("open"); }
     applyFilter();
   </script>
 </body>
