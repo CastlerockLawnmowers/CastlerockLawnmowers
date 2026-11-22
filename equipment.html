@@ -6,337 +6,63 @@
   <title>Equipment | Castlerock Lawnmowers</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #1f2937;
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .site-header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .header-logo img {
-      height: 120px;
-      width: auto;
-      display: block;
-    }
-    .header-center {
-      text-align: center;
-      flex: 1;
-    }
-    .header-center h1 {
-      font-size: 2.3rem;
-      font-weight: 800;
-      font-style: italic;
-      color: #c8102e;
-      letter-spacing: 0.5px;
-      line-height: 1.15;
-    }
-    .header-phone {
-      margin-top: 6px;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #111827;
-    }
-    .header-phone a {
-      color: #111827;
-      text-decoration: none;
-    }
-    .header-right {
-      text-align: right;
-      min-width: 170px;
-    }
-    .hecht-badge {
-      display: inline-block;
-      background: #c8102e;
-      color: #ffffff;
-      font-weight: 900;
-      font-size: 1.35rem;
-      padding: 4px 14px;
-      letter-spacing: 1.5px;
-      border-radius: 3px;
-    }
-    .dealer-sub {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #374151;
-      margin-top: 4px;
-      letter-spacing: 0.5px;
-    }
-    .payment-line {
-      font-size: 0.78rem;
-      color: #6b7280;
-      margin-top: 3px;
-    }
-    .nav-bar {
-      background: #111111;
-      padding: 10px 20px;
-    }
-    .nav-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-    }
-    .nav-pill {
-      display: inline-block;
-      background: #facc15;
-      color: #111111;
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 8px 28px;
-      border-radius: 999px;
-      text-decoration: none;
-      letter-spacing: 0.6px;
-      transition: background 0.15s ease, transform 0.1s ease;
-    }
-    .nav-pill:hover {
-      background: #fde047;
-    }
-    .nav-pill.active {
-      background: #ffffff;
-      color: #111111;
-      box-shadow: 0 0 0 2px #facc15;
-    }
-    .main-wrap {
-      max-width: 1140px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 24px 20px 44px;
-      flex: 1;
-    }
-    .sub-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 22px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .back-btn {
-      display: inline-block;
-      background: #111111;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 7px 15px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: bold;
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #1f2937; line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+    .site-header { background: #ffffff; border-bottom: 1px solid #e5e7eb; }
+    .header-inner { max-width: 1140px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .header-logo img { height: 120px; width: auto; display: block; }
+    .header-center { text-align: center; flex: 1; }
+    .header-center h1 { font-size: 2.3rem; font-weight: 800; font-style: italic; color: #c8102e; letter-spacing: 0.5px; line-height: 1.15; }
+    .header-phone { margin-top: 6px; font-size: 1.35rem; font-weight: 700; color: #111827; }
+    .header-phone a { color: #111827; text-decoration: none; }
+    .header-right { text-align: right; min-width: 170px; }
+    .hecht-badge { display: inline-block; background: #c8102e; color: #ffffff; font-weight: 900; font-size: 1.35rem; padding: 4px 14px; letter-spacing: 1.5px; border-radius: 3px; }
+    .dealer-sub { font-size: 0.75rem; font-weight: 700; color: #374151; margin-top: 4px; letter-spacing: 0.5px; }
+    .payment-line { font-size: 0.78rem; color: #6b7280; margin-top: 3px; }
+    .nav-bar { background: #111111; padding: 10px 20px; }
+    .nav-inner { max-width: 1140px; margin: 0 auto; display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+    .nav-pill { display: inline-block; background: #facc15; color: #111111; font-weight: 800; font-size: 0.95rem; padding: 8px 28px; border-radius: 999px; text-decoration: none; letter-spacing: 0.6px; transition: background 0.15s ease, transform 0.1s ease; }
+    .nav-pill:hover { background: #fde047; }
+    .nav-pill.active { background: #ffffff; color: #111111; box-shadow: 0 0 0 2px #facc15; }
+    .main-wrap { max-width: 1140px; width: 100%; margin: 0 auto; padding: 24px 20px 44px; flex: 1; }
+    .sub-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb; }
+    .back-btn { display: inline-block; background: #111111; color: #ffffff; text-decoration: none; padding: 7px 15px; border-radius: 999px; font-size: 0.85rem; font-weight: bold; }
     .back-btn:hover { background: #c8102e; }
-    .cat-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .cat-pill {
-      background: #ffffff;
-      border: 1px solid #d1d5db;
-      color: #1f2937;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .cat-pill:hover, .cat-pill.active {
-      background: #c8102e;
-      color: #ffffff;
-      border-color: #c8102e;
-    }
-    .cat-heading {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      color: #c8102e;
-      font-size: 1.85rem;
-      margin-bottom: 18px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px 18px;
-    }
-    @media (max-width: 960px) {
-      .product-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 680px) {
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    .product-tile {
-      background: #ffffff;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      padding: 18px 14px;
-      transition: box-shadow 0.15s ease, transform 0.15s ease;
-    }
-    .product-tile:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transform: translateY(-2px);
-    }
-    .tile-img-wrap {
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-      background: #ffffff;
-    }
-    .tile-img-wrap img {
-      max-height: 170px;
-      max-width: 100%;
-      object-fit: contain;
-    }
-    .tile-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      color: #c8102e;
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 4px;
-      line-height: 1.25;
-    }
-    .tile-price {
-      font-size: 1.05rem;
-      font-weight: bold;
-      color: #111827;
-    }
-    .modal-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.62);
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cat-pill { background: #ffffff; border: 1px solid #d1d5db; color: #1f2937; padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; font-weight: bold; cursor: pointer; }
+    .cat-pill:hover, .cat-pill.active { background: #c8102e; color: #ffffff; border-color: #c8102e; }
+    .cat-heading { font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #c8102e; font-size: 1.85rem; margin-bottom: 18px; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 18px; }
+    @media (max-width: 960px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 680px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    .product-tile { background: #ffffff; border: 1px solid #d1d5db; border-radius: 10px; text-align: center; cursor: pointer; padding: 18px 14px; transition: box-shadow 0.15s ease, transform 0.15s ease; }
+    .product-tile:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
+    .tile-img-wrap { height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: #ffffff; }
+    .tile-img-wrap img { max-height: 170px; max-width: 100%; object-fit: contain; }
+    .tile-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #c8102e; font-size: 1rem; font-weight: bold; margin-bottom: 4px; line-height: 1.25; }
+    .tile-price { font-size: 1.05rem; font-weight: bold; color: #111827; }
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.62); z-index: 999; align-items: center; justify-content: center; padding: 16px; }
     .modal-backdrop.open { display: flex; }
-    .modal-card {
-      background: #ffffff;
-      max-width: 580px;
-      width: 100%;
-      border-radius: 10px;
-      padding: 24px;
-      position: relative;
-      max-height: 88vh;
-      overflow-y: auto;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
-    }
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: #111111;
-      color: #ffffff;
-      border: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .modal-img {
-      display: block;
-      max-height: 220px;
-      max-width: 100%;
-      margin: 0 auto 14px;
-      object-fit: contain;
-    }
-    .modal-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-style: italic;
-      color: #c8102e;
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-    }
-    .modal-price {
-      font-size: 1.25rem;
-      font-weight: bold;
-      color: #111827;
-      margin-bottom: 12px;
-    }
-    .modal-desc {
-      font-size: 0.94rem;
-      line-height: 1.55;
-      color: #374151;
-      margin-bottom: 16px;
-    }
-    .modal-call {
-      background: #f3f4f6;
-      border-left: 4px solid #c8102e;
-      padding: 10px 14px;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-    .site-footer {
-      background: #111111;
-      color: #e5e7eb;
-      text-align: center;
-      padding: 22px 20px;
-      font-size: 0.9rem;
-    }
-    .site-footer a {
-      color: #facc15;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; text-align: center; }
-      .header-right { text-align: center; }
-      .header-logo img { height: 95px; margin: 0 auto; }
-      .header-center h1 { font-size: 1.75rem; }
-      .nav-inner { gap: 12px; }
-      .nav-pill { padding: 7px 20px; font-size: 0.88rem; }
-    }
+    .modal-card { background: #ffffff; max-width: 580px; width: 100%; border-radius: 10px; padding: 24px; position: relative; max-height: 88vh; overflow-y: auto; box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+    .modal-close { position: absolute; top: 12px; right: 14px; background: #111111; color: #ffffff; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 1rem; cursor: pointer; }
+    .modal-img { display: block; max-height: 220px; max-width: 100%; margin: 0 auto 14px; object-fit: contain; }
+    .modal-title { font-family: Georgia, "Times New Roman", serif; font-style: italic; color: #c8102e; font-size: 1.4rem; margin-bottom: 6px; }
+    .modal-price { font-size: 1.25rem; font-weight: bold; color: #111827; margin-bottom: 12px; }
+    .modal-desc { font-size: 0.94rem; line-height: 1.55; color: #374151; margin-bottom: 16px; }
+    .modal-call { background: #f3f4f6; border-left: 4px solid #c8102e; padding: 10px 14px; font-weight: bold; font-size: 0.95rem; }
+    .site-footer { background: #111111; color: #e5e7eb; text-align: center; padding: 22px 20px; font-size: 0.9rem; }
+    .site-footer a { color: #facc15; text-decoration: none; font-weight: 700; }
+    @media (max-width: 768px) { .header-inner { flex-direction: column; text-align: center; } .header-right { text-align: center; } .header-logo img { height: 95px; margin: 0 auto; } .header-center h1 { font-size: 1.75rem; } .nav-inner { gap: 12px; } .nav-pill { padding: 7px 20px; font-size: 0.88rem; } }
   </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-inner">
-      <div class="header-logo">
-        <a href="index.html">
-          <img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo">
-        </a>
-      </div>
-      <div class="header-center">
-        <h1>Castlerock Lawnmowers</h1>
-        <p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p>
-      </div>
-      <div class="header-right">
-        <div class="hecht-badge">HECHT</div>
-        <div class="dealer-sub">AUTHORISED DEALER</div>
-        <div class="payment-line">Sales &bull; Servicing &bull; Repairs</div>
-      </div>
+      <div class="header-logo"><a href="index.html"><img src="CLR Logo.jpg" alt="Castlerock Lawnmowers Logo"></a></div>
+      <div class="header-center"><h1>Castlerock Lawnmowers</h1><p class="header-phone"><a href="tel:07934716954">Mob: 07934 716954</a></p></div>
+      <div class="header-right"><div class="hecht-badge">HECHT</div><div class="dealer-sub">AUTHORISED DEALER</div><div class="payment-line">Sales &bull; Servicing &bull; Repairs</div></div>
     </div>
-    <nav class="nav-bar">
-      <div class="nav-inner">
-        <a href="index.html" class="nav-pill active">PRODUCTS</a>
-        <a href="services.html" class="nav-pill">SERVICES</a>
-        <a href="contact.html" class="nav-pill">CONTACT</a>
-      </div>
-    </nav>
+    <nav class="nav-bar"><div class="nav-inner"><a href="index.html" class="nav-pill active">PRODUCTS</a><a href="services.html" class="nav-pill">SERVICES</a><a href="contact.html" class="nav-pill">CONTACT</a></div></nav>
   </header>
-
   <main class="main-wrap">
     <div class="sub-bar">
       <a href="index.html" class="back-btn">&larr; All Categories</a>
@@ -347,11 +73,9 @@
         <button class="cat-pill" data-cat="tools" onclick="selectCat('tools')">Spreaders, Trailers &amp; Tools</button>
       </div>
     </div>
-
     <h2 class="cat-heading" id="catTitle">Log Splitters</h2>
     <div class="product-grid" id="productGrid"></div>
   </main>
-
   <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
     <div class="modal-card">
       <button class="modal-close" onclick="document.getElementById('modalBackdrop').classList.remove('open')">&times;</button>
@@ -362,69 +86,62 @@
       <div class="modal-call">Interested? Call Castlerock Lawnmowers on 07934 716954 for availability &amp; details.</div>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a>
-  </footer>
-
+  <footer class="site-footer"><strong>Castlerock Lawnmowers</strong> &bull; 45 Seapark, Castlerock, BT51 4TH &bull; Mob: <a href="tel:07934716954">07934 716954</a></footer>
   <script>
-    const WIX = "https://static.wixstatic.com/media/";
+    const IMG_DIR = "images/";
     const ITEMS = [
-      { cat: "splitters", name: "Hecht 8 Ton Vertical Log Splitter", price: "£900", img: "b243b4_c7e22bf9e97145989973b5c304d77018~mv2.jpg", desc: "3kW electric motor powering a hydraulic ram. 8 ton maximum splitting pressure. Weight 112kg." },
-      { cat: "splitters", name: "Hecht Horizontal Petrol Log Splitter 10T", price: "£850", img: "b243b4_698d2db1f7ca4adfac593b4d85865ebc~mv2.jpg", desc: "Petrol wood splitter, 212cc engine, 10 tons splitting pressure, max wood length 520mm. 12-inch wheels with drawbar and tow hitch. Approx weight 126kg." },
-      { cat: "splitters", name: "Hecht 6070 Vertical Electric Log Splitter 7 Ton", price: "£790", img: "b243b4_583bd73c1c5d4c8cbc57c0fe2d15e26f~mv2.jpg", desc: "Electric vertical wood splitter. Power input 230V 50Hz, 3000W. Log length up to 55cm, diameter up to 30cm. Splitting pressure 7 tons. Weight 98kg." },
-      { cat: "splitters", name: "Hecht 676 Log Splitter", price: "£475", img: "b243b4_d5836c6ee9d241188ce273520d5f4465~mv2.png", desc: "2kW 230V electric log splitter on stand with transport wheels. Splits logs up to 52cm long with 7 tons maximum pressure. Weight 48kg." },
-
-      { cat: "shredders", name: "Professional Self Propelled Shredder & Vacuum", price: "£1,395", img: "b243b4_3bd9eb89fe8f42fb8b06b7d734509bfb~mv2.jpg", desc: "Combined self-propelled petrol vacuum and shredder. 196cc engine (4.1kW), 60cm working width, cuts branches up to 5cm diameter, 3m suction hose, 130L collecting bag." },
-      { cat: "shredders", name: "Hecht 6208 Petrol Shredder", price: "£850", img: "b243b4_fd551a769fc64ec79bd165051304b167~mv2.png", desc: "Petrol powered garden shredder with 7HP engine. Suitable for cutting branches up to 70mm diameter." },
-      { cat: "shredders", name: "Champion RT10005 Petrol Shredder", price: "£775", img: "b243b4_e4ae6c3daa664a88bccf0edfecca2ccd~mv2.jpg", desc: "Champion RT10005 5cm (2-inch) wood chipper shredder powered by 4.1kW 4-stroke OHV engine with 3.1L fuel tank." },
-      { cat: "shredders", name: "Hecht 6285XL Electric Shredder", price: "£295", img: "b243b4_03a0634227a34e6db814dc72e7c69d42~mv2.jpg", desc: "2800W electric garden shredder for branches up to 4.4cm diameter, complete with large 60L plastic collecting box." },
-
-      { cat: "scarifiers", name: "Gardencare 40cm Petrol Scarifier", price: "£365", img: "b243b4_4acf99728fd54d89bb56faf2e4dfa171~mv2.jpg", desc: "Gardencare GCS40 petrol lawn scarifier supplied with both an 18-blade cassette and a 24-spring tine cassette to remove moss and thatch." },
-      { cat: "scarifiers", name: "Hecht Electric Scarifier", price: "£155", img: "b243b4_bc642432d0c9484f9ebf3df75804c1c5~mv2.png", desc: "1500W electric lawn scarifier, 32cm working width, 35L grass catcher, supplied with both 16 metal knives and spring tine roller. Lightweight 8kg." },
-
-      { cat: "tools", name: "Hecht 8101 Petrol Sweeper 100cm", price: "£1,200", img: "b243b4_f7750e0e94f34ca3a2e076af4f7bac1e~mv2.jpg", desc: "6.5HP 173cc petrol sweeper, 100cm working width, 3 forward + 2 reverse gears, 35cm brush diameter. Weight 80kg." },
-      { cat: "tools", name: "Hecht 8680SE Petrol Sweeper 80cm", price: "£1,130", img: "b243b4_57f257a1d73344a399b4935bcec0020a~mv2.jpg", desc: "Multifunctional self-propelled 80cm sweeper with electric start, Hecht OHV engine, 4 forward + 2 reverse gears." },
-      { cat: "tools", name: "Hecht 8615 Petrol Sweeper 60cm", price: "£825", img: "b243b4_57b3fe8990864f07bff7bbf312c74128~mv2.jpg", desc: "Multifunctional self-propelled 60cm sweeper with Hecht OHV engine, 4 forward + 2 reverse gears, 35cm brush diameter." },
-      { cat: "tools", name: "65L Towable Sprayer", price: "£500", img: "b243b4_e4e1bb6163114632a2e39db0ad42c6d2~mv2.jpg", desc: "Tow-behind sprayer with 7ft boom coverage, complete with hand lance and nozzle." },
-      { cat: "tools", name: "Hecht 3038 Oil Space Heater", price: "£395", img: "b243b4_832952970f6a4b2986c481d1bce7034b~mv2.jpg", desc: "37kW (125,000 BTU) diesel/kerosene space heater on wheels, 38L tank, heats up to 295m²." },
-      { cat: "tools", name: "Gardencare Petrol Rotavator", price: "£380", img: "b243b4_6b7e379858ae4e4b86f85873bddb5399~mv2.jpg", desc: "16-inch working width cultivator powered by a 100cc Briggs & Stratton 500 Series engine with 4 steel tines." },
-      { cat: "tools", name: "80Kg Towable Spreader", price: "£265", img: "b243b4_ec9e96fbfc0f412b997f527498dbf686~mv2.jpg", desc: "80kg capacity tow-behind polythene spreader with metal gears." },
-      { cat: "tools", name: "Hecht 53080 Trailer Barrow", price: "£255", img: "b243b4_4ca3d4d9097346deaf848ecc31f6a283~mv2.jpg", desc: "300kg capacity tipping trailer / push barrow with pneumatic wheels and polythene body." },
-      { cat: "tools", name: "Hecht 2052 Air Compressor 50L", price: "£230", img: "b243b4_90f366a027a24afda7638485421ac646~mv2.png", desc: "1500W 50L oil-lubricated air compressor, 8 bar max pressure, 180L/min suction power." },
-      { cat: "tools", name: "Hecht 2 Inch Water Pump", price: "£225", img: "b243b4_c84ac85d0b5047cd9a24ff7a9e364c3e~mv2.jpg", desc: "4-stroke petrol water pump, 36,000 L/h max delivery volume, 27m max delivery height." },
-      { cat: "tools", name: "60Kg Towable Spreader", price: "£220", img: "b243b4_f88160256beb4bcbac61bd729c978619~mv2.jpg", desc: "60kg capacity tow-behind polythene spreader with metal gears." },
-      { cat: "tools", name: "60L Manual Adjustable Spreader", price: "£215", img: "b243b4_39c108ae64fa4bb8859a07f4aa2792ec~mv2.jpg", desc: "60L manual push spreader for fertiliser, seed, or winter salt with metal gears." },
-      { cat: "tools", name: "Hecht 1 Inch Water Pump", price: "£165", img: "b243b4_ed3d1d2251ad4a568b0e6d6c9f4a84be~mv2.jpg", desc: "43cc petrol water pump, 15,000 L/h max delivery volume, 35m max delivery height." },
-      { cat: "tools", name: "High Side Tipping Cart Trailer", price: "£165", img: "b243b4_eb825e3f272f4a9ca2b46c95111b4a74~mv2.jpg", desc: "300kg capacity steel tipping cart trailer with removable hinged sides and pneumatic wheels." },
-      { cat: "tools", name: "Loading Ramps (Pair)", price: "£160", img: "b243b4_9dfec7af1b024a558af508f91a0ac402~mv2.jpg", desc: "Folding loading ramps for ATVs & ride-on mowers, 1000kg capacity with supporting legs, 2210mm unfolded." },
-      { cat: "tools", name: "36Kg Towable Spreader", price: "£155", img: "b243b4_3f578efab50e4dbcad08de6ab8ea244c~mv2.jpg", desc: "36kg capacity tow-behind polythene spreader with metal gears." },
-      { cat: "tools", name: "Hecht 50Nm 20V Cordless Drill Kit", price: "£165", img: "b243b4_ae205a939d5f4cc9b1a8fc4172489ac2~mv2.jpg", desc: "Brushless 20V cordless hammer drill with 2x 2Ah batteries, 1-hour quick charger, bits, and carry case." },
-      { cat: "tools", name: "29L Manual Adjustable Spreader", price: "£135", img: "b243b4_f9b057ad5adf4c5ab88a775f73ed4055~mv2.jpg", desc: "29L manual adjustable spreader with metal gears for seed, fertiliser, and salt." },
-      { cat: "tools", name: "Tipping Cart Trailer (Poly)", price: "£135", img: "b243b4_802637a9fbe347889959a2525177caf6~mv2.jpg", desc: "150kg capacity poly tipping cart trailer with pneumatic wheels." },
-      { cat: "tools", name: "Hecht 35Nm 20V Cordless Drill Kit", price: "£125", img: "b243b4_fd5366b5a2024b05b0218c3022ff8a3c~mv2.jpg", desc: "20V cordless hammer drill complete with 2x 2Ah batteries, quick charger, bits, and carry box." },
-      { cat: "tools", name: "Hecht 901 Saw Horse", price: "£115", img: "b243b4_4bbdcf4df7d34f739fcaf5ed27de5562~mv2.jpg", desc: "Self-locking log saw horse clamping timber from 24mm to 230mm diameter, 100kg load capacity." },
-      { cat: "tools", name: "Hecht 20V Cordless Impact Wrench (Body)", price: "£95", img: "b243b4_9f7d103b9b564d0b99824f6d0304b8ab~mv2.png", desc: "300Nm 1/2-inch cordless impact wrench (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "Hecht 1323 Angle Grinder 9-Inch", price: "£95", img: "b243b4_81f9006bf6664d4b8c694fc99c5190a1~mv2.jpg", desc: "2350W 230mm corded angle grinder with soft-start and rotary handle." },
-      { cat: "tools", name: "Hecht 1670 Battery Circular Saw (Body)", price: "£90", img: "b243b4_a9f17374838348c8902ddb5ade0f1f12~mv2.jpg", desc: "20V cordless circular saw, 150mm blade, 48mm cutting depth (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "27L Manual Adjustable Spreader", price: "£85", img: "b243b4_15819df88ed94388853c6305869616b8~mv2.jpg", desc: "27L manual adjustable spreader for seed, fertiliser, and salt." },
-      { cat: "tools", name: "Trestle Log Horse with Chainsaw Holder", price: "£85", img: "b243b4_0f499028fdf94c17a84d3778b26e8ede~mv2.jpg", desc: "Galvanised steel saw horse fitted with integrated chainsaw holder." },
-      { cat: "tools", name: "Hecht 94 Piece Socket & Bit Set", price: "£75", img: "b243b4_1386de78da0d4451813e198fc08f2237~mv2.jpg", desc: "94-piece 1/2-inch and 1/4-inch ratchet, socket, and bit set in sturdy carry case." },
-      { cat: "tools", name: "Hecht 4.5-Inch Cordless Angle Grinder (Body)", price: "£65", img: "b243b4_55643197a34d45d69038e68b936a6020~mv2.png", desc: "20V 115mm cordless angle grinder (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "Hecht 1510 Reciprocating Saw (Body)", price: "£65", img: "b243b4_7589da20e43945c2bce0054592ed350d~mv2.jpg", desc: "20V cordless reciprocating saw, 115mm wood cutting depth (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "Hecht 1531 20V Battery Jigsaw (Body)", price: "£60", img: "b243b4_9b29d2c31d714c188a8b4f812a0a37bd~mv2.jpg", desc: "20V cordless jigsaw (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "Hecht 2090 Battery Air Compressor 20V (Body)", price: "£60", img: "b243b4_a072ab0a8fe947c2a44b14ad254fd802~mv2.png", desc: "20V portable digital tyre/air compressor up to 7 bar (ACCU 1278 program, body only)." },
-      { cat: "tools", name: "Hecht 76 Piece Tool Kit", price: "£60", img: "b243b4_58043b1854684f84bea5ce72f9b0a56f~mv2.jpg", desc: "76-piece household & garage tool case with screwdrivers, pliers, bits, and spanners." },
-      { cat: "tools", name: "Hecht 20V 4Ah Battery (001278B)", price: "£60", img: "b243b4_c619bb02ec5a4f3a9004b54ca82cdf3a~mv2.png", desc: "20V 4.0Ah Li-ion battery for Hecht ACCU 1278 cordless tools." },
-      { cat: "tools", name: "Hecht Chainsaw Sharpener", price: "£55", img: "b243b4_f28809260a0a4f949ad1f2de69f6c906~mv2.jpg", desc: "Bench/wall-mounted electric chainsaw chain sharpener with grinding wheel included." },
-      { cat: "tools", name: "20L Manual Spreader", price: "£45", img: "b243b4_5e0ca693f1654749b7925e9b6b65fc98~mv2.jpg", desc: "20L manual push spreader for fertiliser, grass seed, and salt." },
-      { cat: "tools", name: "16L Manual Knapsack Sprayer", price: "£45", img: "b243b4_227f0c2fafc640f69432ece7c242eb11~mv2.jpg", desc: "16L backpack knapsack sprayer with 4 bar max pressure." },
-      { cat: "tools", name: "Trestle Log Horse X3", price: "£45", img: "b243b4_ac9e9e64c83a4b42b8c01e58ed77a4be~mv2.jpg", desc: "Folding steel X3 trestle log saw horse." },
-      { cat: "tools", name: "Hecht 4.5-Inch Electric Angle Grinder", price: "£45", img: "b243b4_3a7957823dbf4b22b598c80ca24a1a13~mv2.jpg", desc: "650W 115mm corded electric angle grinder, 12,000 rpm." },
-      { cat: "tools", name: "Hecht 20V 2Ah Battery (001277B)", price: "£40", img: "b243b4_13ccb468472f4a61b54bc2c14e46e2a3~mv2.png", desc: "20V 2.0Ah Li-ion battery for Hecht ACCU 1278 cordless tools." },
-      { cat: "tools", name: "Hecht Cordless Screwdriver (52 Bits)", price: "£35", img: "b243b4_9b66f9efc8ed404588b5e9c14c066b36~mv2.jpg", desc: "3.7V Li-ion swivel cordless screwdriver with LED torch, charger, and 52 bits in presentation case." },
-      { cat: "tools", name: "Hecht 20V Battery Charger", price: "£25", img: "b243b4_9b9e318cc9ec4029ad10f428a2a54112~mv2.png", desc: "Charger for Hecht 001277B & 001278B 20V Li-ion batteries." },
-      { cat: "tools", name: "Hecht 5L Manual Sprayer", price: "£18", img: "b243b4_8e347ac199c74afdb96eedecd1ed9cd4~mv2.jpg", desc: "5L hand pump pressure sprayer with adjustable jet and trigger lock." }
+      { cat: "splitters", name: "Hecht 8 Ton Vertical Log Splitter", price: "£900", img: "10790.jpg", desc: "3kW electric motor powering a hydraulic ram. 8 ton maximum splitting pressure. Weight 112kg." },
+      { cat: "splitters", name: "Hecht Horizontal Petrol Log Splitter 10T", price: "£850", img: "Log-splitter_edited.png", desc: "Petrol wood splitter, 212cc engine, 10 tons splitting pressure, max wood length 520mm. 12-inch wheels with drawbar and tow hitch. Approx weight 126kg." },
+      { cat: "splitters", name: "Hecht 6070 Vertical Electric Log Splitter 7 Ton", price: "£790", img: "10193.webp", desc: "Electric vertical wood splitter. Power input 230V 50Hz, 3000W. Log length up to 55cm, diameter up to 30cm. Splitting pressure 7 tons. Weight 98kg." },
+      { cat: "splitters", name: "Hecht 676 Log Splitter", price: "£475", img: "676.webp", desc: "2kW 230V electric log splitter on stand with transport wheels. Splits logs up to 52cm long with 7 tons maximum pressure. Weight 48kg." },
+      { cat: "shredders", name: "Professional Self Propelled Shredder & Vacuum", price: "£1,395", img: "Pro Shredder Vacuum.jpg", desc: "Combined self-propelled petrol vacuum and shredder. 196cc engine (4.1kW), 60cm working width, cuts branches up to 5cm diameter, 3m suction hose, 130L collecting bag." },
+      { cat: "shredders", name: "Hecht 6208 Petrol Shredder", price: "£850", img: "Shredder_edited.png", desc: "Petrol powered garden shredder with 7HP engine. Suitable for cutting branches up to 70mm diameter." },
+      { cat: "shredders", name: "Champion RT10005 Petrol Shredder", price: "£775", img: "61raHKnCGYL._AC_SL1500_-1.jpg", desc: "Champion RT10005 5cm (2-inch) wood chipper shredder powered by 4.1kW 4-stroke OHV engine with 3.1L fuel tank." },
+      { cat: "shredders", name: "Hecht 6285XL Electric Shredder", price: "£295", img: "6285.jpg", desc: "2800W electric garden shredder for branches up to 4.4cm diameter, complete with large 60L plastic collecting box." },
+      { cat: "scarifiers", name: "Gardencare 40cm Petrol Scarifier", price: "£365", img: "image_anysize.jpg", desc: "Gardencare GCS40 petrol lawn scarifier supplied with both an 18-blade cassette and a 24-spring tine cassette to remove moss and thatch." },
+      { cat: "scarifiers", name: "Hecht Electric Scarifier", price: "£155", img: "Scarafier_edited.png", desc: "1500W electric lawn scarifier, 32cm working width, 35L grass catcher, supplied with both 16 metal knives and spring tine roller. Lightweight 8kg." },
+      { cat: "tools", name: "Hecht 8101 Petrol Sweeper 100cm", price: "£1,200", img: "8101.jpg", desc: "6.5HP 173cc petrol sweeper, 100cm working width, 3 forward + 2 reverse gears, 35cm brush diameter. Weight 80kg." },
+      { cat: "tools", name: "Hecht 8680SE Petrol Sweeper 80cm", price: "£1,130", img: "8680se sweeper.jpg", desc: "Multifunctional self-propelled 80cm sweeper with electric start, Hecht OHV engine, 4 forward + 2 reverse gears." },
+      { cat: "tools", name: "Hecht 8615 Petrol Sweeper 60cm", price: "£825", img: "8615.jpg", desc: "Multifunctional self-propelled 60cm sweeper with Hecht OHV engine, 4 forward + 2 reverse gears, 35cm brush diameter." },
+      { cat: "tools", name: "65L Towable Sprayer", price: "£500", img: "56L Towing Sprayer.jpg", desc: "Tow-behind sprayer with 7ft boom coverage, complete with hand lance and nozzle." },
+      { cat: "tools", name: "Hecht 3038 Oil Space Heater", price: "£395", img: "3088.webp", desc: "37kW (125,000 BTU) diesel/kerosene space heater on wheels, 38L tank, heats up to 295m²." },
+      { cat: "tools", name: "Gardencare Petrol Rotavator", price: "£380", img: "61DBJFA7yzL._AC_UY218_.jpg", desc: "16-inch working width cultivator powered by a 100cc Briggs & Stratton 500 Series engine with 4 steel tines." },
+      { cat: "tools", name: "80Kg Towable Spreader", price: "£265", img: "80Kg Towable Spreader.jpg", desc: "80kg capacity tow-behind polythene spreader with metal gears." },
+      { cat: "tools", name: "Hecht 53080 Trailer Barrow", price: "£255", img: "Tipping Barrow.jpg", desc: "300kg capacity tipping trailer / push barrow with pneumatic wheels and polythene body." },
+      { cat: "tools", name: "Hecht 2052 Air Compressor 50L", price: "£230", img: "compressor_edited.png", desc: "1500W 50L oil-lubricated air compressor, 8 bar max pressure, 180L/min suction power." },
+      { cat: "tools", name: "Hecht 2 Inch Water Pump", price: "£225", img: "2in Water Pump.jpg", desc: "4-stroke petrol water pump, 36,000 L/h max delivery volume, 27m max delivery height." },
+      { cat: "tools", name: "60Kg Towable Spreader", price: "£220", img: "60Kg Towable Spreader.jpg", desc: "60kg capacity tow-behind polythene spreader with metal gears." },
+      { cat: "tools", name: "60L Manual Adjustable Spreader", price: "£215", img: "60L Manual Adjustable Spreader.jpg", desc: "60L manual push spreader for fertiliser, seed, or winter salt with metal gears." },
+      { cat: "tools", name: "Hecht 1 Inch Water Pump", price: "£165", img: "1in Water Pump.jpg", desc: "43cc petrol water pump, 15,000 L/h max delivery volume, 35m max delivery height." },
+      { cat: "tools", name: "High Side Tipping Cart Trailer", price: "£165", img: "High Side Cart.jpg", desc: "300kg capacity steel tipping cart trailer with removable hinged sides and pneumatic wheels." },
+      { cat: "tools", name: "Loading Ramps (Pair)", price: "£160", img: "71pbiEjodBL._AC_SL1200_ (1).jpg", desc: "Folding loading ramps for ATVs & ride-on mowers, 1000kg capacity with supporting legs, 2210mm unfolded." },
+      { cat: "tools", name: "36Kg Towable Spreader", price: "£155", img: "36Kg Towable Spreader.jpg", desc: "36kg capacity tow-behind polythene spreader with metal gears." },
+      { cat: "tools", name: "Hecht 50Nm 20V Cordless Drill Kit", price: "£165", img: "1241-1.jpg", desc: "Brushless 20V cordless hammer drill with 2x 2Ah batteries, 1-hour quick charger, bits, and carry case." },
+      { cat: "tools", name: "29L Manual Adjustable Spreader", price: "£135", img: "29L Man Adj Spreader Metal Gear.jpg", desc: "29L manual adjustable spreader with metal gears for seed, fertiliser, and salt." },
+      { cat: "tools", name: "Tipping Cart Trailer (Poly)", price: "£135", img: "Tipping Cart.jpg", desc: "150kg capacity poly tipping cart trailer with pneumatic wheels." },
+      { cat: "tools", name: "Hecht 35Nm 20V Cordless Drill Kit", price: "£125", img: "1241-2.jpg", desc: "20V cordless hammer drill complete with 2x 2Ah batteries, quick charger, bits, and carry box." },
+      { cat: "tools", name: "Hecht 901 Saw Horse", price: "£115", img: "901-4.jfif", desc: "Self-locking log saw horse clamping timber from 24mm to 230mm diameter, 100kg load capacity." },
+      { cat: "tools", name: "Hecht 20V Cordless Impact Wrench (Body)", price: "£95", img: "13699.webp", desc: "300Nm 1/2-inch cordless impact wrench (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "Hecht 1323 Angle Grinder 9-Inch", price: "£95", img: "9 in Grinder.jpg", desc: "2350W 230mm corded angle grinder with soft-start and rotary handle." },
+      { cat: "tools", name: "Hecht 1670 Battery Circular Saw (Body)", price: "£90", img: "Circular Saw.jpg", desc: "20V cordless circular saw, 150mm blade, 48mm cutting depth (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "27L Manual Adjustable Spreader", price: "£85", img: "27L Manual Adjustable Spreader.jpg", desc: "27L manual adjustable spreader for seed, fertiliser, and salt." },
+      { cat: "tools", name: "Trestle Log Horse with Chainsaw Holder", price: "£85", img: "Saw Holder Horse.jpg", desc: "Galvanised steel saw horse fitted with integrated chainsaw holder." },
+      { cat: "tools", name: "Hecht 94 Piece Socket & Bit Set", price: "£75", img: "9822.jpg", desc: "94-piece 1/2-inch and 1/4-inch ratchet, socket, and bit set in sturdy carry case." },
+      { cat: "tools", name: "Hecht 4.5-Inch Cordless Angle Grinder (Body)", price: "£65", img: "17093.webp", desc: "20V 115mm cordless angle grinder (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "Hecht 1510 Reciprocating Saw (Body)", price: "£65", img: "Recip Saw.jpg", desc: "20V cordless reciprocating saw, 115mm wood cutting depth (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "Hecht 1531 20V Battery Jigsaw (Body)", price: "£60", img: "Jigsaw.jpg", desc: "20V cordless jigsaw (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "Hecht 2090 Battery Air Compressor 20V (Body)", price: "£60", img: "19158.webp", desc: "20V portable digital tyre/air compressor up to 7 bar (ACCU 1278 program, body only)." },
+      { cat: "tools", name: "Hecht 76 Piece Tool Kit", price: "£60", img: "11209.jpg", desc: "76-piece household & garage tool case with screwdrivers, pliers, bits, and spanners." },
+      { cat: "tools", name: "Hecht 20V 4Ah Battery (001278B)", price: "£60", img: "14124.webp", desc: "20V 4.0Ah Li-ion battery for Hecht ACCU 1278 cordless tools." },
+      { cat: "tools", name: "Hecht Chainsaw Sharpener", price: "£55", img: "9245.jpg", desc: "Bench/wall-mounted electric chainsaw chain sharpener with grinding wheel included." },
+      { cat: "tools", name: "20L Manual Spreader", price: "£45", img: "20L Manual Spreader.jpg", desc: "20L manual push spreader for fertiliser, grass seed, and salt." },
+      { cat: "tools", name: "16L Manual Knapsack Sprayer", price: "£45", img: "16L Manual Sprayer.jpg", desc: "16L backpack knapsack sprayer with 4 bar max pressure." },
+      { cat: "tools", name: "Trestle Log Horse X3", price: "£45", img: "3 Trestles.jpg", desc: "Folding steel X3 trestle log saw horse." },
+      { cat: "tools", name: "Hecht 4.5-Inch Electric Angle Grinder", price: "£45", img: "12900.jpg", desc: "650W 115mm corded electric angle grinder, 12,000 rpm." },
+      { cat: "tools", name: "Hecht 20V 2Ah Battery (001277B)", price: "£40", img: "15252.webp", desc: "20V 2.0Ah Li-ion battery for Hecht ACCU 1278 cordless tools." },
+      { cat: "tools", name: "Hecht Cordless Screwdriver (52 Bits)", price: "£35", img: "19291.webp", desc: "3.7V Li-ion swivel cordless screwdriver with LED torch, charger, and 52 bits in presentation case." },
+      { cat: "tools", name: "Hecht 20V Battery Charger", price: "£25", img: "8080.webp", desc: "Charger for Hecht 001277B & 001278B 20V Li-ion batteries." },
+      { cat: "tools", name: "Hecht 5L Manual Sprayer", price: "£18", img: "5L Manual Sprayer.jpg", desc: "5L hand pump pressure sprayer with adjustable jet and trigger lock." }
     ];
 
     const TITLES = {
@@ -435,6 +152,7 @@
     };
 
     function selectCat(cat) {
+      if (cat === "log-splitters") cat = "splitters";
       if (!TITLES[cat]) cat = "splitters";
       document.getElementById("catTitle").textContent = TITLES[cat];
       document.querySelectorAll(".cat-pill").forEach(btn => {
@@ -445,7 +163,7 @@
       grid.innerHTML = filtered.map((item, idx) => `
         <div class="product-tile" onclick="openModal('${cat}', ${idx})">
           <div class="tile-img-wrap">
-            <img src="${WIX + item.img}" alt="${item.name}" loading="lazy" />
+            <img src="${IMG_DIR + item.img}" alt="${item.name}" loading="lazy" />
           </div>
           <div class="tile-title">${item.name}</div>
           <div class="tile-price">${item.price}</div>
@@ -459,7 +177,7 @@
     function openModal(cat, idx) {
       const item = ITEMS.filter(i => i.cat === cat)[idx];
       if (!item) return;
-      document.getElementById("modalImg").src = WIX + item.img;
+      document.getElementById("modalImg").src = IMG_DIR + item.img;
       document.getElementById("modalImg").alt = item.name;
       document.getElementById("modalTitle").textContent = item.name;
       document.getElementById("modalPrice").textContent = item.price;
